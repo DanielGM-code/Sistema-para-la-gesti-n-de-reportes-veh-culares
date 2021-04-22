@@ -1,0 +1,44 @@
+﻿<Window x:Class="SGRV.GUIDelegacionesMunicipales.RegistrarVehiculo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SGRV.GUIDelegacionesMunicipales"
+        mc:Ignorable="d"
+        Title="RegistrarVehiculo" Height="768" Width="1366">
+    <Grid>
+        <Label Content="Registrar Vehiculo" HorizontalAlignment="Left" Margin="575,23,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <TextBox HorizontalAlignment="Left" Margin="207,212,0,0" Text="Nombre del conductor" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <Label Content="Nombre del conductor:" HorizontalAlignment="Left" Margin="208,165,0,0" VerticalAlignment="Top"/>
+        <ListBox Margin="89,254,905,135"/>
+        <TextBox HorizontalAlignment="Left" Margin="601,195,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Marca:" HorizontalAlignment="Left" Margin="601,164,0,0" VerticalAlignment="Top"/>
+        <Label Content="Modelo:" HorizontalAlignment="Left" Margin="601,273,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="601,303,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Año:" HorizontalAlignment="Left" Margin="982,164,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="982,195,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Color:" HorizontalAlignment="Left" Margin="982,273,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="982,303,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Nombre de la aseguradora:" HorizontalAlignment="Left" Margin="601,403,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="601,434,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Número de la poliza de seguro" HorizontalAlignment="Left" Margin="982,403,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="982,434,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Número de placas del vehículo:" HorizontalAlignment="Left" Margin="601,528,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="601,559,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button_NuevoVehiculo" Content="Registrar nuevo vehículo" HorizontalAlignment="Left" Margin="671,672,0,0" VerticalAlignment="Top" Click="button_NuevoVehiculo_Click"/>
+        <Button x:Name="button_Aceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="563,672,0,0" VerticalAlignment="Top" Click="button_Aceptar_Click"/>
+        <Button x:Name="button_CerrarSesion" Content="Cerrar sesion" HorizontalAlignment="Left" Margin="1275,20,0,0" VerticalAlignment="Top" Height="60" Width="60" Click="button_CerrarSesion_Click"/>
+        <Button x:Name="button_Chat" Content="Chat" HorizontalAlignment="Left" VerticalAlignment="Top" Height="110" Width="110" Click="button_Chat_Click"/>
+        <Button x:Name="button_Regresar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="154" Width="78" Margin="-12,-49,0,0" RenderTransformOrigin="0.5,0.5" Click="button_Regresar_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="45.018"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</Window>
