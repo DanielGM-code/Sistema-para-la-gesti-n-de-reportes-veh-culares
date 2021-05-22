@@ -8,5 +8,6 @@ namespace SGRV.modelo.poco
 {
     class Class1
     {
+        String nombre;
     }
 }
