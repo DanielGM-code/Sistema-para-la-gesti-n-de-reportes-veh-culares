@@ -35,7 +35,7 @@ namespace SGRV
             if (validadCampos())
             {
                 String username = tb_username.Text;
-                String contraseña = pb_password.Password;
+                String contraseña = pb_contraseña.Password;
 
                 Usuario usuario = UsuarioDAO.getUsuarioByUsername(username);
                 if (usuario.IdUsuario != 0)
@@ -78,19 +78,7 @@ namespace SGRV
 
         private bool validadCampos()
         {
-            return (tb_username.Text == "" || pb_password.Password == "") ? false : true;
-        }
-
-        private void Login_OnMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed) {
-                DragMove();
-            }
-        }
-
-        private void button_cerrarVentana_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
+            return (tb_username.Text == "" || pb_contraseña.Password == "") ? false : true;
         }
     }
 }

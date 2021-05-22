@@ -8,52 +8,10 @@
     ".NETCoreApp,Version=v5.0": {
       "SGRV/1.0.0": {
         "dependencies": {
-          "FontAwesome.Sharp": "5.15.3",
-          "MahApps.Metro.IconPacks.Material": "4.8.0",
-          "MaterialDesignThemes": "4.0.0",
           "System.Data.SqlClient": "4.5.1"
         },
         "runtime": {
           "SGRV.dll": {}
-        }
-      },
-      "FontAwesome.Sharp/5.15.3": {
-        "runtime": {
-          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {
-            "assemblyVersion": "5.15.3.0",
-            "fileVersion": "5.15.3.0"
-          }
-        }
-      },
-      "MahApps.Metro.IconPacks.Material/4.8.0": {
-        "runtime": {
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.8.0.6"
-          },
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Material.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.8.0.6"
-          }
-        }
-      },
-      "MaterialDesignColors/2.0.0": {
-        "runtime": {
-          "lib/netcoreapp3.1/MaterialDesignColors.dll": {
-            "assemblyVersion": "2.0.0.2422",
-            "fileVersion": "2.0.0.2422"
-          }
-        }
-      },
-      "MaterialDesignThemes/4.0.0": {
-        "dependencies": {
-          "MaterialDesignColors": "2.0.0"
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {
-            "assemblyVersion": "4.0.0.2422",
-            "fileVersion": "4.0.0.2422"
-          }
         }
       },
       "Microsoft.NETCore.Platforms/2.0.0": {},
@@ -150,34 +108,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "FontAwesome.Sharp/5.15.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-b72giuP5i2aR2W+u1gdYfYnTRkMIvI78idSDgrgcSV0aSE/nwJcMoh3sItxugMqOcNeIHxveGxAxcrcTYmwlHA==",
-      "path": "fontawesome.sharp/5.15.3",
-      "hashPath": "fontawesome.sharp.5.15.3.nupkg.sha512"
-    },
-    "MahApps.Metro.IconPacks.Material/4.8.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-KZ6BRhXtFlcKuuh5n13ezexZSuyVOo7O+tQwacLRvzfl421P+/rWfRO1rcsHimvo2Bpm4cG8uTj7KXagsioJyg==",
-      "path": "mahapps.metro.iconpacks.material/4.8.0",
-      "hashPath": "mahapps.metro.iconpacks.material.4.8.0.nupkg.sha512"
-    },
-    "MaterialDesignColors/2.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+JoghC3QRK0u9Wul1To1ORjcfTbFTVzFPjJ02H7VREOdNzIIn427e8G9gP9hXu9pm1r2OneLnoCG/lTma5cG2w==",
-      "path": "materialdesigncolors/2.0.0",
-      "hashPath": "materialdesigncolors.2.0.0.nupkg.sha512"
-    },
-    "MaterialDesignThemes/4.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+n5oWHuRiYL/gUw2XfQHCRZqHtU8KbrdurgU0IcO98Zsyhw4BvggodfXY8veRtbjjmM9EJ/sG2yKBrgPOGX4JQ==",
-      "path": "materialdesignthemes/4.0.0",
-      "hashPath": "materialdesignthemes.4.0.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
       "type": "package",

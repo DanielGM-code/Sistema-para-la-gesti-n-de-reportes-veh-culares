@@ -2,56 +2,6 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
-      "FontAwesome.Sharp/5.15.3": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App"
-        ]
-      },
-      "MahApps.Metro.IconPacks.Material/4.8.0": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Material.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Material.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WPF"
-        ]
-      },
-      "MaterialDesignColors/2.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
-        }
-      },
-      "MaterialDesignThemes/4.0.0": {
-        "type": "package",
-        "dependencies": {
-          "MaterialDesignColors": "2.0.0"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {}
-        },
-        "build": {
-          "build/MaterialDesignThemes.targets": {}
-        }
-      },
       "Microsoft.NETCore.Platforms/2.0.0": {
         "type": "package",
         "compile": {
@@ -216,128 +166,6 @@
     }
   },
   "libraries": {
-    "FontAwesome.Sharp/5.15.3": {
-      "sha512": "b72giuP5i2aR2W+u1gdYfYnTRkMIvI78idSDgrgcSV0aSE/nwJcMoh3sItxugMqOcNeIHxveGxAxcrcTYmwlHA==",
-      "type": "package",
-      "path": "fontawesome.sharp/5.15.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fontawesome.sharp.5.15.3.nupkg.sha512",
-        "fontawesome.sharp.nuspec",
-        "lib/net40/FontAwesome.Sharp.dll",
-        "lib/net45/FontAwesome.Sharp.dll",
-        "lib/net472/FontAwesome.Sharp.dll",
-        "lib/net48/FontAwesome.Sharp.dll",
-        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
-      ]
-    },
-    "MahApps.Metro.IconPacks.Material/4.8.0": {
-      "sha512": "KZ6BRhXtFlcKuuh5n13ezexZSuyVOo7O+tQwacLRvzfl421P+/rWfRO1rcsHimvo2Bpm4cG8uTj7KXagsioJyg==",
-      "type": "package",
-      "path": "mahapps.metro.iconpacks.material/4.8.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/MahApps.Metro.IconPacks.Core.dll",
-        "lib/net45/MahApps.Metro.IconPacks.Core.pdb",
-        "lib/net45/MahApps.Metro.IconPacks.Core.xml",
-        "lib/net45/MahApps.Metro.IconPacks.Material.dll",
-        "lib/net45/MahApps.Metro.IconPacks.Material.pdb",
-        "lib/net45/MahApps.Metro.IconPacks.Material.xml",
-        "lib/net46/MahApps.Metro.IconPacks.Core.dll",
-        "lib/net46/MahApps.Metro.IconPacks.Core.pdb",
-        "lib/net46/MahApps.Metro.IconPacks.Core.xml",
-        "lib/net46/MahApps.Metro.IconPacks.Material.dll",
-        "lib/net46/MahApps.Metro.IconPacks.Material.pdb",
-        "lib/net46/MahApps.Metro.IconPacks.Material.xml",
-        "lib/net47/MahApps.Metro.IconPacks.Core.dll",
-        "lib/net47/MahApps.Metro.IconPacks.Core.pdb",
-        "lib/net47/MahApps.Metro.IconPacks.Core.xml",
-        "lib/net47/MahApps.Metro.IconPacks.Material.dll",
-        "lib/net47/MahApps.Metro.IconPacks.Material.pdb",
-        "lib/net47/MahApps.Metro.IconPacks.Material.xml",
-        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Core.dll",
-        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Core.pdb",
-        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Core.xml",
-        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Material.dll",
-        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Material.pdb",
-        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Material.xml",
-        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.dll",
-        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.pdb",
-        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.xml",
-        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Material.dll",
-        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Material.pdb",
-        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Material.xml",
-        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Core.dll",
-        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Core.pdb",
-        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Core.pri",
-        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Core.xml",
-        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Material.dll",
-        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Material.pdb",
-        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Material.pri",
-        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Material.xml",
-        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Material/MahApps.Metro.IconPacks.Material.xr.xml",
-        "logo_small.png",
-        "mahapps.metro.iconpacks.material.4.8.0.nupkg.sha512",
-        "mahapps.metro.iconpacks.material.nuspec"
-      ]
-    },
-    "MaterialDesignColors/2.0.0": {
-      "sha512": "+JoghC3QRK0u9Wul1To1ORjcfTbFTVzFPjJ02H7VREOdNzIIn427e8G9gP9hXu9pm1r2OneLnoCG/lTma5cG2w==",
-      "type": "package",
-      "path": "materialdesigncolors/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "images/MaterialDesignColors.Icon.png",
-        "lib/net452/MaterialDesignColors.dll",
-        "lib/net452/MaterialDesignColors.pdb",
-        "lib/netcoreapp3.1/MaterialDesignColors.dll",
-        "lib/netcoreapp3.1/MaterialDesignColors.pdb",
-        "materialdesigncolors.2.0.0.nupkg.sha512",
-        "materialdesigncolors.nuspec"
-      ]
-    },
-    "MaterialDesignThemes/4.0.0": {
-      "sha512": "+n5oWHuRiYL/gUw2XfQHCRZqHtU8KbrdurgU0IcO98Zsyhw4BvggodfXY8veRtbjjmM9EJ/sG2yKBrgPOGX4JQ==",
-      "type": "package",
-      "path": "materialdesignthemes/4.0.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/MaterialDesignThemes.targets",
-        "build/Resources/Roboto/Roboto-Black.ttf",
-        "build/Resources/Roboto/Roboto-BlackItalic.ttf",
-        "build/Resources/Roboto/Roboto-Bold.ttf",
-        "build/Resources/Roboto/Roboto-BoldItalic.ttf",
-        "build/Resources/Roboto/Roboto-Italic.ttf",
-        "build/Resources/Roboto/Roboto-Light.ttf",
-        "build/Resources/Roboto/Roboto-LightItalic.ttf",
-        "build/Resources/Roboto/Roboto-Medium.ttf",
-        "build/Resources/Roboto/Roboto-MediumItalic.ttf",
-        "build/Resources/Roboto/Roboto-Regular.ttf",
-        "build/Resources/Roboto/Roboto-Thin.ttf",
-        "build/Resources/Roboto/Roboto-ThinItalic.ttf",
-        "build/Resources/Roboto/RobotoCondensed-Bold.ttf",
-        "build/Resources/Roboto/RobotoCondensed-BoldItalic.ttf",
-        "build/Resources/Roboto/RobotoCondensed-Italic.ttf",
-        "build/Resources/Roboto/RobotoCondensed-Light.ttf",
-        "build/Resources/Roboto/RobotoCondensed-LightItalic.ttf",
-        "build/Resources/Roboto/RobotoCondensed-Regular.ttf",
-        "images/MaterialDesignThemes.Icon.png",
-        "lib/net452/MaterialDesignThemes.Wpf.dll",
-        "lib/net452/MaterialDesignThemes.Wpf.pdb",
-        "lib/net452/MaterialDesignThemes.Wpf.xml",
-        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll",
-        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.pdb",
-        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.xml",
-        "materialdesignthemes.4.0.0.nupkg.sha512",
-        "materialdesignthemes.nuspec",
-        "tools/VisualStudioToolsManifest.xml"
-      ]
-    },
     "Microsoft.NETCore.Platforms/2.0.0": {
       "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
       "type": "package",
@@ -695,26 +523,23 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "FontAwesome.Sharp >= 5.15.3",
-      "MahApps.Metro.IconPacks.Material >= 4.8.0",
-      "MaterialDesignThemes >= 4.0.0",
       "System.Data.SqlClient >= 4.5.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dagam\\.nuget\\packages\\": {}
+    "C:\\Users\\angel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dagam\\Desktop\\SGRV\\SGRV.csproj",
+      "projectUniqueName": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
       "projectName": "SGRV",
-      "projectPath": "C:\\Users\\dagam\\Desktop\\SGRV\\SGRV.csproj",
-      "packagesPath": "C:\\Users\\dagam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dagam\\Desktop\\SGRV\\obj\\",
+      "projectPath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
+      "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dagam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -740,18 +565,6 @@
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
         "dependencies": {
-          "FontAwesome.Sharp": {
-            "target": "Package",
-            "version": "[5.15.3, )"
-          },
-          "MahApps.Metro.IconPacks.Material": {
-            "target": "Package",
-            "version": "[4.8.0, )"
-          },
-          "MaterialDesignThemes": {
-            "target": "Package",
-            "version": "[4.0.0, )"
-          },
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.5.1, )"
@@ -775,7 +588,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }
