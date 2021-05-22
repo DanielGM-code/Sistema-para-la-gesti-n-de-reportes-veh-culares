@@ -3,14 +3,124 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SGRV"
+        xmlns:local="clr-namespace:SGRV" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="Login" Height="768" Width="1366">
+        Title="MainWindow" Height="450" Width="380"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Login_OnMouseDown">
     <Grid>
-        <Label Content="Inicio de sesión" HorizontalAlignment="Center" Margin="0,102,0,0" VerticalAlignment="Top" Height="63" Width="284" FontSize="40"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,266,0,0" Text="Username" TextWrapping="Wrap" VerticalAlignment="Top" Width="530" Height="70" FontSize="30" VerticalContentAlignment="Center"/>
-        <Button x:Name="button_IniciarSesion" Content="Iniciar sesión" HorizontalAlignment="Center" Margin="0,596,0,0" VerticalAlignment="Top" Height="60" Width="200" Click="button_IniciarSesion_Click"/>
-        <PasswordBox HorizontalAlignment="Center" Margin="0,422,0,0" VerticalAlignment="Top" Width="530" Height="70"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
+            <Border CornerRadius="25" Grid.RowSpan="2" RenderTransformOrigin="0.513,0.427" Opacity="0.9">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#202639" Offset="0.0"/>
+                        <GradientStop Color="#3f4977" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <StackPanel>
+                <Button x:Name="button_CerrarVentana"
+                            HorizontalAlignment="Right"
+                            Margin="0,10,20,0"
+                            Style="{StaticResource button_funcionConIcono}"
+                            Width="30" Height="30" 
+                            FontFamily="Segoe UI" 
+                            FontWeight="Bold"
+                            Content= "X"
+                            Click="button_cerrarVentana_Click"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="tb_username"
+                             HorizontalAlignment="Center"
+                             Style="{StaticResource textBox_textBoxTransparente}"
+                             HorizontalContentAlignment="Left"
+                             Width="235"
+                             Height="25"
+                             Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="Account" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                    <PasswordBox x:Name="pb_password"
+                             HorizontalAlignment="Center"
+                             Style="{StaticResource passwordBox_passwordBoxTransparente}"
+                             HorizontalContentAlignment="Left"
+                             Width="235"
+                             Height="25"
+                             Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="60,50,0,0" Width="173">
+                    <Button x:Name="button_IniciarSesion"
+                            Style="{StaticResource button_funcionConTexto}"
+                            Width="120" Height="40" 
+                            Content="Iniciar Sesión" 
+                            FontFamily="Segoe UI" 
+                            FontWeight="Bold"
+                            Click="button_IniciarSesion_Click"/>
+                </StackPanel>
+
+            </StackPanel>
+
+
+            <Label Content="Nombre de Usuario" 
+                   HorizontalAlignment="Left" 
+                   Margin="227,22,0,0" 
+                   Grid.Row="1" 
+                   VerticalAlignment="Top"
+                   Style="{StaticResource label_textoPequeño}"/>
+
+
+            <Label Content="Contraseña" 
+                HorizontalAlignment="Left" 
+                Margin="262,98,0,0" 
+                Grid.Row="1" 
+                VerticalAlignment="Top"
+                Style="{StaticResource ResourceKey=label_textoPequeño}"/>
+
+
+            <Label Content="Sistema De Gestión" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,121,0,0" 
+                   VerticalAlignment="Top"
+                   Style="{StaticResource ResourceKey=label_titulo}"/>
+            <Label Content="De Reportes Vehiculares" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,147,0,0" 
+                   VerticalAlignment="Top"
+                   Style="{StaticResource ResourceKey=label_titulo}"/>
+            <Image Source="/recursos/LogoSGRV.png"
+                   HorizontalAlignment="Center" 
+                   Height="108" 
+                   Margin="0,22,0,0" 
+                   VerticalAlignment="Top" Width="158"/>
+
+        </Grid>
     </Grid>
 </Window>
