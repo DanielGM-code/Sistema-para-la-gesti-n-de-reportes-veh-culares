@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DZM6+Rv5J/8v+cfxV+MssBnMwddSxUxrNACBgSYjEaMs2lOjT1kPoLXwMCwxvcaFVCvgrpqrAqxf3KYUls0O7g==",
+  "dgSpecHash": "w33/tVNpIderKzHd3ZguW5J6wvB4ySQH96g8p6iAL8aimiufU5ucmGg6MTGKZiv/Ckg5tNQLwgt3LE3ZcJeuJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
+  "projectFilePath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\angel\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.8.0\\mahapps.metro.iconpacks.material.4.8.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
