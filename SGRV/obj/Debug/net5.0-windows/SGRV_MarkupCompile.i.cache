@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\dagam\Desktop\SGRV\obj\Debug\net5.0-windows\
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV\obj\Debug\net5.0-windows\
 SGRV
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\dagam\Desktop\SGRV\App.xaml
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV\App.xaml
 11-1597085135
 
-15-175670411
-193-1891726104
+311309170480
+194-713206635
 Chat.xaml;GUIDelegacionesMunicipales\HistorialReportes.xaml;GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml;GUIDelegacionesMunicipales\RegistrarConductor.xaml;GUIDelegacionesMunicipales\RegistrarReporte.xaml;GUIDelegacionesMunicipales\RegistrarVehiculo.xaml;GUIDireccionGeneral\MenuDireccionGeneral.xaml;GUIDireccionGeneral\RegistrarDelegacionMunicipal.xaml;GUIDireccionGeneral\RegistrarUsuario.xaml;GUIDireccionGeneral\VizualizarReporte.xaml;Login.xaml;
 
-True
+False
 
