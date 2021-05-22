@@ -40,3 +40,17 @@ C:\Users\dagam\Desktop\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\Registr
 C:\Users\dagam\Desktop\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\VizualizarReporte.baml
 C:\Users\dagam\Desktop\SGRV\obj\Debug\net5.0-windows\GUIDelegacionesMunicipales\RegistrarConductor.g.cs
 C:\Users\dagam\Desktop\SGRV\obj\Debug\net5.0-windows\GUIDelegacionesMunicipales\RegistrarConductor.baml
+C:\Users\dagam\Desktop\SGRV\bin\Debug\net5.0-windows\FontAwesome.Sharp.dll
+C:\Users\dagam\Desktop\SGRV\obj\Debug\net5.0-windows\SGRV.csproj.CopyComplete
+C:\Users\dagam\Desktop\SGRV\bin\Debug\net5.0-windows\MahApps.Metro.IconPacks.Core.dll
+C:\Users\dagam\Desktop\SGRV\bin\Debug\net5.0-windows\MahApps.Metro.IconPacks.Material.dll
+C:\Users\dagam\Desktop\SGRV\obj\Debug\net5.0-windows\App.baml
+C:\Users\dagam\Desktop\SGRV\bin\Debug\net5.0-windows\MaterialDesignColors.dll
+C:\Users\dagam\Desktop\SGRV\bin\Debug\net5.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\dagam\Desktop\SGRV\obj\Debug\net5.0-windows\recursos\HojaDeEstilos.baml
+C:\Users\dagam\Desktop\SGRV\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\dagam\Desktop\SGRV\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\dagam\Desktop\SGRV\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\dagam\Desktop\SGRV\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\dagam\Desktop\SGRV\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\dagam\Desktop\SGRV\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
