@@ -65,5 +65,22 @@ namespace SGRV.GUIDelegacionesMunicipales
             this.Close();
         }
 
+        private void Login_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+
+        private void button_MinimizarVentana_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void button_CerrarVentana_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

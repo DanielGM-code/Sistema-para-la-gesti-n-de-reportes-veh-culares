@@ -598,11 +598,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\angel\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
+      "projectUniqueName": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\.git\\SGRV\\SGRV.csproj",
       "projectName": "SGRV",
-      "projectPath": "C:\\Users\\angel\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
+      "projectPath": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\.git\\SGRV\\SGRV.csproj",
       "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\angel\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\obj\\",
+      "outputPath": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\.git\\SGRV\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -8,7 +8,8 @@
         Title="MainWindow" Height="450" Width="380"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize"
-        MouseDown="Login_OnMouseDown">
+        MouseDown="Login_OnMouseDown"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -25,73 +26,43 @@
                 </Border.Background>
             </Border>
 
-            <StackPanel>
-                <Button x:Name="button_CerrarVentana"
+
+            <Button x:Name="button_CerrarVentana"
                             HorizontalAlignment="Right"
-                            Margin="0,10,20,0"
-                            Style="{StaticResource button_funcionConIcono}"
-                            Width="30" Height="30" 
-                            FontFamily="Segoe UI" 
-                            FontWeight="Bold"
+                            Margin="0,9,19,201"
+                            Style="{StaticResource button_botonPequeno}"
                             Content= "X"
                             Click="button_cerrarVentana_Click"/>
-            </StackPanel>
 
-            <StackPanel Grid.Row="1" >
-                <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="tb_username"
-                             HorizontalAlignment="Center"
+
+            <TextBox x:Name="tb_username"
+                             HorizontalAlignment="Left"
                              Style="{StaticResource textBox_textBoxTransparente}"
                              HorizontalContentAlignment="Left"
-                             Width="235"
+                             Width="225"
                              Height="25"
-                             Margin="63,0,0,0"/>
-                    <iconPacks:PackIconMaterial Kind="Account" 
-                                                VerticalAlignment="Center" 
-                                                HorizontalAlignment="Center" 
-                                                Foreground="White"/>
-                </StackPanel>
-                <Border Width="250"
-                        Height="2"
-                        Background="White"
-                        Opacity="0.5"/>
+                             Margin="99,200,0,0"/>
+            <iconPacks:PackIconMaterial Kind="Account" Margin="64,200,0,0" Height="25" Width="20"/>
+            <Border
+                    Background="White"
+                    Opacity="0.5" Margin="64,5,56,218" Grid.Row="1"/>
 
 
-
-                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
-                    <PasswordBox x:Name="pb_password"
-                             HorizontalAlignment="Center"
+            <PasswordBox x:Name="pb_password"
                              Style="{StaticResource passwordBox_passwordBoxTransparente}"
                              HorizontalContentAlignment="Left"
-                             Width="235"
-                             Height="25"
-                             Margin="63,0,0,0"/>
-                    <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
-                                                VerticalAlignment="Center" 
-                                                HorizontalAlignment="Center" 
-                                                Foreground="White"/>
-                </StackPanel>
-                <Border Width="250"
+                             Height="25" Margin="99,62,56,138" Grid.Row="1"/>
+            <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
+                                                Foreground="White" Margin="64,62,0,0" Grid.Row="1" Height="24" Width="20"/>
+            <Border
                         Height="2"
                         Background="White"
-                        Opacity="0.5"/>
-
-                <StackPanel Orientation="Horizontal" Margin="60,50,0,0" Width="173">
-                    <Button x:Name="button_IniciarSesion"
-                            Style="{StaticResource button_funcionConTexto}"
-                            Width="120" Height="40" 
-                            Content="Iniciar Sesión" 
-                            FontFamily="Segoe UI" 
-                            FontWeight="Bold"
-                            Click="button_IniciarSesion_Click"/>
-                </StackPanel>
-
-            </StackPanel>
+                        Opacity="0.5" Margin="64,92,56,131" Grid.Row="1"/>
 
 
             <Label Content="Nombre de Usuario" 
                    HorizontalAlignment="Left" 
-                   Margin="227,22,0,0" 
+                   Margin="60,5,0,0" 
                    Grid.Row="1" 
                    VerticalAlignment="Top"
                    Style="{StaticResource label_textoPequeño}"/>
@@ -99,7 +70,7 @@
 
             <Label Content="Contraseña" 
                 HorizontalAlignment="Left" 
-                Margin="262,98,0,0" 
+                Margin="60,91,0,0" 
                 Grid.Row="1" 
                 VerticalAlignment="Top"
                 Style="{StaticResource ResourceKey=label_textoPequeño}"/>
@@ -118,8 +89,13 @@
             <Image Source="/recursos/LogoSGRV.png"
                    HorizontalAlignment="Center" 
                    Height="108" 
-                   Margin="0,22,0,0" 
+                   Margin="0,16,0,0" 
                    VerticalAlignment="Top" Width="158"/>
+
+            <Button x:Name="button_IniciarSesion"
+                            Style="{StaticResource button_botonMediano}"
+                            Content="Iniciar Sesión"
+                            Click="button_IniciarSesion_Click" Margin="130,144,130,41" Grid.Row="1"/>
 
         </Grid>
     </Grid>

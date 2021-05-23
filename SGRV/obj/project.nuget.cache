@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CVUYEs5MfquUmDmUD71cVqGiaBqj3S20PliQORpjRP7t4vJJUN0DPy6aHQ6AtSNjYcbVuoj0zCOqIgDULncnpQ==",
+  "dgSpecHash": "B0gXa2ETka7ZvCmosEjNTB2s+dNu3jFGKEb/Fp8ZZ4qHCmwgfjEo07YWvazInd3YAy7iIpIV8tQHFVcwecjYHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\angel\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
+  "projectFilePath": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\.git\\SGRV\\SGRV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\angel\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.8.0\\mahapps.metro.iconpacks.material.4.8.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",

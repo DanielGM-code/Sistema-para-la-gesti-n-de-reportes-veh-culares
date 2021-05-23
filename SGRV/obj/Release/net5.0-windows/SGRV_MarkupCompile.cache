@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\angel\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV\obj\Release\net5.0-windows\
+C:\Users\angel\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\.git\SGRV\obj\Release\net5.0-windows\
 SGRV
 none
 false
 TRACE;RELEASE;NET;NET5_0;NETCOREAPP
-C:\Users\angel\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV\App.xaml
+C:\Users\angel\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\.git\SGRV\App.xaml
 12-318951100
 
-41-140527358
+402054616403
 1962106492870
 Chat.xaml;GUIDelegacionesMunicipales\HistorialReportes.xaml;GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml;GUIDelegacionesMunicipales\RegistrarConductor.xaml;GUIDelegacionesMunicipales\RegistrarReporte.xaml;GUIDelegacionesMunicipales\RegistrarVehiculo.xaml;GUIDireccionGeneral\MenuDireccionGeneral.xaml;GUIDireccionGeneral\RegistrarDelegacionMunicipal.xaml;GUIDireccionGeneral\RegistrarUsuario.xaml;GUIDireccionGeneral\VizualizarReporte.xaml;Login.xaml;recursos\HojaDeEstilos.xaml;
 
