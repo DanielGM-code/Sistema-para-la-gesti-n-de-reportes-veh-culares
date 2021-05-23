@@ -8,10 +8,9 @@
         Title="RegistrarConductor" Height="768" Width="1366">
     <Grid>
         <Label Content="Registro de conductor" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox HorizontalAlignment="Left" Margin="240,221,0,0" Text="Nombre completo" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="40"/>
-        <TextBox HorizontalAlignment="Left" Margin="809,221,0,0" Text="Fecha de nacimiento" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="57"/>
-        <TextBox HorizontalAlignment="Left" Margin="240,389,0,0" Text="Número de licencia de conducir" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="57"/>
-        <TextBox HorizontalAlignment="Left" Margin="809,389,0,0" Text="Teléfono celular" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="56"/>
+        <TextBox x:Name="tb_nombre" HorizontalAlignment="Left" Margin="240,221,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="40"/>
+        <TextBox x:Name="tb_licencia" HorizontalAlignment="Left" Margin="240,389,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="57"/>
+        <TextBox x:Name="tb_telefono" HorizontalAlignment="Left" Margin="809,389,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="56"/>
         <Button x:Name="button_Registrar" Content="Registrar conductor" HorizontalAlignment="Left" Margin="531,585,0,0" VerticalAlignment="Top" Height="55" Width="262" Click="button_Registrar_Click"/>
         <Button x:Name="button_CerrarSesion" Content="Cerrar sesion" HorizontalAlignment="Left" Margin="1275,20,0,0" VerticalAlignment="Top" Height="60" Width="60" Click="button_CerrarSesion_Click"/>
         <Button x:Name="button_Chat" Content="Chat" HorizontalAlignment="Left" VerticalAlignment="Top" Height="110" Width="110" Click="button_Chat_Click"/>
@@ -25,5 +24,10 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Label Content="Nombre Completo:" HorizontalAlignment="Left" Margin="240,173,0,0" VerticalAlignment="Top" Width="213" FontSize="20"/>
+        <Label Content="Fecha de Nacimiento:" HorizontalAlignment="Left" Margin="809,173,0,0" VerticalAlignment="Top" Width="213" FontSize="20"/>
+        <Label Content="Numero de Licencia:" HorizontalAlignment="Left" Margin="240,350,0,0" VerticalAlignment="Top" Width="213" FontSize="20"/>
+        <Label Content="Telefono celular:" HorizontalAlignment="Left" Margin="809,350,0,0" VerticalAlignment="Top" Width="213" FontSize="20"/>
+        <DatePicker x:Name="dp_fehcaNacimiento" HorizontalAlignment="Left" Margin="809,221,0,0" VerticalAlignment="Top" Height="30" Width="286"/>
     </Grid>
 </Window>

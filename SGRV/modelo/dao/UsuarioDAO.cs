@@ -22,7 +22,8 @@ namespace SGRV.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = "SELECT * FROM Usuario";
+                    String query = "SELECT U.idUsuario, U.username, U.contraseña, U.cargo, U.idDelegacion, U.estado, D.nombre " +
+                                   "FROM Usuario U INNER JOIN Delegacion D ON U.idDelegacion = D.idDelegacion WHERE U.estado = 'Activo'";
                     command = new SqlCommand(query, connection);
                     dataReader = command.ExecuteReader();
                     while (dataReader.Read())
@@ -34,6 +35,7 @@ namespace SGRV.modelo.dao
                         usuario.Cargo = (!dataReader.IsDBNull(3)) ? dataReader.GetString(3) : "";
                         usuario.IdDelegacion = (!dataReader.IsDBNull(4)) ? dataReader.GetInt32(4) : 0;
                         usuario.Estado = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
+                        usuario.Delegacion = (!dataReader.IsDBNull(6)) ? dataReader.GetString(6) : "";
                         usuarios.Add(usuario);
                     }
                     dataReader.Close();
@@ -63,7 +65,9 @@ namespace SGRV.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = String.Format("SELECT * FROM Usuario WHERE idUsuario = {0}", idUsuario);
+                    String query = String.Format("SELECT U.idUsuario, U.username, U.contraseña, U.cargo, U.idDelegacion, U.estado, D.nombre " +
+                                                 "FROM Usuario U INNER JOIN Delegacion D ON U.idDelegacion = D.idDelegacion " +
+                                                 "WHERE idUsuario = {0}", idUsuario);
                     command = new SqlCommand(query, connection);
                     dataReader = command.ExecuteReader();
                     while (dataReader.Read())
@@ -74,6 +78,7 @@ namespace SGRV.modelo.dao
                         usuario.Cargo = (!dataReader.IsDBNull(3)) ? dataReader.GetString(3) : "";
                         usuario.IdDelegacion = (!dataReader.IsDBNull(4)) ? dataReader.GetInt32(4) : 0;
                         usuario.Estado = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
+                        usuario.Delegacion = (!dataReader.IsDBNull(6)) ? dataReader.GetString(6) : "";
                     }
                     dataReader.Close();
                     command.Dispose();
@@ -102,7 +107,9 @@ namespace SGRV.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = String.Format("SELECT * FROM Usuario WHERE username = '{0}' AND estado = 'Activo'", username);
+                    String query = String.Format("SELECT U.idUsuario, U.username, U.contraseña, U.cargo, U.idDelegacion, U.estado, D.nombre " +
+                                                 "FROM Usuario U INNER JOIN Delegacion D ON U.idDelegacion = D.idDelegacion " +  
+                                                 "WHERE username = '{0}' AND U.estado = 'Activo'", username);
                     command = new SqlCommand(query, connection);
                     dataReader = command.ExecuteReader();
                     while (dataReader.Read())
@@ -113,6 +120,7 @@ namespace SGRV.modelo.dao
                         usuario.Cargo = (!dataReader.IsDBNull(3)) ? dataReader.GetString(3) : "";
                         usuario.IdDelegacion = (!dataReader.IsDBNull(4)) ? dataReader.GetInt32(4) : 0;
                         usuario.Estado = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
+                        usuario.Delegacion = (!dataReader.IsDBNull(6)) ? dataReader.GetString(6) : "";
                     }
                     dataReader.Close();
                     command.Dispose();

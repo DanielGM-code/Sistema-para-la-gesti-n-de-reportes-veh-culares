@@ -110,9 +110,10 @@ namespace SGRV.modelo.dao
                     String nombreAseguradora = vehiculo.NombreAseguradora;
                     String polizaSeguro = vehiculo.PolizaSeguro;
                     String placas = vehiculo.Placas;
+                    int idConductor = vehiculo.IdConductor;
                     String estado = vehiculo.Estado;
-                    String query = String.Format("INSERT INTO Conductor (marca, modelo, ano, color, nombreAseguradora, polizaSeguro, placas, estado) " +
-                        "VALUES ('{0}', '{1}, {2}, {3}, {4}, {5}, {6}, {7})", marca, modelo, color, nombreAseguradora, polizaSeguro, placas, estado);
+                    String query = String.Format("INSERT INTO Vehiculo (marca, modelo, año, color, nombreAseguradora, polizaSeguro, placas, idConductor, estado) " +
+                        "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', {7}, '{8}')", marca, modelo, ano, color, nombreAseguradora, polizaSeguro, placas, idConductor, estado);
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
                     command.Dispose();
