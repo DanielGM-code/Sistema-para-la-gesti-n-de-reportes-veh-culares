@@ -14,6 +14,7 @@ namespace SGRV.modelo.poco
         String cargo;
         int idDelegacion;
         String estado;
+        String delegacion;
 
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
         public string Username { get => username; set => username = value; }
@@ -21,5 +22,6 @@ namespace SGRV.modelo.poco
         public string Cargo { get => cargo; set => cargo = value; }
         public int IdDelegacion { get => idDelegacion; set => idDelegacion = value; }
         public string Estado { get => estado; set => estado = value; }
+        public string Delegacion { get => delegacion; set => delegacion = value; }
     }
 }

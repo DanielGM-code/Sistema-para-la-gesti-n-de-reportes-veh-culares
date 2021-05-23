@@ -93,7 +93,7 @@ namespace SGRV.GUIDireccionGeneral {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SGRV_wdvtnbow_wpftmp;component/guidirecciongeneral/menudirecciongeneral.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SGRV;component/guidirecciongeneral/menudirecciongeneral.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDireccionGeneral\MenuDireccionGeneral.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

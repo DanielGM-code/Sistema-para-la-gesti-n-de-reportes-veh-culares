@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SGRV.modelo.dao;
+using SGRV.modelo.poco;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,7 +48,38 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_Registrar_Click(object sender, RoutedEventArgs e)
         {
+            if (validarCampos())
+            {
+                Conductor conductor = new Conductor();
+                conductor.Nombre = tb_nombre.Text;
+                conductor.FechaNacimiento = (DateTime) dp_fehcaNacimiento.SelectedDate;
+                conductor.NumeroLicencia = tb_licencia.Text;
+                conductor.Telefono = tb_telefono.Text;
+                conductor.Estado = "Activo";
+                ConductorDAO.addConductor(conductor);
+                MessageBox.Show("Conductor registrado de manera exitosa.");
+                vaciarCampos();
+            }
+            else
+            {
+                MessageBox.Show("Asegúrese de llenar todos los campos.");
+            }
+        }
 
+        private bool validarCampos()
+        {
+            return (tb_nombre.Text == "" ||
+                    tb_licencia.Text == "" ||
+                    tb_telefono.Text == "" ||
+                    dp_fehcaNacimiento.SelectedDate == null) ? false : true;
+        }
+
+        private void vaciarCampos()
+        {
+            tb_nombre.Text = "";
+            tb_licencia.Text = "";
+            tb_telefono.Text = "";
+            dp_fehcaNacimiento.SelectedDate = null;
         }
     }
 }
