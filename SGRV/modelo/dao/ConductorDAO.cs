@@ -103,7 +103,7 @@ namespace SGRV.modelo.dao
                     String telefono = conductor.Telefono;
                     String estado = conductor.Estado;
                     String query = String.Format("INSERT INTO Conductor (nombre, fechaNacimiento, numeroLicencia, telefono, estado) " +
-                        "VALUES ('{0}', '{1}, {2}, {3}, {4})", nombre, fechaNacimiento, numeroLicencia, telefono, estado);
+                        "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", nombre, fechaNacimiento.ToString("yyyy-MM-dd"), numeroLicencia, telefono, estado);
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
                     command.Dispose();

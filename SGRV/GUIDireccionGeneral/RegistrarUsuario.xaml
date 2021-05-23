@@ -9,18 +9,24 @@
     <Grid>
         <Label Content="Registro y Modificación de Usuarios" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="40"/>
         <Label Content="Nombre completo:" HorizontalAlignment="Left" Margin="583,163,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="583,200,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" Height="44"/>
-        <Label Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="583,308,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="583,346,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" Height="44"/>
-        <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="583,470,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="583,512,0,0" VerticalAlignment="Top" Width="359" Height="44"/>
-        <ComboBox HorizontalAlignment="Left" Margin="980,202,0,0" VerticalAlignment="Top" Width="359" Height="44"/>
+        <TextBox x:Name="tb_Nombre" HorizontalAlignment="Left" Margin="583,200,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" Height="44"/>
+        <Label Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="583,276,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="tb_username" HorizontalAlignment="Left" Margin="583,314,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" Height="44"/>
+        <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="583,395,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <PasswordBox x:Name="pb_password" HorizontalAlignment="Left" Margin="583,437,0,0" VerticalAlignment="Top" Width="359" Height="44"/>
+        <ComboBox x:Name="cb_cargo" HorizontalAlignment="Left" Margin="980,202,0,0" VerticalAlignment="Top" Width="359" Height="44"/>
         <Label Content="Cargo:" HorizontalAlignment="Left" Margin="980,157,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <ComboBox HorizontalAlignment="Left" Margin="980,346,0,0" VerticalAlignment="Top" Width="359" Height="44"/>
-        <Label Content="Delegación:" HorizontalAlignment="Left" Margin="980,300,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ComboBox x:Name="cb_delegacion" HorizontalAlignment="Left" Margin="980,314,0,0" VerticalAlignment="Top" Width="359" Height="44"/>
+        <Label Content="Delegación:" HorizontalAlignment="Left" Margin="980,268,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Button x:Name="button_Registrar" Content="Registrar" HorizontalAlignment="Left" Margin="842,630,0,0" VerticalAlignment="Top" Height="60" Width="200" Click="button_Registrar_Click"/>
-        <ListBox Margin="69,256,865,196"/>
-        <Button x:Name="button_Modificar" Content="Modificar" HorizontalAlignment="Left" Margin="69,630,0,0" VerticalAlignment="Top" Height="60" Width="200" Click="button_Modificar_Click"/>
+        <DataGrid x:Name="dg_usuarios" Margin="69,256,865,196">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Username" Binding="{Binding Username}"/>
+                <DataGridTextColumn Header="Cargo" Binding="{Binding Cargo}"/>
+                <DataGridTextColumn Header="Delegacion" Binding="{Binding Delegacion}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button_Modificar" Content="Modificar" HorizontalAlignment="Left" Margin="69,630,0,0" VerticalAlignment="Top" Height="60" Width="200" Click="button_Modificar_Click" />
         <Button x:Name="button_Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="301,630,0,0" VerticalAlignment="Top" Height="60" Width="200" Click="button_Eliminar_Click"/>
         <Label Content="Búscar usuario:" HorizontalAlignment="Left" Margin="69,157,0,0" VerticalAlignment="Top" FontSize="20"/>
         <TextBox HorizontalAlignment="Left" Margin="69,194,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" Height="44"/>
@@ -36,5 +42,9 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <PasswordBox x:Name="pb_confirmarPassword" HorizontalAlignment="Left" Margin="980,437,0,0" VerticalAlignment="Top"  Width="359" Height="44"/>
+        <Label Content="Confirmar contraseña:" HorizontalAlignment="Left" Margin="980,395,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Correo:" HorizontalAlignment="Left" Margin="583,507,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="tb_correo" HorizontalAlignment="Left" Margin="583,549,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" Height="44"/>
     </Grid>
 </Window>

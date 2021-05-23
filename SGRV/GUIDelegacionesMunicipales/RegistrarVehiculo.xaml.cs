@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SGRV.modelo.dao;
+using SGRV.modelo.poco;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,14 @@ namespace SGRV.GUIDelegacionesMunicipales
     /// </summary>
     public partial class RegistrarVehiculo : Window
     {
+        List<Conductor> conductors;
+        Conductor conductorSeleccionado;
+
         public RegistrarVehiculo()
         {
             InitializeComponent();
+            conductors = new List<Conductor>();
+            llenarTabla();
         }
 
 
@@ -45,14 +52,66 @@ namespace SGRV.GUIDelegacionesMunicipales
             this.Close();
         }
 
-        private void button_Aceptar_Click(object sender, RoutedEventArgs e)
+        private void button_Registrar_Click(object sender, RoutedEventArgs e)
         {
-
+            if (validarCampos())
+            {
+                Vehiculo vehiculo = new Vehiculo();
+                vehiculo.Marca = tb_marca.Text;
+                vehiculo.Modelo = tb_modelo.Text;
+                vehiculo.Ano = tb_año.Text;
+                vehiculo.Color = tb_color.Text;
+                vehiculo.NombreAseguradora = tb_nombreAseguradora.Text;
+                vehiculo.PolizaSeguro = tb_numeroPolizaSeguro.Text;
+                vehiculo.Placas = tb_numeroPlacas.Text;
+                vehiculo.IdConductor = conductorSeleccionado.IdConductor;
+                vehiculo.Estado = "Activo";
+                VehiculoDAO.addVehiculo(vehiculo);
+                MessageBox.Show("Vehículo registrado con éxito.");
+                limpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("Asegúrese de llenar todos los campos.");
+            }
         }
 
-        private void button_NuevoVehiculo_Click(object sender, RoutedEventArgs e)
+        private void llenarTabla()
         {
+            conductors = ConductorDAO.getAllConductores();
+            dg_conductores.AutoGenerateColumns = false;
+            dg_conductores.ItemsSource = conductors;
+        }
 
+        private bool validarCampos()
+        {
+            return (tb_marca.Text == "" ||
+                    tb_modelo.Text == "" ||
+                    tb_nombreAseguradora.Text == "" ||
+                    tb_numeroPlacas.Text == "" ||
+                    tb_año.Text == "" ||
+                    tb_color.Text == "" ||
+                    tb_numeroPolizaSeguro.Text == "" ||
+                    tb_nombreConductor.Text == "") ? false : true;
+        }
+
+
+        private void clic_conductor_item(object sender, SelectionChangedEventArgs e)
+        {
+            conductorSeleccionado = (Conductor)dg_conductores.SelectedItem;
+            tb_nombreConductor.Text = conductorSeleccionado.Nombre;
+        }
+
+        private void limpiarCampos()
+        {
+            tb_marca.Text = "";
+            tb_modelo.Text = "";
+            tb_nombreAseguradora.Text = "";
+            tb_numeroPlacas.Text = "";
+            tb_año.Text = "";
+            tb_color.Text = "";
+            tb_numeroPolizaSeguro.Text = "";
+            tb_nombreConductor.Text = "";
         }
     }
 }

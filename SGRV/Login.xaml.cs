@@ -32,6 +32,7 @@ namespace SGRV
 
         private void button_IniciarSesion_Click(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine("Hola Mundo");
             if (validadCampos())
             {
                 String username = tb_username.Text;
@@ -50,7 +51,7 @@ namespace SGRV
                                 menuDireccionGeneral.Show();
                                 this.Close();
                                 break;
-                            case "AgenteDeTransito":
+                            case "Agente De Transito":
                             case "Perito":
                                 MenuDelegacionMunicipal menuDelegacionMunicipal = new MenuDelegacionMunicipal();
                                 menuDelegacionMunicipal.Show();

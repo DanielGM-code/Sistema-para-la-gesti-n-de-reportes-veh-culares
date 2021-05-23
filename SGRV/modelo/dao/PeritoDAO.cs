@@ -99,7 +99,7 @@ namespace SGRV.modelo.dao
                     String nombre = perito.Nombre;
                     String correo = perito.Correo;
                     String estado = perito.Estado;
-                    String query = String.Format("INSERT INTO PERITO (nombre, correo, estado) VALUES ('{0}', '{1}', '{2}')",
+                    String query = String.Format("INSERT INTO Perito (nombre, correo, estado) VALUES ('{0}', '{1}', '{2}')",
                                                  nombre, correo, estado);
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
