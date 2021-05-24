@@ -301,3 +301,6 @@ C:\Users\angel\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\.git
 C:\Users\angel\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\.git\SGRV\obj\Debug\net5.0-windows\SGRV.csproj.CoreCompileInputs.cache
 C:\Users\angel\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\.git\SGRV\obj\Debug\net5.0-windows\SGRV.csproj.CopyComplete
 C:\Users\angel\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\.git\SGRV\obj\Debug\net5.0-windows\SGRV.genruntimeconfig.cache
+C:\Users\angel\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV\bin\Debug\net5.0-windows\WinSCP.exe
+C:\Users\angel\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV\bin\Debug\net5.0-windows\WinSCPnet.dll
+C:\Users\angel\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV\obj\Debug\net5.0-windows\SGRV_Content.g.cs

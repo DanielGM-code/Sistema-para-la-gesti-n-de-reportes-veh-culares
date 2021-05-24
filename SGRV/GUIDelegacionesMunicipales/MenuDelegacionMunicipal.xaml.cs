@@ -65,7 +65,7 @@ namespace SGRV.GUIDelegacionesMunicipales
             this.Close();
         }
 
-        private void Login_OnMouseDown(object sender, MouseButtonEventArgs e)
+        private void OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {

@@ -3,13 +3,253 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SGRV.GUIDelegacionesMunicipales"
+        xmlns:local="clr-namespace:SGRV.GUIDelegacionesMunicipales" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="RegistrarVehiculo" Height="768" Width="1366">
+        Title="RegistrarVehiculo"
+        Height="730" Width="1300"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="OnMouseDown"
+        WindowStartupLocation="CenterScreen">
+
     <Grid>
-        <Label Content="Registrar Vehiculo" HorizontalAlignment="Left" Margin="575,23,0,0" VerticalAlignment="Top" FontSize="40"/>
-        <TextBox x:Name="tb_nombreConductor" HorizontalAlignment="Left" Margin="207,196,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Nombre del conductor:" HorizontalAlignment="Left" Margin="208,165,0,0" VerticalAlignment="Top"/>
+        <Border CornerRadius="25" Grid.RowSpan="2" RenderTransformOrigin="0.513,0.427">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#202639" Offset="0.0"/>
+                    <GradientStop Color="#3f4977" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Label Content="Registrar Vehiculo" 
+               HorizontalAlignment="Left" 
+               Margin="486,18,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoGrande}"/>
+
+        <Label Content="Nombre del conductor"
+               HorizontalAlignment="Left"
+               Margin="72,214,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Marca" 
+               HorizontalAlignment="Left"
+               Margin="482,214,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Modelo"
+               HorizontalAlignment="Left" 
+               Margin="482,332,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Año" 
+               HorizontalAlignment="Left"
+               Margin="878,214,0,0"
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Color" 
+               HorizontalAlignment="Left"
+               Margin="882,332,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Nombre de la aseguradora" 
+               HorizontalAlignment="Left"
+               Margin="482,458,0,0"
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Número de la poliza de seguro" 
+               HorizontalAlignment="Left"
+               Margin="876,458,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Número de placas del vehículo"
+               HorizontalAlignment="Left" 
+               Margin="482,575,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <TextBox x:Name="tb_nombreConductor" 
+                 HorizontalAlignment="Left"
+                 Margin="101,184,0,0"
+                 VerticalAlignment="Top" 
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_marca" 
+                 HorizontalAlignment="Left"
+                 Margin="511,184,0,0" 
+                 VerticalAlignment="Top" 
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_modelo"
+                 HorizontalAlignment="Center" Margin="0,303,0,0"
+                 VerticalAlignment="Top"
+                 Width="276"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_año" 
+                 HorizontalAlignment="Left" 
+                 Margin="906,184,0,0" 
+                 VerticalAlignment="Top"
+                 Width="276"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_color" 
+                 HorizontalAlignment="Left" 
+                 Margin="906,303,0,0" 
+                 VerticalAlignment="Top"
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_nombreAseguradora"
+                 HorizontalAlignment="Left"
+                 Margin="511,429,0,0" 
+                 VerticalAlignment="Top" 
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_numeroPolizaSeguro" 
+                 HorizontalAlignment="Left"
+                 Margin="906,429,0,0"
+                 VerticalAlignment="Top"
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_numeroPlacas" 
+                 HorizontalAlignment="Left" 
+                 Margin="511,546,0,0"
+                 VerticalAlignment="Top" 
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <iconPacks:PackIconMaterial Kind="Email" 
+                                    Margin="91,35,0,0" 
+                                    Height="30" Width="40">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="ArrowLeft" 
+                                    Margin="34,35,0,0" 
+                                    Height="30" Width="40">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="Logout" 
+                                    Margin="1146,35,0,0" 
+                                    Height="30" Width="30">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="WindowMinimize" 
+                                    Margin="1193,35,0,0" 
+                                    Height="30" Width="30">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="Close" 
+                                    Margin="1240,35,0,0" 
+                                    Height="30" Width="30">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="Account" 
+                                        Margin="76,185,0,0" Height="25" Width="20"/>
+
+        <iconPacks:PackIconMaterial Kind="RegisteredTrademark" 
+                                        Margin="486,184,0,0" Height="25" Width="20"/>
+
+        <iconPacks:PackIconMaterial Kind="Calendar" 
+                                        Margin="881,184,0,0" Height="25" Width="20"/>
+
+        <iconPacks:PackIconMaterial Kind="Car" 
+                                        Margin="486,304,0,0" Height="25" Width="20"/>
+
+        <iconPacks:PackIconMaterial Kind="FormatColorFill" 
+                                        Margin="882,303,0,0" Height="24" Width="20"/>
+
+        <iconPacks:PackIconMaterial Kind="Numeric" 
+                                        Margin="881,432,0,0" Height="24" Width="20"/>
+
+        <iconPacks:PackIconMaterial Kind="CarCog" 
+                                        Margin="486,429,0,0" Height="24" Width="20"/>
+
+        <iconPacks:PackIconMaterial Kind="CarBack" 
+                                        Margin="486,546,0,0" Height="24" Width="20"/>
+
+
+        <Button x:Name="button_Registrar"
+                Content="Registrar vehículo" 
+                HorizontalAlignment="Left"
+                Margin="782,634,0,0" 
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonMediano}"
+                Click="button_Registrar_Click"/>
+
+        <Button Content="Agregar Conductor"
+                HorizontalAlignment="Left" 
+                Margin="188,634,0,0"
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonMediano}" RenderTransformOrigin="0.5,0.912"/>
+
+        <Button x:Name="button_Chat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Height="44" Width="52"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Chat_Click" Margin="85,28,0,0"/>
+
+        <Button x:Name="button_Regresar"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Height="44" Width="52"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Regresar_Click" Margin="28,28,0,0"/>
+
+        <Button x:Name="button_CerrarSesion"
+                HorizontalAlignment="Left" 
+                Margin="1140,28,0,0"
+                Height="44" Width="42"
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_CerrarSesion_Click"/>
+
+        <Button x:Name="button_MinimizarVentana"
+                HorizontalAlignment="Left" 
+                Margin="1187,28,0,0"
+                Height="44" Width="42"
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_MinimizarVentana_Click"/>
+
+        <Button x:Name="button_CerrarVentana"
+                HorizontalAlignment="Left" 
+                Margin="1234,28,0,0"
+                Height="44" Width="42"
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_CerrarVentana_Click"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="486,578,514,150"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="882,461,118,267"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="488,461,512,267"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="882,335,118,393"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="882,217,118,511"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="486,335,514,393"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="486,217,514,511"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="76,217,924,511"/>
+
+
         <DataGrid x:Name="dg_conductores" Margin="89,254,905,135" SelectionChanged="clic_conductor_item">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
@@ -18,34 +258,6 @@
                 <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox x:Name="tb_marca" HorizontalAlignment="Left" Margin="601,195,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Marca:" HorizontalAlignment="Left" Margin="601,164,0,0" VerticalAlignment="Top"/>
-        <Label Content="Modelo:" HorizontalAlignment="Left" Margin="601,273,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_modelo" HorizontalAlignment="Left" Margin="601,303,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Año:" HorizontalAlignment="Left" Margin="982,164,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_año" HorizontalAlignment="Left" Margin="982,195,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Color:" HorizontalAlignment="Left" Margin="982,273,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_color" HorizontalAlignment="Left" Margin="982,303,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Nombre de la aseguradora:" HorizontalAlignment="Left" Margin="601,403,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_nombreAseguradora" HorizontalAlignment="Left" Margin="601,434,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Número de la poliza de seguro" HorizontalAlignment="Left" Margin="982,403,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_numeroPolizaSeguro" HorizontalAlignment="Left" Margin="982,434,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Número de placas del vehículo:" HorizontalAlignment="Left" Margin="601,528,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_numeroPlacas" HorizontalAlignment="Left" Margin="601,559,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button_Registrar" Content="Registrar" HorizontalAlignment="Left" Margin="851,654,0,0" VerticalAlignment="Top" Click="button_Registrar_Click"/>
-        <Button x:Name="button_CerrarSesion" Content="Cerrar sesion" HorizontalAlignment="Left" Margin="1275,20,0,0" VerticalAlignment="Top" Height="60" Width="60" Click="button_CerrarSesion_Click"/>
-        <Button x:Name="button_Chat" Content="Chat" HorizontalAlignment="Left" VerticalAlignment="Top" Height="110" Width="110" Click="button_Chat_Click"/>
-        <Button x:Name="button_Regresar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="154" Width="78" Margin="-12,-49,0,0" RenderTransformOrigin="0.5,0.5" Click="button_Regresar_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="45.018"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button Content="Agregar Conductor" HorizontalAlignment="Left" Margin="207,636,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

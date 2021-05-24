@@ -176,6 +176,18 @@
             "rid": "win"
           }
         }
+      },
+      "WinSCP/5.17.10": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/WinSCPnet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/WinSCPnet.dll": {}
+        },
+        "build": {
+          "build/WinSCP.targets": {}
+        }
       }
     }
   },
@@ -584,12 +596,30 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "WinSCP/5.17.10": {
+      "sha512": "8dEFNSj8uW/3uStziNmcZSYgOakW5oL0euwR+0BuvJ9zMBYN9yRlRW6yzlYSpmrhysp32StXe/Pi4PxzznOvVA==",
+      "type": "package",
+      "path": "winscp/5.17.10",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/WinSCP.targets",
+        "lib/net40/WinSCPnet.dll",
+        "lib/netstandard2.0/WinSCPnet.dll",
+        "tools/WinSCP.exe",
+        "winscp.5.17.10.nupkg.sha512",
+        "winscp.nuspec",
+        "winscp64.png"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
       "MahApps.Metro.IconPacks.Material >= 4.8.0",
-      "System.Data.SqlClient >= 4.5.1"
+      "System.Data.SqlClient >= 4.5.1",
+      "WinSCP >= 5.17.10"
     ]
   },
   "packageFolders": {
@@ -598,11 +628,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\.git\\SGRV\\SGRV.csproj",
+      "projectUniqueName": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
       "projectName": "SGRV",
-      "projectPath": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\.git\\SGRV\\SGRV.csproj",
+      "projectPath": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
       "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\.git\\SGRV\\obj\\",
+      "outputPath": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -638,6 +668,10 @@
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.5.1, )"
+          },
+          "WinSCP": {
+            "target": "Package",
+            "version": "[5.17.10, )"
           }
         },
         "imports": [
