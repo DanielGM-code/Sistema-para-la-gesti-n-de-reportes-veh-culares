@@ -5,46 +5,170 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SGRV.GUIDireccionGeneral"
         mc:Ignorable="d"
-        Title="RegistrarUsuario" Height="768" Width="1366">
+        Title="RegistrarUsuario"
+        Height="730" Width="1300"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="OnMouseDown"
+        WindowStartupLocation="CenterScreen">
+
     <Grid>
-        <Label Content="Registro y Modificación de Usuarios" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="40"/>
-        <Label Content="Nombre completo:" HorizontalAlignment="Left" Margin="583,163,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="tb_Nombre" HorizontalAlignment="Left" Margin="583,200,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" Height="44"/>
-        <Label Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="583,276,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="tb_username" HorizontalAlignment="Left" Margin="583,314,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" Height="44"/>
-        <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="583,395,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <PasswordBox x:Name="pb_password" HorizontalAlignment="Left" Margin="583,437,0,0" VerticalAlignment="Top" Width="359" Height="44"/>
-        <ComboBox x:Name="cb_cargo" HorizontalAlignment="Left" Margin="980,202,0,0" VerticalAlignment="Top" Width="359" Height="44"/>
-        <Label Content="Cargo:" HorizontalAlignment="Left" Margin="980,157,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <ComboBox x:Name="cb_delegacion" HorizontalAlignment="Left" Margin="980,314,0,0" VerticalAlignment="Top" Width="359" Height="44"/>
-        <Label Content="Delegación:" HorizontalAlignment="Left" Margin="980,268,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Button x:Name="button_Registrar" Content="Registrar" HorizontalAlignment="Left" Margin="842,630,0,0" VerticalAlignment="Top" Height="60" Width="200" Click="button_Registrar_Click"/>
-        <DataGrid x:Name="dg_usuarios" Margin="69,256,865,196">
+        <Border CornerRadius="25" Grid.RowSpan="2" RenderTransformOrigin="0.513,0.427" Opacity="0.9">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#202639" Offset="0.0"/>
+                    <GradientStop Color="#3f4977" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Label Content="Registro y Modificación de Usuarios"
+               HorizontalAlignment="Center" 
+               Margin="0,10,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoGrande}"/>
+
+        <Label Content="Nombre completo"
+               HorizontalAlignment="Left" 
+               Margin="554,191,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Nombre de usuario"
+               HorizontalAlignment="Left" 
+               Margin="554,309,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Contraseña" 
+               HorizontalAlignment="Left" 
+               Margin="554,426,0,0"
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Cargo" 
+               HorizontalAlignment="Left"
+               Margin="907,191,0,0"
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}" RenderTransformOrigin="0.23,0.578"/>
+
+        <Label Content="Delegación" 
+               HorizontalAlignment="Left"
+               Margin="902,310,0,0"
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Búscar usuario" 
+               HorizontalAlignment="Left" 
+               Margin="74,236,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Confirmar contraseña"
+               HorizontalAlignment="Left" 
+               Margin="554,551,0,0"
+               VerticalAlignment="Top" 
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Correo" 
+               HorizontalAlignment="Left"
+               Margin="902,426,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <TextBox x:Name="tb_Nombre" 
+                 HorizontalAlignment="Left"
+                 Margin="585,161,0,0"
+                 VerticalAlignment="Top" 
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_username" 
+                 HorizontalAlignment="Left"
+                 Margin="585,277,0,0"
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top"
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_usuarioBuscado"
+                 HorizontalAlignment="Left" 
+                 Margin="105,207,0,0"
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top"
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_correo"
+                 HorizontalAlignment="Left"
+                 Margin="933,394,0,0"
+                 VerticalAlignment="Top" 
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <PasswordBox x:Name="pb_password"
+                     HorizontalAlignment="Left"
+                     Margin="585,394,0,0"
+                     VerticalAlignment="Top" 
+                     Width="275"
+                     Style="{StaticResource passwordBox_passwordBoxTransparente}"/>
+
+        <PasswordBox x:Name="pb_confirmarPassword" 
+                     HorizontalAlignment="Left"
+                     Margin="585,519,0,0" 
+                     VerticalAlignment="Top"  
+                     Width="275"
+                     Style="{StaticResource passwordBox_passwordBoxTransparente}"/>
+
+        <ComboBox x:Name="cb_cargo" 
+                  HorizontalAlignment="Left"
+                  Margin="908,161,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="300" Height="27"/>
+
+        <ComboBox x:Name="cb_delegacion" 
+                  HorizontalAlignment="Left" 
+                  Margin="908,277,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="300" Height="27"/>
+
+        <Button x:Name="button_Registrar"
+                Content="Registrar" 
+                HorizontalAlignment="Left"
+                Margin="830,619,0,0"
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonMediano}"
+                Click="button_Registrar_Click"/>
+
+        <DataGrid x:Name="dg_usuarios" Margin="80,300,820,152">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Username" Binding="{Binding Username}"/>
                 <DataGridTextColumn Header="Cargo" Binding="{Binding Cargo}"/>
                 <DataGridTextColumn Header="Delegacion" Binding="{Binding Delegacion}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button_Modificar" Content="Modificar" HorizontalAlignment="Left" Margin="69,630,0,0" VerticalAlignment="Top" Height="60" Width="200" Click="button_Modificar_Click" />
-        <Button x:Name="button_Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="301,630,0,0" VerticalAlignment="Top" Height="60" Width="200" Click="button_Eliminar_Click"/>
-        <Label Content="Búscar usuario:" HorizontalAlignment="Left" Margin="69,157,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="69,194,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" Height="44"/>
-        <Button x:Name="button_CerrarSesion" Content="Cerrar sesion" HorizontalAlignment="Left" Margin="1275,20,0,0" VerticalAlignment="Top" Height="60" Width="60" Click="button_CerrarSesion_Click"/>
-        <Button x:Name="button_Chat" Content="Chat" HorizontalAlignment="Left" VerticalAlignment="Top" Height="110" Width="110" Click="button_Chat_Click"/>
-        <Button x:Name="button_Regresar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="154" Width="78" Margin="-12,-49,0,0" RenderTransformOrigin="0.5,0.5" Click="button_Regresar_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="45.018"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <PasswordBox x:Name="pb_confirmarPassword" HorizontalAlignment="Left" Margin="980,437,0,0" VerticalAlignment="Top"  Width="359" Height="44"/>
-        <Label Content="Confirmar contraseña:" HorizontalAlignment="Left" Margin="980,395,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="Correo:" HorizontalAlignment="Left" Margin="583,507,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="tb_correo" HorizontalAlignment="Left" Margin="583,549,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" Height="44"/>
+
+        <Button x:Name="button_Modificar"
+                Content="Modificar" 
+                HorizontalAlignment="Left" 
+                Margin="110,619,0,0"
+                VerticalAlignment="Top" 
+                Style="{StaticResource button_botonMediano}"
+                Click="button_Modificar_Click" />
+
+        <Button x:Name="button_Eliminar" 
+                Content="Eliminar" 
+                HorizontalAlignment="Left" 
+                Margin="341,619,0,0" 
+                VerticalAlignment="Top" 
+                Style="{StaticResource button_botonMediano}"
+                Click="button_Eliminar_Click" RenderTransformOrigin="0.908,0.175"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="80,239,920,489"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="560,193,440,535"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="560,309,440,419"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="560,426,440,302"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="908,426,92,302"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="560,551,440,177"/>
     </Grid>
 </Window>

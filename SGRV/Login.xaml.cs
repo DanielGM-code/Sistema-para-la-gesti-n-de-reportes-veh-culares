@@ -82,7 +82,7 @@ namespace SGRV
             return (tb_username.Text == "" || pb_password.Password == "") ? false : true;
         }
 
-        private void Login_OnMouseDown(object sender, MouseButtonEventArgs e)
+        private void OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {

@@ -9,7 +9,7 @@
         Height="730" Width="1300"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize"
-        MouseDown="Login_OnMouseDown"
+        MouseDown="OnMouseDown"
         WindowStartupLocation="CenterScreen">
     <Grid>
 
@@ -25,7 +25,7 @@
         <Label Content="Bienvenido al Sistema de Reportes &#10;         de Siniestros Vehiculares" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 
-               Style="{StaticResource label_tituloGrande}" Margin="0,14,0,0"/>
+               Style="{StaticResource label_textoGrande}" Margin="0,14,0,0"/>
 
         <iconPacks:PackIconMaterial Kind="Email" 
                                     Margin="91,35,0,0" 

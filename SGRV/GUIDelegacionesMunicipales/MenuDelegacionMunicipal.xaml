@@ -9,7 +9,7 @@
         Height="730" Width="1300"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize"
-        MouseDown="Login_OnMouseDown"
+        MouseDown="OnMouseDown"
         WindowStartupLocation="CenterScreen">
     <Grid>
 
@@ -26,7 +26,7 @@
                HorizontalAlignment="Center" 
                Margin="0,14,0,0"
                VerticalAlignment="Top"
-               Style="{StaticResource label_tituloGrande}"/>
+               Style="{StaticResource label_textoGrande}"/>
 
         <iconPacks:PackIconMaterial Kind="Email" 
                                     Margin="91,35,0,0" 
