@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B0gXa2ETka7ZvCmosEjNTB2s+dNu3jFGKEb/Fp8ZZ4qHCmwgfjEo07YWvazInd3YAy7iIpIV8tQHFVcwecjYHw==",
+  "dgSpecHash": "AjgGyXaHXyefelkUsOIA+7FgjR1Yfzp4gPx7vi0KxmhrZTzOYiK5uZJgE8/xxtAQolCyFNoNeziVJs/NOrvpDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\.git\\SGRV\\SGRV.csproj",
+  "projectFilePath": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\angel\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.8.0\\mahapps.metro.iconpacks.material.4.8.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
@@ -15,7 +15,8 @@
     "C:\\Users\\angel\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512",
-    "C:\\Users\\angel\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512"
+    "C:\\Users\\angel\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512",
+    "C:\\Users\\angel\\.nuget\\packages\\winscp\\5.17.10\\winscp.5.17.10.nupkg.sha512"
   ],
   "logs": []
 }

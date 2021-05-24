@@ -6,6 +6,7 @@ using SGRV.modelo.database;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace SGRV.modelo.dao
 {
@@ -31,10 +32,10 @@ namespace SGRV.modelo.dao
                         Conductor conductor = new Conductor();
                         conductor.IdConductor = (!dataReader.IsDBNull(0)) ? dataReader.GetInt32(0) : 0;
                         conductor.Nombre = (!dataReader.IsDBNull(1)) ? dataReader.GetString(1) : "";
-                        conductor.FechaNacimiento = (!dataReader.IsDBNull(1)) ? dataReader.GetDateTime(2) : new DateTime();
-                        conductor.NumeroLicencia = (!dataReader.IsDBNull(1)) ? dataReader.GetString(3) : "";
-                        conductor.Telefono = (!dataReader.IsDBNull(1)) ? dataReader.GetString(4) : "";
-                        conductor.Estado = (!dataReader.IsDBNull(1)) ? dataReader.GetString(5) : "";
+                        conductor.FechaNacimiento = (!dataReader.IsDBNull(2)) ? dataReader.GetDateTime(2) : new DateTime();
+                        conductor.NumeroLicencia = (!dataReader.IsDBNull(3)) ? dataReader.GetString(3) : "";
+                        conductor.Telefono = (!dataReader.IsDBNull(4)) ? dataReader.GetString(4) : "";
+                        conductor.Estado = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
                         conductores.Add(conductor);
                     }
                     dataReader.Close();
@@ -43,6 +44,7 @@ namespace SGRV.modelo.dao
             }
             catch (Exception e)
             {
+                MessageBox.Show(e.Message);
                 Console.WriteLine(e.Message);
                 throw;
             }
