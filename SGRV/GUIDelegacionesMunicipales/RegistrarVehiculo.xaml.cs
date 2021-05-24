@@ -113,5 +113,23 @@ namespace SGRV.GUIDelegacionesMunicipales
             tb_numeroPolizaSeguro.Text = "";
             tb_nombreConductor.Text = "";
         }
+
+        private void OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+
+        private void button_MinimizarVentana_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void button_CerrarVentana_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

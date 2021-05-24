@@ -147,5 +147,13 @@ namespace SGRV.GUIDireccionGeneral
             List<Delegacion> delegacions = DelegacionDAO.getAllDelegaciones();
             cb_delegacion.ItemsSource = delegacions;
         }
+
+        private void OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
     }
 }

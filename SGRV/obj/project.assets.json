@@ -593,19 +593,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\angel\\.nuget\\packages\\": {}
+    "C:\\Users\\dagam\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\.git\\SGRV\\SGRV.csproj",
+      "projectUniqueName": "C:\\Users\\dagam\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
       "projectName": "SGRV",
-      "projectPath": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\.git\\SGRV\\SGRV.csproj",
-      "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\angel\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\.git\\SGRV\\obj\\",
+      "projectPath": "C:\\Users\\dagam\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\SGRV.csproj",
+      "packagesPath": "C:\\Users\\dagam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dagam\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dagam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -658,7 +658,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="380"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize"
-        MouseDown="Login_OnMouseDown"
+        MouseDown="OnMouseDown"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid>
@@ -42,11 +42,12 @@
                              Width="225"
                              Height="25"
                              Margin="99,200,0,0"/>
-            <iconPacks:PackIconMaterial Kind="Account" Margin="64,200,0,0" Height="25" Width="20"/>
-            <Border
-                    Background="White"
-                    Opacity="0.5" Margin="64,5,56,218" Grid.Row="1"/>
+            <iconPacks:PackIconMaterial Kind="Account" 
+                                        Margin="64,200,0,0" Height="25" Width="20"/>
 
+            <Border Style="{StaticResource border_lineas}" Margin="64,5,56,218" Grid.Row="1"/>
+
+            <Border Style="{StaticResource border_lineas}" Margin="64,91,56,132" Grid.Row="1"/>
 
             <PasswordBox x:Name="pb_password"
                              Style="{StaticResource passwordBox_passwordBoxTransparente}"
@@ -54,11 +55,6 @@
                              Height="25" Margin="99,62,56,138" Grid.Row="1"/>
             <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
                                                 Foreground="White" Margin="64,62,0,0" Grid.Row="1" Height="24" Width="20"/>
-            <Border
-                        Height="2"
-                        Background="White"
-                        Opacity="0.5" Margin="64,92,56,131" Grid.Row="1"/>
-
 
             <Label Content="Nombre de Usuario" 
                    HorizontalAlignment="Left" 
@@ -80,22 +76,21 @@
                    HorizontalAlignment="Center" 
                    Margin="0,121,0,0" 
                    VerticalAlignment="Top"
-                   Style="{StaticResource ResourceKey=label_titulo}"/>
+                   Style="{StaticResource ResourceKey=label_textoMediano}"/>
             <Label Content="De Reportes Vehiculares" 
                    HorizontalAlignment="Center" 
                    Margin="0,147,0,0" 
                    VerticalAlignment="Top"
-                   Style="{StaticResource ResourceKey=label_titulo}"/>
-            <Image Source="/recursos/LogoSGRV.png"
-                   HorizontalAlignment="Center" 
-                   Height="108" 
-                   Margin="0,16,0,0" 
-                   VerticalAlignment="Top" Width="158"/>
+                   Style="{StaticResource ResourceKey=label_textoMediano}"/>
 
             <Button x:Name="button_IniciarSesion"
                             Style="{StaticResource button_botonMediano}"
                             Content="Iniciar Sesión"
                             Click="button_IniciarSesion_Click" Margin="130,144,130,41" Grid.Row="1"/>
+
+            <Image HorizontalAlignment="Center"
+                   Height="104" Margin="0,16,0,0" 
+                   VerticalAlignment="Top" Width="188" Source="/recursos/LogoSGRV.png"/>
 
         </Grid>
     </Grid>

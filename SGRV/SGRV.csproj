@@ -5,8 +5,15 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LogoSGRV.png" />
+  </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.8.0" />
 		<PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Resource Include="recursos\LogoSGRV.png" />
 	</ItemGroup>
 </Project>

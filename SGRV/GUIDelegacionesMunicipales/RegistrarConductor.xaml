@@ -3,31 +3,184 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SGRV.GUIDelegacionesMunicipales"
+        xmlns:local="clr-namespace:SGRV.GUIDelegacionesMunicipales" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="RegistrarConductor" Height="768" Width="1366">
+        Title="RegistrarConductor"
+        Height="730" Width="1300"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="OnMouseDown"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Registro de conductor" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox x:Name="tb_nombre" HorizontalAlignment="Left" Margin="240,221,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="40"/>
-        <TextBox x:Name="tb_licencia" HorizontalAlignment="Left" Margin="240,389,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="57"/>
-        <TextBox x:Name="tb_telefono" HorizontalAlignment="Left" Margin="809,389,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="56"/>
-        <Button x:Name="button_Registrar" Content="Registrar conductor" HorizontalAlignment="Left" Margin="531,585,0,0" VerticalAlignment="Top" Height="55" Width="262" Click="button_Registrar_Click"/>
-        <Button x:Name="button_CerrarSesion" Content="Cerrar sesion" HorizontalAlignment="Left" Margin="1275,20,0,0" VerticalAlignment="Top" Height="60" Width="60" Click="button_CerrarSesion_Click"/>
-        <Button x:Name="button_Chat" Content="Chat" HorizontalAlignment="Left" VerticalAlignment="Top" Height="110" Width="110" Click="button_Chat_Click"/>
-        <Button x:Name="button_Regresar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="154" Width="78" Margin="-12,-49,0,0" RenderTransformOrigin="0.5,0.5" Click="button_Regresar_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="45.018"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Label Content="Nombre Completo:" HorizontalAlignment="Left" Margin="240,173,0,0" VerticalAlignment="Top" Width="213" FontSize="20"/>
-        <Label Content="Fecha de Nacimiento:" HorizontalAlignment="Left" Margin="809,173,0,0" VerticalAlignment="Top" Width="213" FontSize="20"/>
-        <Label Content="Numero de Licencia:" HorizontalAlignment="Left" Margin="240,350,0,0" VerticalAlignment="Top" Width="213" FontSize="20"/>
-        <Label Content="Telefono celular:" HorizontalAlignment="Left" Margin="809,350,0,0" VerticalAlignment="Top" Width="213" FontSize="20"/>
-        <DatePicker x:Name="dp_fehcaNacimiento" HorizontalAlignment="Left" Margin="809,221,0,0" VerticalAlignment="Top" Height="30" Width="286"/>
+
+        <Border CornerRadius="25" RenderTransformOrigin="0.513,0.427">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#202639" Offset="0.0"/>
+                    <GradientStop Color="#3f4977" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Label Content="Registro de conductor" 
+               HorizontalAlignment="Center"
+               Margin="0,25,0,0" 
+               VerticalAlignment="Top" 
+               Style="{StaticResource label_textoGrande}"/>
+
+        <TextBox x:Name="tb_nombre" 
+                 HorizontalAlignment="Left" 
+                 Margin="265,247,0,0" 
+                 TextWrapping="NoWrap" 
+                 VerticalAlignment="Top" 
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_licencia"
+                 HorizontalAlignment="Left" 
+                 Margin="265,440,0,0" 
+                 TextWrapping="NoWrap" 
+                 VerticalAlignment="Top"
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <TextBox x:Name="tb_telefono"
+                 HorizontalAlignment="Left"
+                 Margin="764,440,0,0"
+                 TextWrapping="NoWrap"
+                 VerticalAlignment="Top"
+                 Width="275"
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <Button x:Name="button_Registrar" 
+                Content="Registrar conductor" 
+                HorizontalAlignment="Left"
+                Margin="580,585,0,0" 
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonMediano}"
+                Click="button_Registrar_Click"/>
+
+        <Label Content="Nombre Completo" 
+               HorizontalAlignment="Left" 
+               Margin="234,279,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Fecha de Nacimiento" 
+               HorizontalAlignment="Left" 
+               Margin="735,279,0,0"
+               VerticalAlignment="Top" 
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Numero de Licencia"
+               HorizontalAlignment="Left"
+               Margin="234,472,0,0" 
+               VerticalAlignment="Top" 
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Label Content="Telefono celular:" 
+               HorizontalAlignment="Left" 
+               Margin="735,472,0,0"
+               VerticalAlignment="Top" 
+               Style="{StaticResource label_textoPequeño}"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="240,472,760,256"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="739,472,261,256"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="240,279,760,449"/>
+
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="739,279,261,449"/>
+
+
+        <iconPacks:PackIconMaterial Kind="Email" 
+                                    Margin="91,35,0,0" 
+                                    Height="30" Width="40">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="ArrowLeft" 
+                                    Margin="34,35,0,0" 
+                                    Height="30" Width="40">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="Logout" 
+                                    Margin="1146,35,0,0" 
+                                    Height="30" Width="30">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="WindowMinimize" 
+                                    Margin="1193,35,0,0" 
+                                    Height="30" Width="30">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="Close" 
+                                    Margin="1240,35,0,0" 
+                                    Height="30" Width="30">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="RenameBox" 
+                                    Margin="240,247,0,0" 
+                                    Height="28" Width="20">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="Calendar" 
+                                    Margin="739,246,0,0" 
+                                    Height="28" Width="20">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="Numeric" 
+                                    Margin="240,444,0,0" 
+                                    Height="23" Width="20">
+        </iconPacks:PackIconMaterial>
+
+        <iconPacks:PackIconMaterial Kind="CellphoneBasic" 
+                                    Margin="739,444,0,0" 
+                                    Height="23" Width="20">
+        </iconPacks:PackIconMaterial>
+
+
+        <DatePicker x:Name="dp_fehcaNacimiento"
+                    HorizontalAlignment="Left"
+                    Margin="764,244,0,0" 
+                    VerticalAlignment="Top"
+                    Height="30" Width="275"/>
+
+        <Button x:Name="button_Chat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Height="44" Width="52"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Chat_Click" Margin="85,28,0,0"/>
+
+        <Button x:Name="button_Regresar"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Height="44" Width="52"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Regresar_Click" Margin="28,28,0,0"/>
+
+        <Button x:Name="button_CerrarSesion"
+                HorizontalAlignment="Left" 
+                Margin="1140,28,0,0"
+                Height="44" Width="42"
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_CerrarSesion_Click"/>
+
+        <Button x:Name="button_MinimizarVentana"
+                HorizontalAlignment="Left" 
+                Margin="1187,28,0,0"
+                Height="44" Width="42"
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_MinimizarVentana_Click"/>
+
+        <Button x:Name="button_CerrarVentana"
+                HorizontalAlignment="Left" 
+                Margin="1234,28,0,0"
+                Height="44" Width="42"
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_CerrarVentana_Click"/>
     </Grid>
 </Window>
