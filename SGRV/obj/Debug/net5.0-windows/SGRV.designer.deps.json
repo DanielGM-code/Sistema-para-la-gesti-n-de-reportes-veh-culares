@@ -179,6 +179,14 @@
             "fileVersion": "4.6.26515.6"
           }
         }
+      },
+      "WinSCP/5.17.10": {
+        "runtime": {
+          "lib/netstandard2.0/WinSCPnet.dll": {
+            "assemblyVersion": "1.7.2.11087",
+            "fileVersion": "1.7.2.11087"
+          }
+        }
       }
     }
   },
@@ -266,6 +274,13 @@
       "sha512": "sha512-S0wEUiKcLvRlkFUXca8uio1UQ5bYQzYgOmOKtCqaBQC3GR9AJjh43otcM32IGsAyvadFTaAMw9Irm6dS4Evfng==",
       "path": "system.text.encoding.codepages/4.5.0",
       "hashPath": "system.text.encoding.codepages.4.5.0.nupkg.sha512"
+    },
+    "WinSCP/5.17.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8dEFNSj8uW/3uStziNmcZSYgOakW5oL0euwR+0BuvJ9zMBYN9yRlRW6yzlYSpmrhysp32StXe/Pi4PxzznOvVA==",
+      "path": "winscp/5.17.10",
+      "hashPath": "winscp.5.17.10.nupkg.sha512"
     }
   }
 }

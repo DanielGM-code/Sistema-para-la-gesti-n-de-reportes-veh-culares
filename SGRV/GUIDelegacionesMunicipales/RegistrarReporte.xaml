@@ -8,15 +8,15 @@
         Title="RegistrarReporte" Height="768" Width="1366">
     <Grid>
         <Label Content="Registrar Reporte" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="40"/>
-        <ListBox Margin="57,172,1060,355"/>
-        <ListBox Margin="343,172,774,355"/>
+        <DataGrid x:Name="dg_conductores" Margin="57,172,1060,355" SelectionChanged="seleccionar_conductor"/>
+        <DataGrid x:Name="dg_vehiculos" Margin="343,172,774,355" SelectionChanged="clic_vehiculo"/>
         <Label Content="Conductores" HorizontalAlignment="Left" Margin="62,104,0,0" VerticalAlignment="Top"/>
         <Label Content="Vehículos" HorizontalAlignment="Left" Margin="343,104,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="62,135,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ListBox Margin="57,472,1060,104"/>
+        <DataGrid x:Name="dg_conductoresSeleccionados" Margin="57,472,1060,104" SelectionChanged="clic_Conductor"/>
         <Label Content="Conductores seleccionados:" HorizontalAlignment="Left" Margin="57,441,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="348,135,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ListBox Margin="343,472,774,104"/>
+        <DataGrid x:Name="dg_vehiculosSeleccionados" Margin="343,472,774,104"/>
         <Label Content="Vehículos seleccionados:" HorizontalAlignment="Left" Margin="343,441,0,0" VerticalAlignment="Top"/>
         <Label Content="Fecha:" HorizontalAlignment="Left" Margin="722,104,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="722,135,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
@@ -24,14 +24,6 @@
         <TextBox HorizontalAlignment="Left" Margin="1004,135,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Descripción:" HorizontalAlignment="Left" Margin="722,173,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="722,204,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="584" Height="173"/>
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="722,440,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="884,440,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="1049,440,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="1206,440,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="722,560,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="884,560,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="1049,560,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="1206,560,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
         <Label Content="Fotografías:" HorizontalAlignment="Left" Margin="723,409,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button_RegistrarReporte" Content="Registrar reporte" HorizontalAlignment="Center" Margin="0,706,0,0" VerticalAlignment="Top" Click="button_RegistrarReporte_Click"/>
         <Button x:Name="button_CerrarSesion" Content="Cerrar sesion" HorizontalAlignment="Left" Margin="1275,20,0,0" VerticalAlignment="Top" Height="60" Width="60" Click="button_CerrarSesion_Click"/>
@@ -46,6 +38,11 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <WrapPanel x:Name="wp_imagenes" Margin="720, 450, 65, 70">
+        </WrapPanel>
+        <Button x:Name="button_agregarFotografia" Content="Agregar Fotografia" HorizontalAlignment="Left" Margin="1201,691,0,0" VerticalAlignment="Top" Click="button_agregarFotografia_Click"/>
+        <Button x:Name="btn_eliminarConductor" Content="Eliminar" HorizontalAlignment="Left" Margin="254,658,0,0" VerticalAlignment="Top" Click="btn_eliminarConductor_Click"/>
+        <Button x:Name="btn_eliminarVehiculo" Content="Eliminar" HorizontalAlignment="Left" Margin="546,658,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

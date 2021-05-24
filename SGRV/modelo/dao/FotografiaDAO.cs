@@ -136,5 +136,39 @@ namespace SGRV.modelo.dao
                 connection.Close();
             }
         }
+
+        public static int getUltimoId()
+        {
+            int ultimoId = 0;
+            SqlConnection connection = null;
+            try
+            {
+                connection = ConexionBD.getConnection();
+                if (connection != null)
+                {
+                    SqlCommand command;
+                    SqlDataReader dataReader;
+                    String query = "SELECT TOP 1 idFotografia FROM Fotografia Order BY idFotografia DESC";
+                    command = new SqlCommand(query, connection);
+                    dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        ultimoId = (!dataReader.IsDBNull(0)) ? dataReader.GetInt32(0) : 0;
+                    }
+                    dataReader.Close();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return ultimoId;
+        }
     }
 }
