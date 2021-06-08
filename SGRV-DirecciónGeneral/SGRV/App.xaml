@@ -1,0 +1,13 @@
+﻿<Application x:Class="SGRV.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SGRV"
+             StartupUri="Login.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="recursos\HojaDeEstilos.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary> 
+    </Application.Resources>
+</Application>

@@ -101,7 +101,8 @@ namespace SGRV.GUIDireccionGeneral {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SGRV;component/guidirecciongeneral/registrardelegacionmunicipal.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SGRV_zmuqhxl5_wpftmp;component/guidirecciongeneral/registrardelegacionmunicipal." +
+                    "xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDireccionGeneral\RegistrarDelegacionMunicipal.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
