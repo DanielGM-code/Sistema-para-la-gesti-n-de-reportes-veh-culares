@@ -167,7 +167,7 @@ namespace SGRV.GUIDireccionGeneral {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SGRV;component/guidirecciongeneral/modificardelegacion.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;component/guidirecciongeneral/modificardelegacion.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDireccionGeneral\ModificarDelegacion.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

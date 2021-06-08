@@ -1,4 +1,4 @@
-﻿using SGRV.GUIDelegacionesMunicipales;
+﻿using SGRV.GUIDireccionGeneral;
 using SGRV.modelo.dao;
 using SGRV.modelo.database;
 using SGRV.modelo.poco;
@@ -44,11 +44,14 @@ namespace SGRV
                     {
                         switch (usuario.Cargo)
                         {
-                            case "Agente De Transito":
-                            case "Perito":
-                                MenuDelegacionMunicipal menuDelegacionMunicipal = new MenuDelegacionMunicipal();
-                                menuDelegacionMunicipal.Show();
+                            case "Administrativo":
+                            case "Soporte":
+                                MenuDireccionGeneral menuDireccionGeneral = new MenuDireccionGeneral();
+                                menuDireccionGeneral.Show();
                                 this.Close();
+                                break;
+                            default:
+                                MessageBox.Show("Usted está intentando ingresar con un usuario de la Delegación Municipal.");
                                 break;
                         }
                     }

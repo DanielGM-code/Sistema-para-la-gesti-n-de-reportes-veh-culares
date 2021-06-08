@@ -151,7 +151,8 @@ namespace SGRV.GUIDelegacionesMunicipales {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SGRV;component/guidelegacionesmunicipales/modificarconductor.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;component/guidelegacionesmunicipales/modificarconductor." +
+                    "xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDelegacionesMunicipales\ModificarConductor.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

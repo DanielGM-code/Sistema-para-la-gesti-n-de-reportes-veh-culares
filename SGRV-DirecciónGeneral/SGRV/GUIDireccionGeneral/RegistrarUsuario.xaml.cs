@@ -26,9 +26,6 @@ namespace SGRV.GUIDireccionGeneral
         public RegistrarUsuario()
         {
             InitializeComponent();
-            usuarios = new List<Usuario>();
-            llenarTabla();
-            llenarComboboxes();
         }
 
         private void button_Modificar_Click(object sender, RoutedEventArgs e)
@@ -87,7 +84,6 @@ namespace SGRV.GUIDireccionGeneral
                             break;
                     }
                     MessageBox.Show("Se ha registrado al usuario de manera exitosa.");
-                    llenarTabla();
                 }
                 else
                 {
@@ -120,13 +116,6 @@ namespace SGRV.GUIDireccionGeneral
             this.Close();
         }
 
-        private void llenarTabla()
-        {
-            usuarios = UsuarioDAO.getAllUsuarios();
-            dg_usuarios.AutoGenerateColumns = false;
-            dg_usuarios.ItemsSource = usuarios;
-        }
-
         private bool validarCampos()
         {
             return (tb_Nombre.Text == "" ||
@@ -135,25 +124,22 @@ namespace SGRV.GUIDireccionGeneral
                cb_delegacion.SelectedItem == null) ? false : true;
         }
 
-        private void llenarComboboxes()
-        {
-            List<String> cargos = new List<string>();
-            cargos.Add("Administrativo");
-            cargos.Add("Soporte");
-            cargos.Add("Agente de Tránsito");
-            cargos.Add("Perito");
-            cb_cargo.ItemsSource = cargos;
-
-            List<Delegacion> delegacions = DelegacionDAO.getAllDelegaciones();
-            cb_delegacion.ItemsSource = delegacions;
-        }
-
         private void OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
             }
+        }
+
+        private void button_MinimizarVentana_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_CerrarVentana_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

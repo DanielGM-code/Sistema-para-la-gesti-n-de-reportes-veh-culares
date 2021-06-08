@@ -148,5 +148,39 @@ namespace SGRV.modelo.dao
                 connection.Close();
             }
         }
+
+        public static void updateConductor(Conductor conductor)
+        {
+            SqlConnection connection = null;
+            try
+            {
+                connection = ConexionBD.getConnection();
+                if (connection != null)
+                {
+                    SqlCommand command;
+                    int idConductor = conductor.IdConductor;
+                    String nombre = conductor.Nombre;
+                    DateTime fechaNacimiento = conductor.FechaNacimiento;
+                    String numeroLicencia = conductor.NumeroLicencia;
+                    String telefono = conductor.Telefono;
+                    String estado = conductor.Estado;
+                    String query = String.Format("UPDATE Conductor SET nombre = '{0}', " +
+                                                                      "fechaNacimiento = '{1}', " +
+                                                                      "numeroLicencia = '{2}', " +
+                                                                      "telefono = '{3}', " +
+                                                                      "estado = '{4}' WHERE IdConductor = {5}",
+                                                                      nombre, fechaNacimiento.ToString("yyyy-MM-dd"), numeroLicencia,
+                                                                      telefono, estado, idConductor);
+                    command = new SqlCommand(query, connection);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+        }
     }
 }

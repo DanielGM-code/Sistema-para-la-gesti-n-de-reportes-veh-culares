@@ -1,0 +1,12 @@
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\DirecionGeneral.csproj.AssemblyReference.cache
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\recursos\HojaDeEstilos.baml
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\Chat.g.cs
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\MenuDireccionGeneral.g.cs
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\RegistrarDelegacionMunicipal.g.cs
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\RegistrarUsuario.g.cs
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\VizualizarReporte.g.cs
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\Login.g.cs
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\DirecionGeneral_Content.g.cs
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\DirecionGeneral_MarkupCompile.cache
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\DirecionGeneral_MarkupCompile.lref

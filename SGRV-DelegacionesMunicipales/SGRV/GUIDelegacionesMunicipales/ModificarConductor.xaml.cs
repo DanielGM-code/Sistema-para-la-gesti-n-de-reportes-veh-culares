@@ -37,6 +37,7 @@ namespace SGRV.GUIDelegacionesMunicipales
             if (validarCampos())
             {
                 Conductor conductor = new Conductor();
+                conductor.IdConductor = conductorSeleccionado.IdConductor;
                 conductor.Nombre = tb_nombre.Text;
                 conductor.FechaNacimiento = (DateTime)dp_fehcaNacimiento.SelectedDate;
                 conductor.NumeroLicencia = tb_licencia.Text;
@@ -45,9 +46,13 @@ namespace SGRV.GUIDelegacionesMunicipales
 
                 try
                 {
-                    //ConductorDAO.addConductor(conductor);
-                    //MessageBox.Show("Conductor registrado de manera exitosa.");
-                    //vaciarCampos();
+                    if (conductorSeleccionado != null)
+                    {
+                        ConductorDAO.updateConductor(conductor);
+                        MessageBox.Show("Conductor registrado de manera exitosa.");
+                        vaciarCampos();
+                        llenarTabla();
+                    }
                 }
                 catch (Exception x)
                 {
@@ -126,12 +131,15 @@ namespace SGRV.GUIDelegacionesMunicipales
         private void clic_conductor_item(object sender, SelectionChangedEventArgs e)
         {
             conductorSeleccionado = (Conductor)dg_conductores.SelectedItem;
-            tb_nombreConductor.Text = conductorSeleccionado.Nombre;
-            tb_nombre.Text = conductorSeleccionado.Nombre;
-            tb_licencia.Text = conductorSeleccionado.NumeroLicencia;
-            tb_telefono.Text = conductorSeleccionado.Telefono;
-            DateTime fechaNacimiento = conductorSeleccionado.FechaNacimiento;
-            dp_fehcaNacimiento.SelectedDate = fechaNacimiento;
+            if (conductorSeleccionado != null)
+            {
+                tb_nombreConductor.Text = conductorSeleccionado.Nombre;
+                tb_nombre.Text = conductorSeleccionado.Nombre;
+                tb_licencia.Text = conductorSeleccionado.NumeroLicencia;
+                tb_telefono.Text = conductorSeleccionado.Telefono;
+                DateTime fechaNacimiento = conductorSeleccionado.FechaNacimiento;
+                dp_fehcaNacimiento.SelectedDate = fechaNacimiento; 
+            }
         }
     }
 }

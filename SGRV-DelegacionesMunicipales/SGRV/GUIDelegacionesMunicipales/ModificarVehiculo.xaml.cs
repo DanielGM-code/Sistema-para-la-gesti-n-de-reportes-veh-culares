@@ -82,8 +82,13 @@ namespace SGRV.GUIDelegacionesMunicipales
         {
             try
             {
+                limpiarCampos();
                 conductorSeleccionado = (Conductor)dg_conductores.SelectedItem;
-                llenarTablaVehiculos(conductorSeleccionado);
+
+                if (conductorSeleccionado != null)
+                {
+                    llenarTablaVehiculos(conductorSeleccionado); 
+                }
             }
             catch (Exception x) 
             {
@@ -97,13 +102,16 @@ namespace SGRV.GUIDelegacionesMunicipales
             try
             {
                 vehiculoSeleccionado = (Vehiculo)dg_vehiculos.SelectedItem;
-                tb_año.Text = vehiculoSeleccionado.Ano;
-                tb_color.Text = vehiculoSeleccionado.Color;
-                tb_marca.Text = vehiculoSeleccionado.Marca;
-                tb_modelo.Text = vehiculoSeleccionado.Modelo;
-                tb_nombreAseguradora.Text = vehiculoSeleccionado.NombreAseguradora;
-                tb_numeroPlacas.Text = vehiculoSeleccionado.Placas;
-                tb_numeroPolizaSeguro.Text = vehiculoSeleccionado.PolizaSeguro;
+                if (vehiculoSeleccionado != null)
+                {
+                    tb_año.Text = vehiculoSeleccionado.Ano;
+                    tb_color.Text = vehiculoSeleccionado.Color;
+                    tb_marca.Text = vehiculoSeleccionado.Marca;
+                    tb_modelo.Text = vehiculoSeleccionado.Modelo;
+                    tb_nombreAseguradora.Text = vehiculoSeleccionado.NombreAseguradora;
+                    tb_numeroPlacas.Text = vehiculoSeleccionado.Placas;
+                    tb_numeroPolizaSeguro.Text = vehiculoSeleccionado.PolizaSeguro;
+                }
             }
             catch (Exception x)
             {

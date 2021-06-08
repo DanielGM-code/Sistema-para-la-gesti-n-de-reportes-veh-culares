@@ -33,13 +33,16 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_Eliminar_Click(object sender, RoutedEventArgs e)
         {
-            Conductor conductor = new Conductor();
 
             try
             {
-                ConductorDAO.removeConductor(conductor);
-                MessageBox.Show("Conductor eliminado de manera exitosa.");
-                vaciarCampos();
+                if(conductorSeleccionado != null)
+                {
+                    ConductorDAO.removeConductor(conductorSeleccionado);
+                    MessageBox.Show("Conductor eliminado de manera exitosa.");
+                    vaciarCampos();
+                    llenarTabla();
+                }
             }
             catch (Exception x)
             {
@@ -103,12 +106,16 @@ namespace SGRV.GUIDelegacionesMunicipales
         private void clic_conductor_item(object sender, SelectionChangedEventArgs e)
         {
             conductorSeleccionado = (Conductor)dg_conductores.SelectedItem;
-            tb_nombreConductor.Text = conductorSeleccionado.Nombre;
-            tb_nombre.Text = conductorSeleccionado.Nombre;
-            tb_licencia.Text = conductorSeleccionado.NumeroLicencia;
-            tb_telefono.Text = conductorSeleccionado.Telefono;
-            DateTime fechaNacimiento = conductorSeleccionado.FechaNacimiento;
-            dp_fehcaNacimiento.SelectedDate = fechaNacimiento;
+            if (conductorSeleccionado != null)
+            {
+                
+                tb_nombreConductor.Text = conductorSeleccionado.Nombre;
+                tb_nombre.Text = conductorSeleccionado.Nombre;
+                tb_licencia.Text = conductorSeleccionado.NumeroLicencia;
+                tb_telefono.Text = conductorSeleccionado.Telefono;
+                DateTime fechaNacimiento = conductorSeleccionado.FechaNacimiento;
+                dp_fehcaNacimiento.SelectedDate = fechaNacimiento;
+            }
         }
     }
 }

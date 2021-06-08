@@ -191,7 +191,8 @@ namespace SGRV.GUIDelegacionesMunicipales {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SGRV;component/guidelegacionesmunicipales/menudelegacionmunicipal.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;component/guidelegacionesmunicipales/menudelegacionmunic" +
+                    "ipal.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

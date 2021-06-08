@@ -1,0 +1,20 @@
+﻿Delegaciones Municipales
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\
+Delegaciones_Municipales
+none
+false
+TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\App.xaml
+141999323697
+11225599352
+45373174759
+197-2092361746
+Chat.xaml;GUIDelegacionesMunicipales\EliminarConductor.xaml;GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml;GUIDelegacionesMunicipales\ModificarConductor.xaml;GUIDelegacionesMunicipales\ModificarVehiculo.xaml;GUIDelegacionesMunicipales\RegistrarConductor.xaml;GUIDelegacionesMunicipales\RegistrarReporte.xaml;GUIDelegacionesMunicipales\RegistrarVehiculo.xaml;GUIDireccionGeneral\MenuDireccionGeneral.xaml;GUIDireccionGeneral\ModificarDelegacion.xaml;GUIDireccionGeneral\RegistrarDelegacion.xaml;GUIDireccionGeneral\RegistrarUsuario.xaml;Login.xaml;recursos\HojaDeEstilos.xaml;
+
+False
+

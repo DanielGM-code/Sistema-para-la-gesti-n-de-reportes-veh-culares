@@ -50,6 +50,9 @@ namespace SGRV
                                 menuDelegacionMunicipal.Show();
                                 this.Close();
                                 break;
+                            default:
+                                MessageBox.Show("Usted está intentando ingresar con un usuario de la Dirección General.");
+                                break;
                         }
                     }
                     else
