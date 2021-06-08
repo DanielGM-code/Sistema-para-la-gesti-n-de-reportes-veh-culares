@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Chat.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GUIDelegacionesMunicipales\EliminarConductor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GUIDelegacionesMunicipales\ModificarConductor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GUIDelegacionesMunicipales\ModificarVehiculo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GUIDelegacionesMunicipales\RegistrarReporte.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GUIDelegacionesMunicipales\RegistrarVehiculo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GUIDelegacionesMunicipales\RegistrarConductor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GUIDireccionGeneral\ModificarDelegacion.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GUIDireccionGeneral\RegistrarDelegacion.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Chat.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDelegacionesMunicipales\EliminarConductor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDelegacionesMunicipales\ModificarConductor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDelegacionesMunicipales\ModificarVehiculo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDelegacionesMunicipales\RegistrarReporte.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDelegacionesMunicipales\RegistrarVehiculo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDelegacionesMunicipales\RegistrarConductor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDireccionGeneral\ModificarDelegacion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDireccionGeneral\RegistrarDelegacion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="recursos\HojaDeEstilos.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

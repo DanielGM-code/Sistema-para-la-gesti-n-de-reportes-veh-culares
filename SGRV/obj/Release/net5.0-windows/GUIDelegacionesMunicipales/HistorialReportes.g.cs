@@ -101,7 +101,8 @@ namespace SGRV.GUIDelegacionesMunicipales {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SGRV;component/guidelegacionesmunicipales/historialreportes.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SGRV_zmuqhxl5_wpftmp;component/guidelegacionesmunicipales/historialreportes.xaml" +
+                    "", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDelegacionesMunicipales\HistorialReportes.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

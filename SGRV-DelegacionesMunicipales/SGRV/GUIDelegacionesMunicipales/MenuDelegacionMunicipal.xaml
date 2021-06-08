@@ -1,0 +1,203 @@
+﻿<Window x:Class="SGRV.GUIDelegacionesMunicipales.MenuDelegacionMunicipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SGRV.GUIDelegacionesMunicipales"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="MenuDelegacionMunicipal"  
+        Height="730" Width="1300"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="OnMouseDown"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Border CornerRadius="25" RenderTransformOrigin="0.513,0.427" Margin="-2,0,2,0">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#202639" Offset="0.0"/>
+                    <GradientStop Color="#3f4977" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Label Content="Bienvenido al Sistema de Reportes de &#10;            Siniestros Vehiculares" 
+               HorizontalAlignment="Left" 
+               Margin="277,15,0,0"
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoGrande}"/>
+
+        <Border 
+            Style="{StaticResource border_ContenedorBotones}"
+            Margin="232,240,718,350"/>
+
+        <Border 
+            Style="{StaticResource border_ContenedorBotones}"
+            Margin="698,240,252,350"/>
+
+        <Border 
+            Style="{StaticResource border_ContenedorBotones}"
+            Margin="465,481,485,109"/>
+
+
+        <Button x:Name="button_Conductor" 
+                Content="        Conductores" 
+                HorizontalAlignment="Left" 
+                Margin="232,240,0,0" 
+                VerticalAlignment="Top" 
+                Height="140" Width="350"
+                Style="{StaticResource button_botonGrande}"
+                Click="button_Conductor_Click"/>
+
+        <Button x:Name="button_Vehiculo" 
+                Content="        Vehículos" 
+                HorizontalAlignment="Left" 
+                Margin="698,240,0,0" 
+                VerticalAlignment="Top" 
+                Height="140" Width="350"
+                Style="{StaticResource button_botonGrande}"  
+                Click="button_Vehiculo_Click"/>
+
+        <Button x:Name="button_Reporte" 
+                Content="     Reportes" 
+                HorizontalAlignment="Left" 
+                Margin="465,481,0,0" 
+                VerticalAlignment="Top" 
+                Height="140" Width="350"
+                Style="{StaticResource button_botonGrande}"
+                Click="button_Reporte_Click"/>
+
+        <Button 
+            Name="button_RegistrarConductor"
+            Content="{iconPacks:Material Height=40, Kind=Plus, Width=40}"
+            Style="{StaticResource button_botonIconoRegistrar}"
+            HorizontalAlignment="Left" 
+            Margin="344,280,0,0" 
+            Click="button_RegistrarConductor_Click"
+            VerticalAlignment="Top" Height="58" Width="56"/>
+
+        <Button 
+            x:Name="button_ModificarConductor"
+            Content="{iconPacks:Material Height=40, Kind=AccountEdit, Width=40}"
+            Style="{StaticResource button_botonIconoModificar}"
+            HorizontalAlignment="Left" 
+            Margin="412,280,0,0" 
+            VerticalAlignment="Top" Height="58" Width="56"
+            Click="button_ModificarConductor_Click"/>
+
+        <Button 
+            x:Name="button_EliminarConductor"
+            Content="{iconPacks:Material Kind=TrashCan, Height=40, Width=40}"
+            Style="{StaticResource button_botonIconoEliminar}"
+            HorizontalAlignment="Left" 
+            Margin="480,280,0,0" 
+            VerticalAlignment="Top" Height="58" Width="56"
+            Click="button_EliminarConductor_Click"/>
+
+        <Button 
+            x:Name="button_RegistrarVehiculo"
+            Content="{iconPacks:Material Height=40, Kind=Plus, Width=40}"
+            Style="{StaticResource button_botonIconoRegistrar}"
+            Click="button_RegistrarVehiculo_Click"
+            HorizontalAlignment="Left" 
+            Margin="828,281,0,0" 
+            VerticalAlignment="Top" Height="58" Width="56"/>
+
+        <Button 
+            x:Name="button_ModificarVehiculo"
+            Content="{iconPacks:Material Height=40, Kind=Pencil, Width=40}"
+            Style="{StaticResource button_botonIconoModificar}"
+            HorizontalAlignment="Left" 
+            Margin="896,281,0,0" 
+            VerticalAlignment="Top" Height="58" Width="56"
+            Click="button_ModificarVehiculo_Click"/>
+
+        <Button 
+            x:Name="button_EliminarVehiculo"
+            Content="{iconPacks:Material Height=40, Kind=TrashCan, Width=40}"
+            Style="{StaticResource button_botonIconoEliminar}"
+            HorizontalAlignment="Left" 
+            Margin="964,281,0,0" 
+            VerticalAlignment="Top" Height="58" Width="56" 
+            Click="button_EliminarVehiculo_Click"/>
+
+        <Button 
+            x:Name="button_RegistrarReporte"
+            Content="{iconPacks:Material Height=40, Kind=Plus, Width=40}"
+            Style="{StaticResource button_botonIconoRegistrar}"
+            HorizontalAlignment="Left" 
+            Margin="584,522,0,0" 
+            VerticalAlignment="Top" Height="58" Width="56"
+            Click="button_RegistrarReporte_Click"/>
+
+        <Button 
+            x:Name="button_ModificarReporte"
+            Content="{iconPacks:Material Height=40, Kind=BookEdit, Width=40}"
+            Style="{StaticResource button_botonIconoModificar}"
+            HorizontalAlignment="Left" 
+            Margin="652,522,0,0" 
+            VerticalAlignment="Top" Height="58" Width="56"
+            Click="button_ModificarReporte_Click"/>
+
+        <Button 
+            x:Name="button_EliminarReporte"
+            Content="{iconPacks:Material Kind=TrashCan, Height=40, Width=40}"
+            Style="{StaticResource button_botonIconoEliminar}"
+            HorizontalAlignment="Left" 
+            Margin="720,522,0,0" 
+            VerticalAlignment="Top" Height="58" Width="56"
+            Click="button_EliminarReporte_Click"/>
+
+        <Button x:Name="button_Chat"
+                Content="{iconPacks:Material Kind=Email, Height=30, Width=40}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Height="44" Width="52"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Chat_Click" Margin="85,28,0,0"/>
+
+        <Button x:Name="button_CerrarSesion"
+                Content="{iconPacks:Material Kind=Logout, Height=30, Width=30}"
+                HorizontalAlignment="Left" 
+                Margin="1140,28,0,0"
+                Height="44" Width="42"
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_CerrarSesion_Click"/>
+
+        <Button x:Name="button_MinimizarVentana"
+                Content="{iconPacks:Material Kind=WindowMinimize, Height=30, Width=30}"
+                HorizontalAlignment="Left" 
+                Margin="1188,28,0,0"
+                Height="44" Width="42"
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_MinimizarVentana_Click"/>
+
+        <Button x:Name="button_CerrarVentana"
+                Content="{iconPacks:Material Kind=Close, Height=30, Width=30}"
+                HorizontalAlignment="Left" 
+                Margin="1234,28,0,0"
+                Height="44" Width="42"
+                VerticalAlignment="Top"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_CerrarVentana_Click"/>
+
+
+        <iconPacks:PackIconMaterial Kind="Car"
+                                    x:Name="icon_car"
+                                    Margin="730,268,0,0" 
+                                    Height="84" Width="74"/>
+
+        <iconPacks:PackIconMaterial Kind="Face" 
+                                    Margin="252,274,0,0" 
+                                    Height="70" Width="70"/>
+
+        <iconPacks:PackIconMaterial Kind="FileDocument" 
+                                    Margin="501,511,0,0" 
+                                    Height="80" Width="53"/>
+
+    </Grid>
+</Window>
