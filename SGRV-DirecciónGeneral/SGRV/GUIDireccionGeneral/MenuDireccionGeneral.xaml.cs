@@ -88,6 +88,9 @@ namespace SGRV.GUIDireccionGeneral
             button_RegistrarReporte.Visibility = Visibility.Hidden;
             button_ModificarReporte.Visibility = Visibility.Hidden;
             button_EliminarReporte.Visibility = Visibility.Hidden;
+
+            button_Usuario.Visibility = Visibility.Visible;
+            button_Reporte.Visibility = Visibility.Visible;
         }
 
         private void button_RegistrarUsuario_Click(object sender, RoutedEventArgs e)
