@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DireccionGeneral.GUIDireccionGeneral;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -114,7 +115,9 @@ namespace SGRV.GUIDireccionGeneral
 
         private void button_ModificarUsuario_Click(object sender, RoutedEventArgs e)
         {
-
+            ModificarUsuario ventanaModificarUsuario = new ModificarUsuario();
+            ventanaModificarUsuario.Show();
+            this.Close();
         }
 
         private void button_ModificarReporte_Click(object sender, RoutedEventArgs e)
@@ -141,7 +144,9 @@ namespace SGRV.GUIDireccionGeneral
 
         private void button_EliminarDelegacion_Click(object sender, RoutedEventArgs e)
         {
-
+            EliminarDelegacion ventanaEliminarDelegacionMunicipal = new EliminarDelegacion();
+            ventanaEliminarDelegacionMunicipal.Show();
+            this.Close();
         }
 
 
