@@ -18,6 +18,59 @@
           }
         }
       },
+      "Microsoft-WindowsAPICodePack-Core/1.1.4": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        }
+      },
+      "Microsoft-WindowsAPICodePack-ExtendedLinguisticServices/1.1.4": {
+        "dependencies": {
+          "Microsoft-WindowsAPICodePack-Core": "1.1.4"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        }
+      },
+      "Microsoft-WindowsAPICodePack-Sensors/1.1.4": {
+        "dependencies": {
+          "Microsoft-WindowsAPICodePack-Core": "1.1.4"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.Sensors.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        }
+      },
+      "Microsoft-WindowsAPICodePack-Shell/1.1.4": {
+        "dependencies": {
+          "Microsoft-WindowsAPICodePack-Core": "1.1.4"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.Shell.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        }
+      },
+      "Microsoft-WindowsAPICodePack-ShellExtensions/1.1.4": {
+        "dependencies": {
+          "Microsoft-WindowsAPICodePack-Core": "1.1.4",
+          "Microsoft-WindowsAPICodePack-Shell": "1.1.4"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.ShellExtensions.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/2.0.0": {},
       "Microsoft.Win32.Registry/4.5.0": {
         "dependencies": {
@@ -42,6 +95,18 @@
             "assetType": "runtime",
             "assemblyVersion": "4.1.1.0",
             "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Microsoft.WindowsAPICodePack-Shell/1.1.0": {
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          },
+          "lib/Microsoft.WindowsAPICodePack.ShellExtensions.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
           }
         }
       },
@@ -198,6 +263,41 @@
       "path": "mahapps.metro.iconpacks.material/4.8.0",
       "hashPath": "mahapps.metro.iconpacks.material.4.8.0.nupkg.sha512"
     },
+    "Microsoft-WindowsAPICodePack-Core/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gsEStalyKPTR5/HKyAHYvIoDZTGUTUgIBS1eeGvkjWgDYB7f5aSBFAAJfxhhDsOGDjLs6O0uzw1H0EWYWZGDmg==",
+      "path": "microsoft-windowsapicodepack-core/1.1.4",
+      "hashPath": "microsoft-windowsapicodepack-core.1.1.4.nupkg.sha512"
+    },
+    "Microsoft-WindowsAPICodePack-ExtendedLinguisticServices/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XYwSZpgTOqiwgH0LPiOLxRAUpzAzyKxEadNCEtpReR9dBUb3iJOZw4lFPHAiiYjDfue7QesNxyVCBLbgOCFmDg==",
+      "path": "microsoft-windowsapicodepack-extendedlinguisticservices/1.1.4",
+      "hashPath": "microsoft-windowsapicodepack-extendedlinguisticservices.1.1.4.nupkg.sha512"
+    },
+    "Microsoft-WindowsAPICodePack-Sensors/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8U+YT42XYiUu0RHEEu3v4mTrzKS28PsljXXDdBH/89Zanu1XNq3HuDUys+FbzDyt7WXX9qxFFRYl4f3MBMn+pw==",
+      "path": "microsoft-windowsapicodepack-sensors/1.1.4",
+      "hashPath": "microsoft-windowsapicodepack-sensors.1.1.4.nupkg.sha512"
+    },
+    "Microsoft-WindowsAPICodePack-Shell/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EtoEx9Fx3ZGW//sni9TB1vuBvzXIlyG8E2KNaX7bqV240aiU8RP+NmDHd1ox0YKbJDMxq7AWSI2jPhpLMYXKyw==",
+      "path": "microsoft-windowsapicodepack-shell/1.1.4",
+      "hashPath": "microsoft-windowsapicodepack-shell.1.1.4.nupkg.sha512"
+    },
+    "Microsoft-WindowsAPICodePack-ShellExtensions/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UQnst6625NvHAUMpWxLPwuO+ulgH/HnlhjQJVJPT8TuTvNzpcC94POU0B3ooxceOBP+8Ewxq/NQ152zv+OzFiQ==",
+      "path": "microsoft-windowsapicodepack-shellextensions/1.1.4",
+      "hashPath": "microsoft-windowsapicodepack-shellextensions.1.1.4.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/2.0.0": {
       "type": "package",
       "serviceable": true,
@@ -211,6 +311,13 @@
       "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "Microsoft.WindowsAPICodePack-Shell/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8WvLG0TNTylzMB8gnZeZDG68/DsagAF64K35RC2Y/zocHp4e03Uj/kba6egQlq1+0uVv04FpLG+CmENEIN53rg==",
+      "path": "microsoft.windowsapicodepack-shell/1.1.0",
+      "hashPath": "microsoft.windowsapicodepack-shell.1.1.0.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.4.0": {
       "type": "package",

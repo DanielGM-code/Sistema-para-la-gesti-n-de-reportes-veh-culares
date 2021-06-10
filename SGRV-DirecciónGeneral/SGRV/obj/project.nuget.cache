@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "AVRlumLQfJuy9NvNJoudAjp8nKzDmOB+MUTeykFbC8reJ2quEkgG4J5q9HXKH6OL78L4pA5DW9jO91r0K19oKw==",
+  "dgSpecHash": "Vv5k3nviLAwq8sYN4GFvzubq7NJcxw9dAu6EY74tlOiIvw9e602h5kexUBbYpe/YhPFseHzdjmmKQH6xq3wsqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DirecciónGeneral\\SGRV\\DireccionGeneral.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\angel\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.8.0\\mahapps.metro.iconpacks.material.4.8.0.nupkg.sha512",
+    "C:\\Users\\angel\\.nuget\\packages\\microsoft-windowsapicodepack-core\\1.1.4\\microsoft-windowsapicodepack-core.1.1.4.nupkg.sha512",
+    "C:\\Users\\angel\\.nuget\\packages\\microsoft-windowsapicodepack-shell\\1.1.4\\microsoft-windowsapicodepack-shell.1.1.4.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

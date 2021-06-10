@@ -58,3 +58,8 @@ C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-ve
 C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\DelegacionesMunicipales.pdb
 C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\DelegacionesMunicipales.genruntimeconfig.cache
 C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\DelegacionesMunicipales.csproj.AssemblyReference.cache
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\bin\Debug\net5.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\bin\Debug\net5.0-windows\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\bin\Debug\net5.0-windows\Microsoft.WindowsAPICodePack.dll
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\bin\Debug\net5.0-windows\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\bin\Debug\net5.0-windows\Microsoft.WindowsAPICodePack.Sensors.dll

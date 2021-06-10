@@ -93,7 +93,7 @@ namespace SGRV.modelo.dao
                     SqlCommand command;
                     int idReporte = vehiculosReporte.IdReporte;
                     int idVehiculo = vehiculosReporte.IdVehiculo;
-                    String query = String.Format("INSERT INTO VehiculosReporte (idReporte, idVehiculo) VALUES ('{0}', '{1})", idReporte, idVehiculo);
+                    String query = String.Format("INSERT INTO VehiculosReporte (idReporte, idVehiculo) VALUES ({0}, {1})", idReporte, idVehiculo);
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
                     command.Dispose();
