@@ -100,3 +100,9 @@ C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-ve
 C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\ModificarUsuario.g.cs
 C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\EliminarDelegacion.baml
 C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\ModificarUsuario.baml
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\EliminarUsuario.g.cs
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\Mensaje.g.cs
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\bin\Debug\net5.0-windows\Microsoft.WindowsAPICodePack.dll
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\bin\Debug\net5.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\EliminarUsuario.baml
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\Mensaje.baml

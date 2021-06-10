@@ -27,11 +27,11 @@
             </Border.Background>
         </Border>
 
-        <Border Style="{StaticResource border_ContenedorFormulario}" Margin="296,170,296,25" Grid.RowSpan="2"/>
+        <Border Style="{StaticResource border_ContenedorFormulario}" Margin="296,170,296,92" Grid.RowSpan="2"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="331,244,669,135"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="686,360,314,19"/>
         <Border Style="{StaticResource border_lineasGrandes}" Margin="331,360,669,19"/>
-        <Border Style="{StaticResource border_lineasGrandes}" Margin="331,95,669,252" Grid.Row="1"/>
-        <Border Style="{StaticResource border_lineasGrandes}" Margin="675,83,325,264" Grid.Row="1"/>
-        <Border Style="{StaticResource border_lineasGrandes}" Margin="331,199,669,148" Grid.Row="1"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="686,99,314,248" Grid.Row="1"/>
 
         <Label Content="Registro de Usuarios"
                HorizontalAlignment="Center" 
@@ -41,15 +41,15 @@
 
         <Label Content="Nombre de usuario"
                HorizontalAlignment="Left" 
-               Margin="325,360,0,0" 
+               Margin="325,244,0,0" 
                VerticalAlignment="Top"
-               Style="{StaticResource label_textoPequeño}" Grid.RowSpan="2"/>
+               Style="{StaticResource label_textoPequeño}"/>
 
         <Label Content="Contraseña" 
                HorizontalAlignment="Left" 
-               Margin="325,95,0,0"
+               Margin="680,360,0,0"
                VerticalAlignment="Top"
-               Style="{StaticResource label_textoPequeño}" Grid.Row="1"/>
+               Style="{StaticResource label_textoPequeño}" Grid.RowSpan="2"/>
 
         <Label Content="Cargo" 
                HorizontalAlignment="Left"
@@ -59,25 +59,25 @@
 
         <Label Content="Delegación" 
                HorizontalAlignment="Left"
-               Margin="674,360,0,0"
+               Margin="325,99,0,0"
                VerticalAlignment="Top"
-               Style="{StaticResource label_textoPequeño}" Grid.RowSpan="2"/>
+               Style="{StaticResource label_textoPequeño}" Grid.Row="1"/>
 
         <Label Content="Confirmar contraseña"
                HorizontalAlignment="Left" 
-               Margin="325,199,0,0"
+               Margin="680,99,0,0"
                VerticalAlignment="Top" 
                Style="{StaticResource label_textoPequeño}" Grid.Row="1"/>
 
         <Label Content="Correo" 
                HorizontalAlignment="Left"
-               Margin="670,83,0,0" 
+               Margin="326,360,0,0" 
                VerticalAlignment="Top"
-               Style="{StaticResource label_textoPequeño}" Grid.Row="1"/>
+               Style="{StaticResource label_textoPequeño}" Grid.RowSpan="2"/>
 
         <TextBox x:Name="tb_username" 
                  HorizontalAlignment="Left"
-                 Margin="355,328,0,0"
+                 Margin="355,212,0,0"
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top"
                  Width="276"
@@ -86,23 +86,23 @@
 
         <TextBox x:Name="tb_correo"
                  HorizontalAlignment="Left"
-                 Margin="698,53,0,0"
+                 Margin="354,330,0,0"
                  VerticalAlignment="Top" 
                  Width="275"
                  MaxLength="250"
-                 Style="{StaticResource textBox_textBoxTransparente}" Grid.Row="1"/>
+                 Style="{StaticResource textBox_textBoxTransparente}"/>
 
         <PasswordBox x:Name="pb_password"
                      HorizontalAlignment="Left"
-                     Margin="355,63,0,0"
+                     Margin="710,328,0,0"
                      VerticalAlignment="Top" 
                      Width="276"
                      MaxLength="250"
-                     Style="{StaticResource passwordBox_passwordBoxTransparente}" Grid.Row="1"/>
+                     Style="{StaticResource passwordBox_passwordBoxTransparente}"/>
 
         <PasswordBox x:Name="pb_confirmarPassword" 
                      HorizontalAlignment="Left"
-                     Margin="355,167,0,0" 
+                     Margin="710,67,0,0" 
                      VerticalAlignment="Top"  
                      Width="276"
                      MaxLength="250"
@@ -118,15 +118,15 @@
 
         <ComboBox x:Name="cb_delegacion" 
                   HorizontalAlignment="Left" 
-                  Margin="717,328,0,0" 
+                  Margin="368,67,0,0" 
                   FontSize="13"
                   VerticalAlignment="Top" 
-                  Width="263" Height="28"/>
+                  Width="263" Height="28" Grid.Row="1"/>
 
         <Button x:Name="button_Registrar"
                 Content="Registrar usuario" 
                 HorizontalAlignment="Center"
-                Margin="0,245,0,0"
+                Margin="0,175,0,0"
                 VerticalAlignment="Top"
                 Style="{StaticResource button_botonMediano}"
                 Click="button_Registrar_Click" Grid.Row="1"/>
@@ -173,21 +173,7 @@
                 VerticalAlignment="Top"
                 Style="{StaticResource button_botonIcono}"
                 Click="button_CerrarVentana_Click"/>
-        <Border Style="{StaticResource border_lineasGrandes}" Margin="680,360,320,19"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="331,99,669,248" Grid.Row="1"/>
         <Border Style="{StaticResource border_lineasGrandes}" Margin="680,244,320,135"/>
-        <Border Style="{StaticResource border_lineasGrandes}" Margin="331,244,669,135"/>
-        <Label Content="Nombre completo"
-            HorizontalAlignment="Left" 
-            Margin="325,244,0,0" 
-            VerticalAlignment="Top"
-            Style="{StaticResource label_textoPequeño}"/>
-        <TextBox x:Name="tb_Nombre" 
-            HorizontalAlignment="Left"
-            Margin="355,214,0,0"
-            TextWrapping="Wrap" 
-            VerticalAlignment="Top"
-            Width="276"
-            MaxLength="250"
-            Style="{StaticResource textBox_textBoxTransparente}"/>
     </Grid>
 </Window>

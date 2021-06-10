@@ -19,9 +19,46 @@ namespace SGRV.GUIDireccionGeneral
     /// </summary>
     public partial class RegistrarDelegacion : Window
     {
+        public string[] municipios { get; set; }
+
         public RegistrarDelegacion()
         {
             InitializeComponent();
+            municipios = new string[] {
+                "Acajete", "Acatlán", "Acayucan",
+                "Actopan", "Acula", "Acutzingo",
+                "Agua Dulce", "Álamo Temapache",
+                "Alpatláhuac", "Alto Lucero de Gutiérrez Barrios",
+                "Altotonga", "Amatitlán", "Amatlán de los Reyes", 
+                "Ángel R. Cabada", "Apazapan", "Aquila",
+                "Astacinga", "Atlahuilco", "Atoyac", "Atzacan",
+                "Atzalan", "Ayahualulco", "Banderilla", 
+                "Benito Juárez", "Boca del Río", "Calcahualco",
+                "Camarón de Tejeda", "Camerino Z. Mendoza",
+                "Carlos A. Carrillo", "Carrillo Puerto",
+                "Castillo de Teayo", "Catemaco", "Cazones de Herrera",
+                "Cerro Azul", "Chacaltianguis", "Chalma", "Chiconamel",
+                "Chiconquiaco", "Chicotepec", "Chinameca",
+                "Chinampa de Gorostiza", "Chocomán", "Chontla",
+                "Chumatlán", "Citlaltépetl", "Cocoatzintla",
+                "Coahuitlán", "Coatepec", "Coatzacoalcos",
+                "Coatzintla", "Coetzala", "Colipa", "Comapa",
+                "Córdoba", "Cosamaloapan de Carpio", "Cosautlán de Carvajal",
+                "Coscomatepec", "Cosoleacaque", "Cotaxtla", "Coxquihui",
+                "Coyutla", "Chichapa", "Cuitláhuac", "El Higo",
+                "Emiliano Zapata", "Espinal", "Filomeno Mata",
+                "Fortín", "Gutiérrez Zamora", "Hidalgotitlán",
+                "Huatusco", "Huayacocotla", "Hueyapan de Ocampo",
+                "Huiloapan de Cuauhtémoc", "Ignacio de la Llave", "Ilamatlán",
+                "Isla", "Ixcatepec", "Ixhuacán de los Reyes", "Ixhuatlán de Madero",
+                "Ixhuatlán del Café", "Ixhuatlán del Sureste", "Ixhuatlancillo",
+                "Ixmatlahuacan", "Ixtaczoquitlán", "Jalacingo", "Jalcomulco",
+                "Jáltipan", "Jamapa", "Jesús Carranza", "Jilotepec",
+                "José Azueta", "Juan Rodríguez Clara", "Juchique de Ferrer",
+                "La Antigua", "La Perla", "Landero y Coss", "Las Choapas",
+                "Las Minas", "Las Vigas de Ramírez"
+            };
+            DataContext = this;
         }
 
         private void button_Registrar_Click(object sender, RoutedEventArgs e)

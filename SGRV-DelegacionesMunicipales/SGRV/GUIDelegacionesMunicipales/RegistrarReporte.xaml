@@ -22,10 +22,6 @@
             </Border.Background>
             
         </Border>
-        <Button x:Name="butonPrueba"
-            Content="Button"
-               Height="20"
-                Width="100" Margin="1111,655,89,55" Click="butonPrueba_Click"/>
         <iconPacks:PackIconMaterial Kind="AccountSearch" 
                                     Margin="41,96,0,0" Height="25" Width="27"/>
 

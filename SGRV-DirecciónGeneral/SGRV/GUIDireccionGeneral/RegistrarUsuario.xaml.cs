@@ -44,39 +44,40 @@ namespace SGRV.GUIDireccionGeneral
                     usuario.Cargo = cb_cargo.SelectedItem.ToString();
                     Delegacion delegacion = (Delegacion) cb_delegacion.SelectedItem;
                     usuario.IdDelegacion = delegacion.IdDelegacion;
+                    usuario.Correo = tb_correo.Text;
                     usuario.Estado = "Activo";
                     UsuarioDAO.addUsuario(usuario);
-                    switch (usuario.Cargo)
-                    {
-                        case "Administrativo":
-                            Administrativo administrativo = new Administrativo();
-                            administrativo.Nombre = tb_Nombre.Text;
-                            administrativo.Correo = tb_correo.Text;
-                            administrativo.Estado = "Activo";
-                            AdministrativoDAO.addAdministrativo(administrativo);
-                            break;
-                        case "Soporte":
-                            Soporte soporte = new Soporte();
-                            soporte.Nombre = tb_Nombre.Text;
-                            soporte.Correo = tb_correo.Text;
-                            soporte.Estado = "Activo";
-                            SoporteDAO.addSoporte(soporte);
-                            break;
-                        case "Agente de Tránsito":
-                            AgenteDeTransito agenteDeTransito = new AgenteDeTransito();
-                            agenteDeTransito.Nombre = tb_Nombre.Text;
-                            agenteDeTransito.Correo = tb_correo.Text;
-                            agenteDeTransito.Estado = "Activo";
-                            AgenteDeTransitoDAO.addAgenteDeTransito(agenteDeTransito);
-                            break;
-                        case "Perito":
-                            Perito perito = new Perito();
-                            perito.Nombre = tb_Nombre.Text;
-                            perito.Correo = tb_correo.Text;
-                            perito.Estado = "Activo";
-                            PeritoDAO.addPerito(perito);
-                            break;
-                    }
+                    //switch (usuario.Cargo)
+                    //{
+                    //    case "Administrativo":
+                    //        Administrativo administrativo = new Administrativo();
+                    //        administrativo.Nombre = tb_Nombre.Text;
+                    //        administrativo.Correo = tb_correo.Text;
+                    //        administrativo.Estado = "Activo";
+                    //        AdministrativoDAO.addAdministrativo(administrativo);
+                    //        break;
+                    //    case "Soporte":
+                    //        Soporte soporte = new Soporte();
+                    //        soporte.Nombre = tb_Nombre.Text;
+                    //        soporte.Correo = tb_correo.Text;
+                    //        soporte.Estado = "Activo";
+                    //        SoporteDAO.addSoporte(soporte);
+                    //        break;
+                    //    case "Agente de Tránsito":
+                    //        AgenteDeTransito agenteDeTransito = new AgenteDeTransito();
+                    //        agenteDeTransito.Nombre = tb_Nombre.Text;
+                    //        agenteDeTransito.Correo = tb_correo.Text;
+                    //        agenteDeTransito.Estado = "Activo";
+                    //        AgenteDeTransitoDAO.addAgenteDeTransito(agenteDeTransito);
+                    //        break;
+                    //    case "Perito":
+                    //        Perito perito = new Perito();
+                    //        perito.Nombre = tb_Nombre.Text;
+                    //        perito.Correo = tb_correo.Text;
+                    //        perito.Estado = "Activo";
+                    //        PeritoDAO.addPerito(perito);
+                    //        break;
+                    //}
                     MessageBox.Show("Se ha registrado al usuario de manera exitosa.");
                     vaciarCampos();
                 }
@@ -113,8 +114,7 @@ namespace SGRV.GUIDireccionGeneral
 
         private bool validarCampos()
         {
-            return (tb_Nombre.Text == "" ||
-               tb_username.Text == "" ||
+            return (tb_username.Text == "" ||
                pb_password.Password == "" ||
                tb_correo.Text == "" ||
                cb_cargo.SelectedItem == null ||
@@ -123,7 +123,6 @@ namespace SGRV.GUIDireccionGeneral
 
         private void vaciarCampos()
         {
-            tb_Nombre.Text = "";
             tb_username.Text = "";
             tb_correo.Text = "";
             pb_password.Password = "";

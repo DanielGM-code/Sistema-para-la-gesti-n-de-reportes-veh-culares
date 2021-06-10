@@ -98,5 +98,9 @@ namespace DelegacionesMunicipales.GUIDelegacionesMunicipales
             }
         }
 
+        private void clic_vehiculo(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

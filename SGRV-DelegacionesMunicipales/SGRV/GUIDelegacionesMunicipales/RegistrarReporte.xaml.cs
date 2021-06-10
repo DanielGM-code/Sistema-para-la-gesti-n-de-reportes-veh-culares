@@ -1,5 +1,4 @@
 ﻿using Microsoft.Win32;
-using Microsoft.WindowsAPICodePack.Dialogs;
 using SGRV.modelo.dao;
 using SGRV.modelo.database;
 using SGRV.modelo.poco;
@@ -350,37 +349,6 @@ namespace SGRV.GUIDelegacionesMunicipales
             {
                 MessageBox.Show("Debe seleccionar un vehículo para eliminarlo de la lista.");
             }
-        }
-
-        private void butonPrueba_Click(object sender, RoutedEventArgs e)
-        {
-            CommonOpenFileDialog commonOpenFileDialog = new CommonOpenFileDialog();
-            commonOpenFileDialog.IsFolderPicker = true;
-
-            if(commonOpenFileDialog.ShowDialog() == CommonFileDialogResult.Ok)
-            {
-                try
-                {
-                    String path = commonOpenFileDialog.FileName;
-                    String newPath = path + "/Reporte36";
-                    Directory.CreateDirectory(newPath);
-                    ConexionSFTP.bajarArchivo(newPath, "Reporte36");
-                    MessageBox.Show("Listo");
-                    DirectoryInfo directory = new DirectoryInfo(newPath);
-                    FileInfo[] fileInfos = directory.GetFiles();
-                    foreach(FileInfo fileInfo in fileInfos)
-                    {
-                        MessageBox.Show(fileInfo.FullName + "\n" + fileInfo.Name);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    throw;
-                }
-            }
-
-            
         }
     }
 }
