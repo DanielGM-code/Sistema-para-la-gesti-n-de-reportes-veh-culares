@@ -10,17 +10,38 @@
     <Compile Update="Chat.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="GUIDireccionGeneral\EliminarDelegacion.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GUIDireccionGeneral\EliminarUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="GUIDireccionGeneral\MenuDireccionGeneral.xaml.cs" />
+    <Compile Update="GUIDireccionGeneral\ModificarUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="GUIDireccionGeneral\RegistrarUsuario.xaml.cs" />
+    <Compile Update="Mensaje.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Chat.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDireccionGeneral\EliminarDelegacion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDireccionGeneral\EliminarUsuario.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GUIDireccionGeneral\MenuDireccionGeneral.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GUIDireccionGeneral\ModificarDelegacion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDireccionGeneral\ModificarUsuario.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GUIDireccionGeneral\RegistrarDelegacion.xaml">
@@ -30,6 +51,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Mensaje.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="recursos\HojaDeEstilos.xaml">

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\
+C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\
 DelegacionesMunicipales
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\App.xaml
-102005163203
-11225599352
-41-405275112
-211-742781212
-Chat.xaml;GUIDelegacionesMunicipales\EliminarConductor.xaml;GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml;GUIDelegacionesMunicipales\ModificarConductor.xaml;GUIDelegacionesMunicipales\ModificarVehiculo.xaml;GUIDelegacionesMunicipales\RegistrarConductor.xaml;GUIDelegacionesMunicipales\RegistrarReporte.xaml;GUIDelegacionesMunicipales\RegistrarVehiculo.xaml;Login.xaml;recursos\HojaDeEstilos.xaml;
+C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\App.xaml
+13415357694
+1-780599726
+441417813096
+1971342861370
+Chat.xaml;GUIDelegacionesMunicipales\EliminarConductor.xaml;GUIDelegacionesMunicipales\EliminarReporte.xaml;GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml;GUIDelegacionesMunicipales\ModificarConductor.xaml;GUIDelegacionesMunicipales\ModificarReporte.xaml;GUIDelegacionesMunicipales\ModificarVehiculo.xaml;GUIDelegacionesMunicipales\RegistrarConductor.xaml;GUIDelegacionesMunicipales\RegistrarReporte.xaml;GUIDelegacionesMunicipales\RegistrarVehiculo.xaml;Login.xaml;Mensaje.xaml;recursos\HojaDeEstilos.xaml;
 
-False
+True
 

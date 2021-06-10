@@ -134,7 +134,9 @@ namespace SGRV.GUIDireccionGeneral
 
         private void button_EliminarUsuarior_Click(object sender, RoutedEventArgs e)
         {
-
+            EliminarUsuario ventanaEliminarUsuario = new EliminarUsuario();
+            ventanaEliminarUsuario.Show();
+            this.Close();
         }
 
         private void button_EliminarReporte_Click(object sender, RoutedEventArgs e)

@@ -32,13 +32,13 @@ namespace DireccionGeneral.GUIDireccionGeneral
         public ModificarUsuario()
         {
             InitializeComponent();
+
             usuarios = new List<Usuario>();
             cargos = new string[] { "Administrativo", "Agente de transito", "Perito", "Soporte" }; 
             DataContext = this;
 
             delegaciones = DelegacionDAO.getAllDelegaciones();
             cb_delegacion.ItemsSource = delegaciones;
-            
 
             llenarTabla();
         }
@@ -72,6 +72,10 @@ namespace DireccionGeneral.GUIDireccionGeneral
                     {
                         MessageBox.Show("Ocurrió un error, inténtelo de nuevo.");
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas deben de ser iguales.");
                 }
             }
         }
@@ -124,14 +128,6 @@ namespace DireccionGeneral.GUIDireccionGeneral
             this.Close();
         }
 
-        private void OnMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
-        }
-
         private void llenarTabla()
         {
             usuarios = UsuarioDAO.getAllUsuarios();
@@ -147,17 +143,15 @@ namespace DireccionGeneral.GUIDireccionGeneral
                 tb_username.Text = usuarioSeleccionado.Username;
                 pb_password.Password = usuarioSeleccionado.Contraseña;
                 cb_cargo.SelectedItem = usuarioSeleccionado.Cargo;
-                List<Delegacion> delegacions = (List<Delegacion>)cb_delegacion.ItemsSource;
-                for (int i = 0;i<delegacions.Count; i++)
-                {
-                    cb_delegacion.SelectedIndex = i;
-                    Delegacion delegacion = (Delegacion)cb_delegacion.SelectedItem;
-                    if(delegacion.IdDelegacion == usuarioSeleccionado.IdDelegacion)
-                    {
-                        break;
-                    }
-                }
-                
+                cb_delegacion.SelectedItem = usuarioSeleccionado.Delegacion;
+            }
+        }
+
+        private void OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
             }
         }
     }
