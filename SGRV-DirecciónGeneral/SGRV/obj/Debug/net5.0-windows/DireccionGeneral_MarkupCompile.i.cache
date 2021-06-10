@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\
 DireccionGeneral
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\App.xaml
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\App.xaml
 11-1768256
-11225599352
+1-780599726
 42-148518450
-208-679628355
+208-178452856
 Chat.xaml;GUIDireccionGeneral\EliminarDelegacion.xaml;GUIDireccionGeneral\EliminarUsuario.xaml;GUIDireccionGeneral\MenuDireccionGeneral.xaml;GUIDireccionGeneral\ModificarDelegacion.xaml;GUIDireccionGeneral\ModificarUsuario.xaml;GUIDireccionGeneral\RegistrarDelegacion.xaml;GUIDireccionGeneral\RegistrarUsuario.xaml;Login.xaml;Mensaje.xaml;recursos\HojaDeEstilos.xaml;
 
-False
+True
 

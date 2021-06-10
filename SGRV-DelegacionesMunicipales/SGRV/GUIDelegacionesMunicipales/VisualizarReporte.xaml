@@ -36,7 +36,7 @@
             Margin="981,176,59,552"/>
 
         <Label 
-            Content="Modificar Reporte"
+            Content="Visualizar Reporte"
             HorizontalAlignment="Center" 
             Margin="0,18,0,0" 
             VerticalAlignment="Top"
@@ -55,8 +55,7 @@
 
         <DataGrid
             x:Name="dg_conductoresSeleccionados"
-            Margin="368,254,674,294"
-            SelectionChanged="clic_Conductor"/>
+            Margin="368,254,674,294"/>
 
         <Label 
             Content="Conductores seleccionados:" 
@@ -67,7 +66,7 @@
 
         <DataGrid
             x:Name="dg_vehiculosSeleccionados"
-            Margin="368,482,675,72" SelectionChanged="dg_vehiculosSeleccionados_SelectionChanged"/>
+            Margin="368,482,675,72"/>
 
         <Label 
             Content="Vehículos seleccionados:"
