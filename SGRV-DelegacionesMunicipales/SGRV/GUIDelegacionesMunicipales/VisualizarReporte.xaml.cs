@@ -23,5 +23,40 @@ namespace DelegacionesMunicipales.GUIDelegacionesMunicipales
         {
             InitializeComponent();
         }
+
+        private void button_Regresar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Chat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_CerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_MinimizarVentana_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_CerrarVentana_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void clic_reporte(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void button_VerDictamen_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
