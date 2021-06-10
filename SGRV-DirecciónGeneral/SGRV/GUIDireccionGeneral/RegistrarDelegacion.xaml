@@ -83,14 +83,6 @@
                  MaxLength="250"
                  Style="{StaticResource textBox_textBoxTransparente}"/>
 
-        <TextBox x:Name="tb_municipio" 
-                 HorizontalAlignment="Left" 
-                 Margin="730,192,0,0" 
-                 VerticalAlignment="Top"
-                 Width="270"
-                 MaxLength="250"
-                 Style="{StaticResource textBox_textBoxTransparente}"/>
-
         <TextBox x:Name="tb_telefono" 
                  HorizontalAlignment="Left" 
                  Margin="730,312,0,0" 
@@ -114,6 +106,8 @@
                  Width="270"
                  MaxLength="250"
                  Style="{StaticResource textBox_textBoxTransparente}"/>
+
+        <ComboBox Margin="730,194,300,511"/>
 
         <iconPacks:PackIconMaterial Kind="RenameBox" 
                                         Margin="304,192,0,0" Height="26" Width="20"/>

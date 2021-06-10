@@ -80,7 +80,7 @@ namespace DireccionGeneral {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DireccionGeneral;V1.0.0.0;component/mensaje.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DireccionGeneral;component/mensaje.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Mensaje.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -47,35 +47,28 @@ namespace DireccionGeneral.GUIDireccionGeneral
         {
             if (validarCampos())
             {
-                if(pb_password.Password == pb_confirmarPassword.Password)
-                {
-                    Usuario usuario = new Usuario();
-                    usuario.IdUsuario = usuarioSeleccionado.IdUsuario;
-                    usuario.Username = tb_username.Text;
-                    usuario.Contraseña = pb_password.Password;
-                    usuario.Cargo = cb_cargo.SelectedItem.ToString();
-                    Delegacion delegacion = (Delegacion)cb_delegacion.SelectedItem;
-                    usuario.IdDelegacion = delegacion.IdDelegacion;
-                    usuario.Estado = "Activo";
+                Usuario usuario = new Usuario();
+                usuario.IdUsuario = usuarioSeleccionado.IdUsuario;
+                usuario.Username = tb_username.Text;
+                usuario.Cargo = cb_cargo.SelectedItem.ToString();
+                Delegacion delegacion = (Delegacion)cb_delegacion.SelectedItem;
+                usuario.IdDelegacion = delegacion.IdDelegacion;
+                usuario.Correo = tb_correo.Text;
+                usuario.Estado = "Activo";
 
-                    try
+                try
+                {
+                    if (usuarioSeleccionado != null)
                     {
-                        if (usuarioSeleccionado != null)
-                        {
-                            UsuarioDAO.updateUsuario(usuario);
-                            MessageBox.Show("Usuario modificado de manera exitosa.");
-                            vaciarCampos();
-                            llenarTabla();
-                        }
-                    }
-                    catch (Exception x)
-                    {
-                        MessageBox.Show("Ocurrió un error, inténtelo de nuevo.");
+                        UsuarioDAO.updateUsuario(usuario);
+                        MessageBox.Show("Usuario modificado de manera exitosa.");
+                        vaciarCampos();
+                        llenarTabla();
                     }
                 }
-                else
+                catch (Exception x)
                 {
-                    MessageBox.Show("Las contraseñas deben de ser iguales.");
+                    MessageBox.Show("Ocurrió un error, inténtelo de nuevo.");
                 }
             }
         }
@@ -83,7 +76,6 @@ namespace DireccionGeneral.GUIDireccionGeneral
         private bool validarCampos()
         {
             return (tb_username.Text == "" ||
-               pb_password.Password == "" ||
                tb_correo.Text == "" ||
                cb_cargo.SelectedItem == null ||
                cb_delegacion.SelectedItem == null) ? false : true;
@@ -93,7 +85,6 @@ namespace DireccionGeneral.GUIDireccionGeneral
         {
             tb_username.Text = "";
             tb_correo.Text = "";
-            pb_password.Password = "";
             cb_cargo.SelectedItem = null;
             cb_delegacion.SelectedItem = null;
         }
@@ -141,7 +132,6 @@ namespace DireccionGeneral.GUIDireccionGeneral
             if (usuarioSeleccionado != null)
             {
                 tb_username.Text = usuarioSeleccionado.Username;
-                pb_password.Password = usuarioSeleccionado.Contraseña;
                 cb_cargo.SelectedItem = usuarioSeleccionado.Cargo;
                 cb_delegacion.SelectedItem = usuarioSeleccionado.Delegacion;
             }
