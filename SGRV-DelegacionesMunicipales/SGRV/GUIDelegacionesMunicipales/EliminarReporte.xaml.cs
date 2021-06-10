@@ -87,5 +87,14 @@ namespace DelegacionesMunicipales.GUIDelegacionesMunicipales
             }
         }
 
+        private void clic_Conductor(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void dg_vehiculosSeleccionados_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -12,7 +12,6 @@
 		<PackageReference Include="Microsoft-WindowsAPICodePack-Sensors" Version="1.1.4" />
 		<PackageReference Include="Microsoft-WindowsAPICodePack-Shell" Version="1.1.4" />
 		<PackageReference Include="Microsoft-WindowsAPICodePack-ShellExtensions" Version="1.1.4" />
-		<PackageReference Include="Microsoft.WindowsAPICodePack-Shell" Version="1.1.0" />
 		<PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
 		<PackageReference Include="WinSCP" Version="5.17.10" />
 	</ItemGroup>
