@@ -31,13 +31,14 @@ namespace DireccionGeneral.GUIDireccionGeneral
 
         public ModificarUsuario()
         {
+            InitializeComponent();
             usuarios = new List<Usuario>();
             cargos = new string[] { "Administrativo", "Agente de transito", "Perito", "Soporte" }; 
             DataContext = this;
 
             delegaciones = DelegacionDAO.getAllDelegaciones();
             cb_delegacion.ItemsSource = delegaciones;
-            InitializeComponent();
+            
 
             llenarTabla();
         }
@@ -146,7 +147,17 @@ namespace DireccionGeneral.GUIDireccionGeneral
                 tb_username.Text = usuarioSeleccionado.Username;
                 pb_password.Password = usuarioSeleccionado.Contraseña;
                 cb_cargo.SelectedItem = usuarioSeleccionado.Cargo;
-                cb_delegacion.SelectedItem = usuarioSeleccionado.Delegacion;
+                List<Delegacion> delegacions = (List<Delegacion>)cb_delegacion.ItemsSource;
+                for (int i = 0;i<delegacions.Count; i++)
+                {
+                    cb_delegacion.SelectedIndex = i;
+                    Delegacion delegacion = (Delegacion)cb_delegacion.SelectedItem;
+                    if(delegacion.IdDelegacion == usuarioSeleccionado.IdDelegacion)
+                    {
+                        break;
+                    }
+                }
+                
             }
         }
     }
