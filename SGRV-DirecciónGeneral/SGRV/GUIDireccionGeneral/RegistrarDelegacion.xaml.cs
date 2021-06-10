@@ -55,7 +55,8 @@ namespace SGRV.GUIDireccionGeneral
                 "Ixmatlahuacan", "Ixtaczoquitlán", "Jalacingo", "Jalcomulco",
                 "Jáltipan", "Jamapa", "Jesús Carranza", "Jilotepec",
                 "José Azueta", "Juan Rodríguez Clara", "Juchique de Ferrer",
-                "La Antigua", "La Perla", 
+                "La Antigua", "La Perla", "Landero y Coss", "Las Choapas",
+                "Las Minas", "Las Vigas de Ramírez"
             };
             DataContext = this;
         }
