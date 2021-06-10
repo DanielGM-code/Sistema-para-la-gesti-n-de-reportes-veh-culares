@@ -13,7 +13,6 @@ namespace SGRV.modelo.poco
         private String direccion;
         private String descripcion;
         private String estado;
-        private int idAgenteDeTransito;
 
 
         public int IdReporte { get => idReporte; set => idReporte = value; }
@@ -21,6 +20,5 @@ namespace SGRV.modelo.poco
         public string Direccion { get => direccion; set => direccion = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string Estado { get => estado; set => estado = value; }
-        public int IdAgenteDeTransito { get => idAgenteDeTransito; set => idAgenteDeTransito = value; }
     }
 }

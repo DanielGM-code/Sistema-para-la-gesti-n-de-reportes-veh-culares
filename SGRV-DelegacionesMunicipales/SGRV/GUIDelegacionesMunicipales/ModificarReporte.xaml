@@ -99,6 +99,14 @@
             MaxLength="250"
             Style="{StaticResource textBox_textBoxTransparente}" Width="226"/>
 
+        <DatePicker
+            x:Name="dp_fecha"
+            Width="235"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Height="35" Margin="678,101,322,594"
+            />
+
         <DataGrid
             x:Name="dg_conductoresSeleccionados"
             Margin="650,216,391,357"
@@ -137,13 +145,6 @@
             VerticalAlignment="Top"
             Style="{StaticResource label_textoPequeño}"/>
 
-        <TextBox 
-            HorizontalAlignment="Left" 
-            Margin="685,106,0,0"
-            VerticalAlignment="Top"
-            MaxLength="8"
-            Style="{StaticResource textBox_textBoxTransparente}" Width="225"/>
-
         <Label 
             Content="Dirección"
             HorizontalAlignment="Left" 
@@ -152,6 +153,7 @@
             Style="{StaticResource label_textoPequeño}"/>
 
         <TextBox 
+            x:Name="tb_direccion"
             HorizontalAlignment="Left"
             Margin="990,106,0,0"
             VerticalAlignment="Top"
@@ -167,6 +169,7 @@
             Style="{StaticResource label_textoPequeño}"/>
 
         <TextBox
+            x:Name="tb_Descripcion"
             HorizontalAlignment="Left" 
             Margin="650,446,0,0"
             VerticalAlignment="Top"

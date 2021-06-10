@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DelegacionesMunicipales.GUIDelegacionesMunicipales;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -131,7 +132,9 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_ModificarReporte_Click(object sender, RoutedEventArgs e)
         {
-
+            ModificarReporte ventanaModificarReporte = new ModificarReporte();
+            ventanaModificarReporte.Show();
+            this.Close();
         }
 
 
