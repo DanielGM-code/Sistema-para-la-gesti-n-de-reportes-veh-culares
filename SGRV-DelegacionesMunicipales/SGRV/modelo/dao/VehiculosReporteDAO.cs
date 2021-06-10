@@ -49,6 +49,45 @@ namespace SGRV.modelo.dao
             }
             return vehiculosReportes;
         }
+        
+        public static List<VehiculosReporte> getAllVehiculosReporteByIdReporte(int idReporte)
+        {
+            List<VehiculosReporte> vehiculosReportes = new List<VehiculosReporte>();
+            SqlConnection connection = null;
+            try
+            {
+                connection = ConexionBD.getConnection();
+                if (connection != null)
+                {
+                    SqlCommand command;
+                    SqlDataReader dataReader;
+                    String query = String.Format("SELECT * FROM VehiculosReporte WHERE idReporte = {0}", idReporte);
+                    command = new SqlCommand(query, connection);
+                    dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        VehiculosReporte vehiculosReporte = new VehiculosReporte();
+                        vehiculosReporte.IdVehiculosReporte = (!dataReader.IsDBNull(0)) ? dataReader.GetInt32(0) : 0;
+                        vehiculosReporte.IdReporte = (!dataReader.IsDBNull(1)) ? dataReader.GetInt32(1) : 0;
+                        vehiculosReporte.IdVehiculo = (!dataReader.IsDBNull(2)) ? dataReader.GetInt32(2) : 0;
+                        vehiculosReportes.Add(vehiculosReporte);
+                    }
+                    dataReader.Close();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return vehiculosReportes;
+        }
 
         public static VehiculosReporte getVehiculosReporteById(int idVehiculosReporte)
         {
