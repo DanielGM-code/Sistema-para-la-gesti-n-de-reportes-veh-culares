@@ -19,6 +19,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Controls.Ribbon;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms.Integration;
 using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Markup;
@@ -101,8 +102,8 @@ namespace SGRV.GUIDireccionGeneral {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DireccionGeneral;component/guidirecciongeneral/registrardelegacionmunicipal.xaml" +
-                    "", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DireccionGeneral;V1.0.0.0;component/guidirecciongeneral/registrardelegacionmunic" +
+                    "ipal.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDireccionGeneral\RegistrarDelegacionMunicipal.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

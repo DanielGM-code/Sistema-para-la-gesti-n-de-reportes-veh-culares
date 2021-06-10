@@ -16,6 +16,79 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
+      "Microsoft-WindowsAPICodePack-Core/1.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "Microsoft-WindowsAPICodePack-ExtendedLinguisticServices/1.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft-WindowsAPICodePack-Core": "1.1.4"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "Microsoft-WindowsAPICodePack-Sensors/1.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft-WindowsAPICodePack-Core": "1.1.4"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.Sensors.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.Sensors.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "Microsoft-WindowsAPICodePack-Shell/1.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft-WindowsAPICodePack-Core": "1.1.4"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.Shell.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.Shell.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
+      "Microsoft-WindowsAPICodePack-ShellExtensions/1.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft-WindowsAPICodePack-Core": "1.1.4",
+          "Microsoft-WindowsAPICodePack-Shell": "1.1.4"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.ShellExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.ShellExtensions.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
       "Microsoft.NETCore.Platforms/2.0.0": {
         "type": "package",
         "compile": {
@@ -46,6 +119,17 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "Microsoft.WindowsAPICodePack-Shell/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {},
+          "lib/Microsoft.WindowsAPICodePack.ShellExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {},
+          "lib/Microsoft.WindowsAPICodePack.ShellExtensions.dll": {}
         }
       },
       "runtime.native.System.Data.SqlClient.sni/4.4.0": {
@@ -243,6 +327,121 @@
         "mahapps.metro.iconpacks.material.nuspec"
       ]
     },
+    "Microsoft-WindowsAPICodePack-Core/1.1.4": {
+      "sha512": "gsEStalyKPTR5/HKyAHYvIoDZTGUTUgIBS1eeGvkjWgDYB7f5aSBFAAJfxhhDsOGDjLs6O0uzw1H0EWYWZGDmg==",
+      "type": "package",
+      "path": "microsoft-windowsapicodepack-core/1.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.WindowsAPICodePack.dll",
+        "lib/net452/Microsoft.WindowsAPICodePack.xml",
+        "lib/net462/Microsoft.WindowsAPICodePack.dll",
+        "lib/net462/Microsoft.WindowsAPICodePack.xml",
+        "lib/net472/Microsoft.WindowsAPICodePack.dll",
+        "lib/net472/Microsoft.WindowsAPICodePack.xml",
+        "lib/net48/Microsoft.WindowsAPICodePack.dll",
+        "lib/net48/Microsoft.WindowsAPICodePack.xml",
+        "lib/netcoreapp3.0/Microsoft.WindowsAPICodePack.dll",
+        "lib/netcoreapp3.0/Microsoft.WindowsAPICodePack.xml",
+        "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.dll",
+        "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.xml",
+        "microsoft-windowsapicodepack-core.1.1.4.nupkg.sha512",
+        "microsoft-windowsapicodepack-core.nuspec"
+      ]
+    },
+    "Microsoft-WindowsAPICodePack-ExtendedLinguisticServices/1.1.4": {
+      "sha512": "XYwSZpgTOqiwgH0LPiOLxRAUpzAzyKxEadNCEtpReR9dBUb3iJOZw4lFPHAiiYjDfue7QesNxyVCBLbgOCFmDg==",
+      "type": "package",
+      "path": "microsoft-windowsapicodepack-extendedlinguisticservices/1.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll",
+        "lib/net452/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.xml",
+        "lib/net462/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll",
+        "lib/net462/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.xml",
+        "lib/net472/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll",
+        "lib/net472/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.xml",
+        "lib/net48/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll",
+        "lib/net48/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.xml",
+        "lib/netcoreapp3.0/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll",
+        "lib/netcoreapp3.0/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.xml",
+        "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll",
+        "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.xml",
+        "microsoft-windowsapicodepack-extendedlinguisticservices.1.1.4.nupkg.sha512",
+        "microsoft-windowsapicodepack-extendedlinguisticservices.nuspec"
+      ]
+    },
+    "Microsoft-WindowsAPICodePack-Sensors/1.1.4": {
+      "sha512": "8U+YT42XYiUu0RHEEu3v4mTrzKS28PsljXXDdBH/89Zanu1XNq3HuDUys+FbzDyt7WXX9qxFFRYl4f3MBMn+pw==",
+      "type": "package",
+      "path": "microsoft-windowsapicodepack-sensors/1.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.WindowsAPICodePack.Sensors.dll",
+        "lib/net452/Microsoft.WindowsAPICodePack.Sensors.xml",
+        "lib/net462/Microsoft.WindowsAPICodePack.Sensors.dll",
+        "lib/net462/Microsoft.WindowsAPICodePack.Sensors.xml",
+        "lib/net472/Microsoft.WindowsAPICodePack.Sensors.dll",
+        "lib/net472/Microsoft.WindowsAPICodePack.Sensors.xml",
+        "lib/net48/Microsoft.WindowsAPICodePack.Sensors.dll",
+        "lib/net48/Microsoft.WindowsAPICodePack.Sensors.xml",
+        "lib/netcoreapp3.0/Microsoft.WindowsAPICodePack.Sensors.dll",
+        "lib/netcoreapp3.0/Microsoft.WindowsAPICodePack.Sensors.xml",
+        "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.Sensors.dll",
+        "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.Sensors.xml",
+        "microsoft-windowsapicodepack-sensors.1.1.4.nupkg.sha512",
+        "microsoft-windowsapicodepack-sensors.nuspec"
+      ]
+    },
+    "Microsoft-WindowsAPICodePack-Shell/1.1.4": {
+      "sha512": "EtoEx9Fx3ZGW//sni9TB1vuBvzXIlyG8E2KNaX7bqV240aiU8RP+NmDHd1ox0YKbJDMxq7AWSI2jPhpLMYXKyw==",
+      "type": "package",
+      "path": "microsoft-windowsapicodepack-shell/1.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.WindowsAPICodePack.Shell.dll",
+        "lib/net452/Microsoft.WindowsAPICodePack.Shell.xml",
+        "lib/net462/Microsoft.WindowsAPICodePack.Shell.dll",
+        "lib/net462/Microsoft.WindowsAPICodePack.Shell.xml",
+        "lib/net472/Microsoft.WindowsAPICodePack.Shell.dll",
+        "lib/net472/Microsoft.WindowsAPICodePack.Shell.xml",
+        "lib/net48/Microsoft.WindowsAPICodePack.Shell.dll",
+        "lib/net48/Microsoft.WindowsAPICodePack.Shell.xml",
+        "lib/netcoreapp3.0/Microsoft.WindowsAPICodePack.Shell.dll",
+        "lib/netcoreapp3.0/Microsoft.WindowsAPICodePack.Shell.xml",
+        "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.Shell.dll",
+        "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.Shell.xml",
+        "microsoft-windowsapicodepack-shell.1.1.4.nupkg.sha512",
+        "microsoft-windowsapicodepack-shell.nuspec"
+      ]
+    },
+    "Microsoft-WindowsAPICodePack-ShellExtensions/1.1.4": {
+      "sha512": "UQnst6625NvHAUMpWxLPwuO+ulgH/HnlhjQJVJPT8TuTvNzpcC94POU0B3ooxceOBP+8Ewxq/NQ152zv+OzFiQ==",
+      "type": "package",
+      "path": "microsoft-windowsapicodepack-shellextensions/1.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.WindowsAPICodePack.ShellExtensions.dll",
+        "lib/net452/Microsoft.WindowsAPICodePack.ShellExtensions.xml",
+        "lib/net462/Microsoft.WindowsAPICodePack.ShellExtensions.dll",
+        "lib/net462/Microsoft.WindowsAPICodePack.ShellExtensions.xml",
+        "lib/net472/Microsoft.WindowsAPICodePack.ShellExtensions.dll",
+        "lib/net472/Microsoft.WindowsAPICodePack.ShellExtensions.xml",
+        "lib/net48/Microsoft.WindowsAPICodePack.ShellExtensions.dll",
+        "lib/net48/Microsoft.WindowsAPICodePack.ShellExtensions.xml",
+        "lib/netcoreapp3.0/Microsoft.WindowsAPICodePack.ShellExtensions.dll",
+        "lib/netcoreapp3.0/Microsoft.WindowsAPICodePack.ShellExtensions.xml",
+        "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.ShellExtensions.dll",
+        "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.ShellExtensions.xml",
+        "microsoft-windowsapicodepack-shellextensions.1.1.4.nupkg.sha512",
+        "microsoft-windowsapicodepack-shellextensions.nuspec"
+      ]
+    },
     "Microsoft.NETCore.Platforms/2.0.0": {
       "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
       "type": "package",
@@ -298,6 +497,23 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.WindowsAPICodePack-Shell/1.1.0": {
+      "sha512": "8WvLG0TNTylzMB8gnZeZDG68/DsagAF64K35RC2Y/zocHp4e03Uj/kba6egQlq1+0uVv04FpLG+CmENEIN53rg==",
+      "type": "package",
+      "path": "microsoft.windowsapicodepack-shell/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.WindowsAPICodePack.Shell.dll",
+        "lib/Microsoft.WindowsAPICodePack.Shell.pdb",
+        "lib/Microsoft.WindowsAPICodePack.Shell.xml",
+        "lib/Microsoft.WindowsAPICodePack.ShellExtensions.XML",
+        "lib/Microsoft.WindowsAPICodePack.ShellExtensions.dll",
+        "lib/Microsoft.WindowsAPICodePack.ShellExtensions.pdb",
+        "microsoft.windowsapicodepack-shell.1.1.0.nupkg.sha512",
+        "microsoft.windowsapicodepack-shell.nuspec"
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.4.0": {
@@ -618,24 +834,30 @@
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
       "MahApps.Metro.IconPacks.Material >= 4.8.0",
+      "Microsoft-WindowsAPICodePack-Core >= 1.1.4",
+      "Microsoft-WindowsAPICodePack-ExtendedLinguisticServices >= 1.1.4",
+      "Microsoft-WindowsAPICodePack-Sensors >= 1.1.4",
+      "Microsoft-WindowsAPICodePack-Shell >= 1.1.4",
+      "Microsoft-WindowsAPICodePack-ShellExtensions >= 1.1.4",
+      "Microsoft.WindowsAPICodePack-Shell >= 1.1.0",
       "System.Data.SqlClient >= 4.5.1",
       "WinSCP >= 5.17.10"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dagam\\.nuget\\packages\\": {}
+    "C:\\Users\\angel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dagam\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\SGRV\\DelegacionesMunicipales.csproj",
+      "projectUniqueName": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\SGRV\\DelegacionesMunicipales.csproj",
       "projectName": "DelegacionesMunicipales",
-      "projectPath": "C:\\Users\\dagam\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\SGRV\\DelegacionesMunicipales.csproj",
-      "packagesPath": "C:\\Users\\dagam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dagam\\source\\repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\SGRV\\obj\\",
+      "projectPath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\SGRV\\DelegacionesMunicipales.csproj",
+      "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\SGRV\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dagam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -665,6 +887,30 @@
             "target": "Package",
             "version": "[4.8.0, )"
           },
+          "Microsoft-WindowsAPICodePack-Core": {
+            "target": "Package",
+            "version": "[1.1.4, )"
+          },
+          "Microsoft-WindowsAPICodePack-ExtendedLinguisticServices": {
+            "target": "Package",
+            "version": "[1.1.4, )"
+          },
+          "Microsoft-WindowsAPICodePack-Sensors": {
+            "target": "Package",
+            "version": "[1.1.4, )"
+          },
+          "Microsoft-WindowsAPICodePack-Shell": {
+            "target": "Package",
+            "version": "[1.1.4, )"
+          },
+          "Microsoft-WindowsAPICodePack-ShellExtensions": {
+            "target": "Package",
+            "version": "[1.1.4, )"
+          },
+          "Microsoft.WindowsAPICodePack-Shell": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.5.1, )"
@@ -692,8 +938,26 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\SGRV\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.WindowsAPICodePack-Shell 1.1.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net5.0-windows7.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Microsoft.WindowsAPICodePack-Shell",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
 }

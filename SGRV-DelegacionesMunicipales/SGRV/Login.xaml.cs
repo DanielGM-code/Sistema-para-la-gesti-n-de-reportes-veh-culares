@@ -31,7 +31,7 @@ namespace SGRV
 
         private void button_IniciarSesion_Click(object sender, RoutedEventArgs e)
         {
-
+            Console.WriteLine("Hola c#");
             if (validadCampos())
             {
                 String username = tb_username.Text;
