@@ -49,7 +49,7 @@ namespace SGRV.GUIDelegacionesMunicipales
                     if (conductorSeleccionado != null)
                     {
                         ConductorDAO.updateConductor(conductor);
-                        MessageBox.Show("Conductor registrado de manera exitosa.");
+                        MessageBox.Show("Conductor modificado de manera exitosa.");
                         vaciarCampos();
                         llenarTabla();
                     }

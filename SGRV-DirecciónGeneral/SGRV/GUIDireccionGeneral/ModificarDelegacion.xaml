@@ -225,8 +225,8 @@
                 <DataGridTextColumn Header="Municipio" Binding="{Binding Municipio}"/>
                 <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}"/>
                 <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}"/>
-                <DataGridTextColumn Header="Código postal" Binding="{Binding codigoPostal}"/>
-                <DataGridTextColumn Header="Correo electrónico" Binding="{Binding correo}"/>
+                <DataGridTextColumn Header="Código postal" Binding="{Binding CodigoPostal}"/>
+                <DataGridTextColumn Header="Correo electrónico" Binding="{Binding Correo}"/>
             </DataGrid.Columns>
         </DataGrid>
 

@@ -197,5 +197,40 @@ namespace SGRV.modelo.dao
                 connection.Close();
             }
         }
+
+        public static void updateUsuario(Usuario usuario)
+        {
+            SqlConnection connection = null;
+            try
+            {
+                connection = ConexionBD.getConnection();
+                if (connection != null)
+                {
+                    SqlCommand command;
+                    String username = usuario.Username;
+                    String contraseña = usuario.Contraseña;
+                    String cargo = usuario.Cargo;
+                    int idDelegacion = usuario.IdDelegacion;
+                    String estado = usuario.Estado;
+                    String query = String.Format("UPDATE Usuario SET username = '{0}', " +
+                                                                      "contraseña = '{1}', " +
+                                                                      "numeroLicencia = '{2}', " +
+                                                                      "cargo = '{3}', " +
+                                                                      "idDelegacion = '{4}'" +
+                                                                      "estado = '{5}'" +
+                                                                      "WHERE IdUsuario = {6}",
+                                                                      username, contraseña, cargo,
+                                                                      idDelegacion, estado);
+                    command = new SqlCommand(query, connection);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+        }
     }
 }

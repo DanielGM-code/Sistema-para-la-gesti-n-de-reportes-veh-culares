@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SGRV.GUIDireccionGeneral
+namespace DelegacionesMunicipales.GUIDelegacionesMunicipales
 {
     /// <summary>
-    /// Lógica de interacción para ModificarDelegacion.xaml
+    /// Lógica de interacción para EliminarReporte.xaml
     /// </summary>
-    public partial class ModificarDelegacion : Window
+    public partial class EliminarReporte : Window
     {
-        public ModificarDelegacion()
+        public EliminarReporte()
         {
             InitializeComponent();
-        }
-
-        private void button_Modificar_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void button_Regresar_Click(object sender, RoutedEventArgs e)
@@ -54,9 +49,32 @@ namespace SGRV.GUIDireccionGeneral
 
         }
 
+        private void clic_reporte(object sender, SelectionChangedEventArgs e)
+        {
 
+        }
 
-        private void clic_delegacion_item(object sender, SelectionChangedEventArgs e)
+        private void clic_vehiculo(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void seleccionar_conductor(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btn_eliminarConductor_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_eliminarVehiculo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_EliminarReporte_Click(object sender, RoutedEventArgs e)
         {
 
         }
@@ -68,5 +86,6 @@ namespace SGRV.GUIDireccionGeneral
                 DragMove();
             }
         }
+
     }
 }

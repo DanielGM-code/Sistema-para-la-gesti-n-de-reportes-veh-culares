@@ -157,5 +157,44 @@ namespace SGRV.modelo.dao
                 connection.Close();
             }
         }
+
+        public static void updateDelegacion(Delegacion delegacion)
+        {
+            SqlConnection connection = null;
+            try
+            {
+                connection = ConexionBD.getConnection();
+                if (connection != null)
+                {
+                    SqlCommand command;
+                    String nombre = delegacion.Nombre;
+                    String direccion = delegacion.Direccion;
+                    String codigoPostal = delegacion.CodigoPostal;
+                    String municipio = delegacion.Municipio;
+                    String telefono = delegacion.Telefono;
+                    String correo = delegacion.Correo;
+                    String estado = delegacion.Estado;
+                    int idDelegacion = delegacion.IdDelegacion;
+                    String query = String.Format("UPDATE Delegacion SET nombre = '{0}', " +
+                                                                      "direccion = '{1}', " +
+                                                                      "codigoPostal = '{2}', " +
+                                                                      "municipio = '{3}', " +
+                                                                      "telefono = '{4}', " +
+                                                                      "correo = '{5}', " +
+                                                                      "estado = '{6}' " +
+                                                                      "WHERE IdDelegacion = {7}",
+                                                                      nombre, direccion, codigoPostal,
+                                                                      municipio, telefono, correo, estado, idDelegacion);
+                    command = new SqlCommand(query, connection);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+        }
     }
 }

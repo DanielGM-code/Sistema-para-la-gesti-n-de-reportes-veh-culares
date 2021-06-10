@@ -22,6 +22,18 @@
             </Border.Background>
         </Border>
 
+        <Border 
+            Style="{StaticResource border_ContenedorBotones}"
+            Margin="232,240,718,350"/>
+
+        <Border 
+            Style="{StaticResource border_ContenedorBotones}"
+            Margin="698,240,252,350"/>
+
+        <Border 
+            Style="{StaticResource border_ContenedorBotones}"
+            Margin="465,481,485,109"/>
+
         <Label Content="Bienvenido al Sistema de Reportes &#10;         de Siniestros Vehiculares" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 

@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SGRV.GUIDireccionGeneral
+namespace DelegacionesMunicipales.GUIDelegacionesMunicipales
 {
     /// <summary>
-    /// Lógica de interacción para RegistrarDelegacion.xaml
+    /// Lógica de interacción para ModificarReporte.xaml
     /// </summary>
-    public partial class RegistrarDelegacion : Window
+    public partial class ModificarReporte : Window
     {
-        public RegistrarDelegacion()
+        public ModificarReporte()
         {
             InitializeComponent();
-        }
-
-        private void button_Registrar_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void button_Regresar_Click(object sender, RoutedEventArgs e)
@@ -54,6 +49,47 @@ namespace SGRV.GUIDireccionGeneral
 
         }
 
+        private void seleccionar_conductor(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void clic_reporte(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void clic_Conductor(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void dg_vehiculosSeleccionados_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void button_agregarFotografia_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_ModificarReporte_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void btn_eliminarConductor_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_eliminarVehiculo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -61,5 +97,6 @@ namespace SGRV.GUIDireccionGeneral
                 DragMove();
             }
         }
+
     }
 }

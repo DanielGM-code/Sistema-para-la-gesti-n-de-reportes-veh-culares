@@ -20,16 +20,17 @@
                     <GradientStop Color="#3f4977" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
+            
         </Border>
-
+        <Button x:Name="butonPrueba"
+            Content="Button"
+               Height="20"
+                Width="100" Margin="1111,655,89,55" Click="butonPrueba_Click"/>
         <iconPacks:PackIconMaterial Kind="AccountSearch" 
                                     Margin="41,96,0,0" Height="25" Width="27"/>
 
         <iconPacks:PackIconMaterial Kind="Car" 
             Margin="340,95,0,0" Height="25" Width="27"/>
-
-        <iconPacks:PackIconMaterial Kind="Calendar" 
-            Margin="700,96,0,0" Height="25" Width="27"/>
 
         <iconPacks:PackIconMaterial Kind="Map" 
             Margin="1000,96,0,0" Height="26" Width="28"/>
@@ -114,7 +115,7 @@
 
         <DataGrid
             x:Name="dg_vehiculosSeleccionados"
-            Margin="343,406,700,147"/>
+            Margin="343,406,700,147" SelectionChanged="dg_vehiculosSeleccionados_SelectionChanged"/>
 
         <Label 
             Content="Vehículos seleccionados:"
@@ -130,13 +131,6 @@
             VerticalAlignment="Top"
             Style="{StaticResource label_textoPequeño}"/>
 
-        <TextBox 
-            HorizontalAlignment="Left" 
-            Margin="735,96,0,0"
-            VerticalAlignment="Top"
-            MaxLength="8"
-            Style="{StaticResource textBox_textBoxTransparente}" Width="225"/>
-
         <Label 
             Content="Dirección"
             HorizontalAlignment="Left" 
@@ -145,6 +139,7 @@
             Style="{StaticResource label_textoPequeño}"/>
 
         <TextBox 
+            x:Name="tb_direccion"
             HorizontalAlignment="Left"
             Margin="1040,96,0,0"
             VerticalAlignment="Top"
@@ -160,6 +155,7 @@
             Style="{StaticResource label_textoPequeño}"/>
 
         <TextBox
+            x:Name="tb_descripcion"
             HorizontalAlignment="Left" 
             Margin="700,205,0,0"
             VerticalAlignment="Top"
@@ -207,7 +203,7 @@
             x:Name="btn_eliminarVehiculo"
             Content="Quitar"
             Margin="343,583,924,124" 
-            Style="{StaticResource button_botonIcono}"  Height="Auto" Width="Auto"/>
+            Style="{StaticResource button_botonIcono}"  Height="Auto" Width="Auto" Click="btn_eliminarVehiculo_Click"/>
 
         <Button x:Name="button_Regresar"
                 Content="{iconPacks:Material Kind=ArrowLeft, Height=30, Width=40}"
@@ -251,5 +247,6 @@
                 VerticalAlignment="Top"
                 Style="{StaticResource button_botonIcono}"
                 Click="button_CerrarVentana_Click"/>
+        <DatePicker  x:Name="dp_fecha" HorizontalAlignment="Left" Margin="700,96,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

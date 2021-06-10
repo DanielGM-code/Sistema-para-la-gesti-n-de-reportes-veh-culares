@@ -101,7 +101,7 @@ namespace SGRV.modelo.dao
                     String direccion = reporte.Direccion;
                     String descripcion = reporte.Descripcion;
                     String estado = reporte.Estado;
-                    String query = String.Format("INSERT INTO Reporte (fecha, direccion, descripcion, estado) VALUES ('{0}','{1}','{2}', '{3})", fecha, direccion, descripcion, estado);
+                    String query = String.Format("INSERT INTO Reporte (fecha, direccion, descripcion, estado) VALUES ('{0}','{1}','{2}', '{3}')", fecha.ToString("yyyy-MM-dd"), direccion, descripcion, estado);
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
                     command.Dispose();
@@ -143,6 +143,40 @@ namespace SGRV.modelo.dao
             {
                 connection.Close();
             }
+        }
+
+        public static int getLastIndex()
+        {
+            int lastIndex = 0;
+            SqlConnection connection = null;
+            try
+            {
+                connection = ConexionBD.getConnection();
+                if (connection != null)
+                {
+                    SqlCommand command;
+                    SqlDataReader dataReader;
+                    String query = "SELECT TOP 1* FROM Reporte R ORDER BY R.idReporte DESC";
+                    command = new SqlCommand(query, connection);
+                    dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        lastIndex = (!dataReader.IsDBNull(0)) ? dataReader.GetInt32(0) : 0;
+                    }
+                    dataReader.Close();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return lastIndex;
         }
     }
 }

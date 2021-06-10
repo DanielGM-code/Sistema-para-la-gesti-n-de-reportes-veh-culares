@@ -21,21 +21,15 @@ namespace SGRV.GUIDireccionGeneral
     /// </summary>
     public partial class RegistrarUsuario : Window
     {
-        List<Usuario> usuarios;
-
+        List<Delegacion> delegaciones;
+        public string[] cargos { get; set; }
         public RegistrarUsuario()
         {
+            delegaciones = new List<Delegacion>();
+
+            cargos = new string[] { "Administrativo", "Agente de transito", "Perito", "Soporte" };
+            DataContext = this;
             InitializeComponent();
-        }
-
-        private void button_Modificar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Eliminar_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void button_Registrar_Click(object sender, RoutedEventArgs e)
@@ -84,6 +78,7 @@ namespace SGRV.GUIDireccionGeneral
                             break;
                     }
                     MessageBox.Show("Se ha registrado al usuario de manera exitosa.");
+                    vaciarCampos();
                 }
                 else
                 {
@@ -120,8 +115,20 @@ namespace SGRV.GUIDireccionGeneral
         {
             return (tb_Nombre.Text == "" ||
                tb_username.Text == "" ||
+               pb_password.Password == "" ||
+               tb_correo.Text == "" ||
                cb_cargo.SelectedItem == null ||
                cb_delegacion.SelectedItem == null) ? false : true;
+        }
+
+        private void vaciarCampos()
+        {
+            tb_Nombre.Text = "";
+            tb_username.Text = "";
+            tb_correo.Text = "";
+            pb_password.Password = "";
+            cb_cargo.SelectedItem = null;
+            cb_delegacion.SelectedItem = null;
         }
 
         private void OnMouseDown(object sender, MouseButtonEventArgs e)

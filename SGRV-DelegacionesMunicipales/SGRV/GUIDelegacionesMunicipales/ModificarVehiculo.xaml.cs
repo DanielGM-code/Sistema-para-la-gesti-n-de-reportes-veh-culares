@@ -21,7 +21,7 @@ namespace SGRV.GUIDelegacionesMunicipales
     /// </summary>
     public partial class ModificarVehiculo : Window
     {
-        List<Conductor> conductors;
+        List<Conductor> conductores;
         List<Vehiculo> vehiculo;
         List<Vehiculo> vehiculos;
         Conductor conductorSeleccionado;
@@ -30,15 +30,16 @@ namespace SGRV.GUIDelegacionesMunicipales
         public ModificarVehiculo()
         {
             InitializeComponent();
-            conductors = new List<Conductor>();
+            conductores = new List<Conductor>();
             llenarTablaConductores();
         }
 
         private void button_Modificar_Click(object sender, RoutedEventArgs e)
         {
-            if(validarCampos())
+            if(vehiculoSeleccionado != null && conductorSeleccionado != null)
             {
                 Vehiculo vehiculo = new Vehiculo();
+                vehiculo.IdVehiculo = vehiculoSeleccionado.IdVehiculo;
                 vehiculo.Marca = tb_marca.Text;
                 vehiculo.Modelo = tb_modelo.Text;
                 vehiculo.Ano = tb_año.Text;
@@ -50,9 +51,17 @@ namespace SGRV.GUIDelegacionesMunicipales
                 vehiculo.Estado = "Activo";
                 try
                 {
-                    //VehiculoDAO.addVehiculo(vehiculo);
-                    //MessageBox.Show("Vehículo registrado con éxito.");
-                    //limpiarCampos();
+                    if (validarCampos())
+                    {
+                        VehiculoDAO.updateVehiculo(vehiculo);
+                        MessageBox.Show("Vehiculo modificado de manera exitosa.");
+                        limpiarCampos();
+                        llenarTablaVehiculos(conductorSeleccionado);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Asegúrese de llenar todos los campos.");
+                    }
                 }
                 catch (Exception x)
                 {
@@ -67,9 +76,9 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void llenarTablaConductores()
         {
-            conductors = ConductorDAO.getAllConductores();
+            conductores = ConductorDAO.getAllConductores();
             dg_conductores.AutoGenerateColumns = false;
-            dg_conductores.ItemsSource = conductors;
+            dg_conductores.ItemsSource = conductores;
         }
 
         private void llenarTablaVehiculos(Conductor conductor)
@@ -87,6 +96,7 @@ namespace SGRV.GUIDelegacionesMunicipales
 
                 if (conductorSeleccionado != null)
                 {
+                    tb_nombreConductor.Text = conductorSeleccionado.Nombre;
                     llenarTablaVehiculos(conductorSeleccionado); 
                 }
             }
@@ -128,8 +138,7 @@ namespace SGRV.GUIDelegacionesMunicipales
                     tb_numeroPlacas.Text == "" ||
                     tb_año.Text == "" ||
                     tb_color.Text == "" ||
-                    tb_numeroPolizaSeguro.Text == "" ||
-                    tb_nombreConductor.Text == "") ? false : true;
+                    tb_numeroPolizaSeguro.Text == "") ? false : true;
         }
 
         private void limpiarCampos()

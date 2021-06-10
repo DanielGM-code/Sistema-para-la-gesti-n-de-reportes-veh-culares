@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using SGRV.modelo.database;
+using System.Windows;
 
 namespace SGRV.modelo.dao
 {
@@ -102,6 +103,7 @@ namespace SGRV.modelo.dao
             return vehiculos;
         }
 
+
         public static Vehiculo getVehiculoById(int idVehiculo)
         {
             Vehiculo vehiculo = new Vehiculo();
@@ -162,7 +164,8 @@ namespace SGRV.modelo.dao
                     String query = String.Format("INSERT INTO Vehiculo (marca, modelo, año, color, nombreAseguradora, polizaSeguro, placas, idConductor, estado) " +
                         "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', {7}, '{8}')", marca, modelo, ano, color, nombreAseguradora, polizaSeguro, placas, idConductor, estado);
                     command = new SqlCommand(query, connection);
-                    command.ExecuteNonQuery();
+                    int noseque = command.ExecuteNonQuery();
+                    MessageBox.Show(noseque + "");
                     command.Dispose();
                 }
             }
@@ -201,6 +204,49 @@ namespace SGRV.modelo.dao
             finally
             {
                 connection.Close();
+            }
+        }
+
+        public static void updateVehiculo(Vehiculo vehiculo)
+        {
+            SqlConnection connection = null;
+            try
+            {
+                connection = ConexionBD.getConnection();
+                if (connection != null)
+                {
+                    SqlCommand command;
+                    String marca = vehiculo.Marca;
+                    String modelo = vehiculo.Modelo;
+                    String ano = vehiculo.Ano;
+                    String color = vehiculo.Color;
+                    String nombreAseguradora = vehiculo.NombreAseguradora;
+                    String polizaSeguro = vehiculo.PolizaSeguro;
+                    String placas = vehiculo.Placas;
+                    int idConductor = vehiculo.IdConductor;
+                    String estado = vehiculo.Estado;
+                    int idVehiculo = vehiculo.IdVehiculo;
+                    String query = String.Format("UPDATE Vehiculo SET marca = '{0}', " +
+                                                                      "modelo = '{1}', " +
+                                                                      "año = '{2}', " +
+                                                                      "color = '{3}', " +
+                                                                      "nombreAseguradora = '{4}'," +
+                                                                      "polizaSeguro ='{5}'," +
+                                                                      "placas = '{6}'," +
+                                                                      "estado = '{7}'" +
+                                                                      "WHERE IdVehiculo = {8}",
+                                                                      marca, modelo, ano,
+                                                                      color, nombreAseguradora, polizaSeguro,
+                                                                      placas, estado, idVehiculo);
+                    command = new SqlCommand(query, connection);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
             }
         }
     }

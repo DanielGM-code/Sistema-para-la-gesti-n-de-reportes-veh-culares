@@ -1,12 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "U8MtvlFyOZ1u0XXbrEGV+TlxAYk0NeunKNx4iLxu6xP8sCDRgwrlyhtpY/m2el+vouQ32QVUo2gxXYn9ImyLZw==",
+  "dgSpecHash": "SKzRR5ndxL6nOBHIm8qHMW2wMfTe4IxPsmpDNCgL3ds72bONCQxkBpF5ZQTDXGvbIlkOGU+pT/6eivuCsANX2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\SGRV\\DelegacionesMunicipales.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\angel\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.8.0\\mahapps.metro.iconpacks.material.4.8.0.nupkg.sha512",
+    "C:\\Users\\angel\\.nuget\\packages\\microsoft-windowsapicodepack-core\\1.1.4\\microsoft-windowsapicodepack-core.1.1.4.nupkg.sha512",
+    "C:\\Users\\angel\\.nuget\\packages\\microsoft-windowsapicodepack-extendedlinguisticservices\\1.1.4\\microsoft-windowsapicodepack-extendedlinguisticservices.1.1.4.nupkg.sha512",
+    "C:\\Users\\angel\\.nuget\\packages\\microsoft-windowsapicodepack-sensors\\1.1.4\\microsoft-windowsapicodepack-sensors.1.1.4.nupkg.sha512",
+    "C:\\Users\\angel\\.nuget\\packages\\microsoft-windowsapicodepack-shell\\1.1.4\\microsoft-windowsapicodepack-shell.1.1.4.nupkg.sha512",
+    "C:\\Users\\angel\\.nuget\\packages\\microsoft-windowsapicodepack-shellextensions\\1.1.4\\microsoft-windowsapicodepack-shellextensions.1.1.4.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\angel\\.nuget\\packages\\microsoft.windowsapicodepack-shell\\1.1.0\\microsoft.windowsapicodepack-shell.1.1.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -18,5 +24,22 @@
     "C:\\Users\\angel\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\winscp\\5.17.10\\winscp.5.17.10.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\SGRV\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.WindowsAPICodePack-Shell 1.1.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net5.0-windows7.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Microsoft.WindowsAPICodePack-Shell",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
 }

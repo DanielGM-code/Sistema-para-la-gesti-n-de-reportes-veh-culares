@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DireccionGeneral.GUIDireccionGeneral;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -88,6 +89,9 @@ namespace SGRV.GUIDireccionGeneral
             button_RegistrarReporte.Visibility = Visibility.Hidden;
             button_ModificarReporte.Visibility = Visibility.Hidden;
             button_EliminarReporte.Visibility = Visibility.Hidden;
+
+            button_Usuario.Visibility = Visibility.Visible;
+            button_Reporte.Visibility = Visibility.Visible;
         }
 
         private void button_RegistrarUsuario_Click(object sender, RoutedEventArgs e)
@@ -111,7 +115,9 @@ namespace SGRV.GUIDireccionGeneral
 
         private void button_ModificarUsuario_Click(object sender, RoutedEventArgs e)
         {
-
+            ModificarUsuario ventanaModificarUsuario = new ModificarUsuario();
+            ventanaModificarUsuario.Show();
+            this.Close();
         }
 
         private void button_ModificarReporte_Click(object sender, RoutedEventArgs e)
@@ -128,7 +134,9 @@ namespace SGRV.GUIDireccionGeneral
 
         private void button_EliminarUsuarior_Click(object sender, RoutedEventArgs e)
         {
-
+            EliminarUsuario ventanaEliminarUsuario = new EliminarUsuario();
+            ventanaEliminarUsuario.Show();
+            this.Close();
         }
 
         private void button_EliminarReporte_Click(object sender, RoutedEventArgs e)
@@ -138,7 +146,9 @@ namespace SGRV.GUIDireccionGeneral
 
         private void button_EliminarDelegacion_Click(object sender, RoutedEventArgs e)
         {
-
+            EliminarDelegacion ventanaEliminarDelegacionMunicipal = new EliminarDelegacion();
+            ventanaEliminarDelegacionMunicipal.Show();
+            this.Close();
         }
 
 
