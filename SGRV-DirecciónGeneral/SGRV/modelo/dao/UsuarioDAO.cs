@@ -22,7 +22,7 @@ namespace SGRV.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = "SELECT U.idUsuario, U.username, U.contraseña, U.cargo, U.idDelegacion, U.estado, D.nombre " +
+                    String query = "SELECT U.idUsuario, U.username, U.contraseña, U.cargo, U.idDelegacion, U.estado, D.nombre, U.correo " +
                                    "FROM Usuario U INNER JOIN Delegacion D ON U.idDelegacion = D.idDelegacion WHERE U.estado = 'Activo'";
                     command = new SqlCommand(query, connection);
                     dataReader = command.ExecuteReader();
@@ -36,6 +36,7 @@ namespace SGRV.modelo.dao
                         usuario.IdDelegacion = (!dataReader.IsDBNull(4)) ? dataReader.GetInt32(4) : 0;
                         usuario.Estado = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
                         usuario.Delegacion = (!dataReader.IsDBNull(6)) ? dataReader.GetString(6) : "";
+                        usuario.Correo = (!dataReader.IsDBNull(7)) ? dataReader.GetString(7) : "";
                         usuarios.Add(usuario);
                     }
                     dataReader.Close();
@@ -65,7 +66,7 @@ namespace SGRV.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = String.Format("SELECT U.idUsuario, U.username, U.contraseña, U.cargo, U.idDelegacion, U.estado, D.nombre " +
+                    String query = String.Format("SELECT U.idUsuario, U.username, U.contraseña, U.cargo, U.idDelegacion, U.estado, D.nombre, U.correo " +
                                                  "FROM Usuario U INNER JOIN Delegacion D ON U.idDelegacion = D.idDelegacion " +
                                                  "WHERE idUsuario = {0}", idUsuario);
                     command = new SqlCommand(query, connection);
@@ -79,6 +80,7 @@ namespace SGRV.modelo.dao
                         usuario.IdDelegacion = (!dataReader.IsDBNull(4)) ? dataReader.GetInt32(4) : 0;
                         usuario.Estado = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
                         usuario.Delegacion = (!dataReader.IsDBNull(6)) ? dataReader.GetString(6) : "";
+                        usuario.Correo = (!dataReader.IsDBNull(7)) ? dataReader.GetString(7) : "";
                     }
                     dataReader.Close();
                     command.Dispose();
@@ -107,7 +109,7 @@ namespace SGRV.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = String.Format("SELECT U.idUsuario, U.username, U.contraseña, U.cargo, U.idDelegacion, U.estado, D.nombre " +
+                    String query = String.Format("SELECT U.idUsuario, U.username, U.contraseña, U.cargo, U.idDelegacion, U.estado, D.nombre, U.correo " +
                                                  "FROM Usuario U INNER JOIN Delegacion D ON U.idDelegacion = D.idDelegacion " +  
                                                  "WHERE username = '{0}' AND U.estado = 'Activo'", username);
                     command = new SqlCommand(query, connection);
@@ -121,6 +123,7 @@ namespace SGRV.modelo.dao
                         usuario.IdDelegacion = (!dataReader.IsDBNull(4)) ? dataReader.GetInt32(4) : 0;
                         usuario.Estado = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
                         usuario.Delegacion = (!dataReader.IsDBNull(6)) ? dataReader.GetString(6) : "";
+                        usuario.Correo = (!dataReader.IsDBNull(7)) ? dataReader.GetString(7) : "";
                     }
                     dataReader.Close();
                     command.Dispose();
@@ -152,9 +155,10 @@ namespace SGRV.modelo.dao
                     String cargo = usuario.Cargo;
                     int idDelegacion = usuario.IdDelegacion;
                     String estado = usuario.Estado;
-                    String query = String.Format("INSERT INTO Usuario (username, contraseña, cargo, idDelegacion, estado) " +
-                                                 "VALUES ('{0}','{1}','{2}','{3}','{4}')", username, contraseña, cargo,
-                                                 idDelegacion, estado);
+                    String correo = usuario.Correo;
+                    String query = String.Format("INSERT INTO Usuario (username, contraseña, cargo, idDelegacion, estado, correo) " +
+                                                 "VALUES ('{0}','{1}','{2}','{3}','{4}', {5})", username, contraseña, cargo,
+                                                 idDelegacion, estado, correo);
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
                     command.Dispose();
@@ -212,15 +216,17 @@ namespace SGRV.modelo.dao
                     String cargo = usuario.Cargo;
                     int idDelegacion = usuario.IdDelegacion;
                     String estado = usuario.Estado;
+                    String correo = usuario.Correo;
                     String query = String.Format("UPDATE Usuario SET username = '{0}', " +
                                                                       "contraseña = '{1}', " +
                                                                       "numeroLicencia = '{2}', " +
                                                                       "cargo = '{3}', " +
                                                                       "idDelegacion = '{4}'" +
                                                                       "estado = '{5}'" +
-                                                                      "WHERE IdUsuario = {6}",
+                                                                      "correo = '{6}'" +
+                                                                      "WHERE IdUsuario = {7}",
                                                                       username, contraseña, cargo,
-                                                                      idDelegacion, estado);
+                                                                      idDelegacion, estado, correo);
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
                     command.Dispose();
