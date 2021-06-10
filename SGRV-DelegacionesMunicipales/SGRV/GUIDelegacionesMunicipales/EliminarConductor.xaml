@@ -41,7 +41,7 @@
 
         <Label Content="Eliminar conductor" 
                HorizontalAlignment="Center"
-               Margin="0,25,0,0" 
+               Margin="0,18,0,0" 
                VerticalAlignment="Top" 
                Style="{StaticResource label_textoGrande}"/>
 

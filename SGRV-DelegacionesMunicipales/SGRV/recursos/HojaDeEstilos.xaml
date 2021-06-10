@@ -344,17 +344,6 @@
     </Style>
 
 
-    <!--Estilo para Combo box-->
-    <Style TargetType="ComboBox">
-        <Setter Property="Foreground" Value="#3f4977"/>
-        <Setter Property="FontFamily" Value="Segoe UI"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="FontSize"  Value="20"/>
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderThickness" Value="0"/>
-    </Style>
-    
-
     <!--Estilo para lineas horizontales pequeñas-->
     <Style TargetType="Border" x:Key="border_lineas">
         <Setter Property="Background" Value ="#ffffffff"/>

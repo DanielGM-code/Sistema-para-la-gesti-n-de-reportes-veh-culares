@@ -27,12 +27,11 @@
             </Border.Background>
         </Border>
 
-        <Border Style="{StaticResource border_ContenedorFormulario}" Margin="296,120,296,56" Grid.RowSpan="2"/>
-        <Border Style="{StaticResource border_lineasGrandes}" Margin="325,184,675,195"/>
-        <Border Style="{StaticResource border_lineasGrandes}" Margin="325,300,675,79"/>
-        <Border Style="{StaticResource border_lineasGrandes}" Margin="325,35,675,312" Grid.Row="1"/>
-        <Border Style="{StaticResource border_lineasGrandes}" Margin="673,35,327,312" Grid.Row="1"/>
-        <Border Style="{StaticResource border_lineasGrandes}" Margin="325,139,675,208" Grid.Row="1"/>
+        <Border Style="{StaticResource border_ContenedorFormulario}" Margin="296,170,296,25" Grid.RowSpan="2"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="331,360,669,19"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="331,95,669,252" Grid.Row="1"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="675,83,325,264" Grid.Row="1"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="331,199,669,148" Grid.Row="1"/>
 
         <Label Content="Registro de Usuarios"
                HorizontalAlignment="Center" 
@@ -40,68 +39,54 @@
                VerticalAlignment="Top"
                Style="{StaticResource label_textoGrande}"/>
 
-        <Label Content="Nombre completo"
-               HorizontalAlignment="Left" 
-               Margin="319,182,0,0" 
-               VerticalAlignment="Top"
-               Style="{StaticResource label_textoPequeño}"/>
-
         <Label Content="Nombre de usuario"
                HorizontalAlignment="Left" 
-               Margin="319,300,0,0" 
+               Margin="325,360,0,0" 
                VerticalAlignment="Top"
-               Style="{StaticResource label_textoPequeño}"/>
+               Style="{StaticResource label_textoPequeño}" Grid.RowSpan="2"/>
 
         <Label Content="Contraseña" 
                HorizontalAlignment="Left" 
-               Margin="319,35,0,0"
+               Margin="325,95,0,0"
                VerticalAlignment="Top"
                Style="{StaticResource label_textoPequeño}" Grid.Row="1"/>
 
         <Label Content="Cargo" 
                HorizontalAlignment="Left"
-               Margin="672,182,0,0"
+               Margin="675,244,0,0"
                VerticalAlignment="Top"
                Style="{StaticResource label_textoPequeño}" RenderTransformOrigin="0.23,0.578"/>
 
         <Label Content="Delegación" 
                HorizontalAlignment="Left"
-               Margin="667,300,0,0"
+               Margin="674,360,0,0"
                VerticalAlignment="Top"
-               Style="{StaticResource label_textoPequeño}"/>
+               Style="{StaticResource label_textoPequeño}" Grid.RowSpan="2"/>
 
         <Label Content="Confirmar contraseña"
                HorizontalAlignment="Left" 
-               Margin="319,139,0,0"
+               Margin="325,199,0,0"
                VerticalAlignment="Top" 
                Style="{StaticResource label_textoPequeño}" Grid.Row="1"/>
 
         <Label Content="Correo" 
                HorizontalAlignment="Left"
-               Margin="667,35,0,0" 
+               Margin="670,83,0,0" 
                VerticalAlignment="Top"
                Style="{StaticResource label_textoPequeño}" Grid.Row="1"/>
 
-        <TextBox x:Name="tb_Nombre" 
-                 HorizontalAlignment="Left"
-                 Margin="350,152,0,0"
-                 VerticalAlignment="Top" 
-                 Width="275"
-                 MaxLength="250"
-                 Style="{StaticResource textBox_textBoxTransparente}"/>
-
         <TextBox x:Name="tb_username" 
                  HorizontalAlignment="Left"
-                 Margin="350,268,0,0"
+                 Margin="355,328,0,0"
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top"
-                 Width="275"
+                 Width="276"
                  MaxLength="250"
                  Style="{StaticResource textBox_textBoxTransparente}"/>
 
         <TextBox x:Name="tb_correo"
                  HorizontalAlignment="Left"
-                 Margin="698,3,0,0"
+                 Margin="698,53,0,0"
                  VerticalAlignment="Top" 
                  Width="275"
                  MaxLength="250"
@@ -109,36 +94,39 @@
 
         <PasswordBox x:Name="pb_password"
                      HorizontalAlignment="Left"
-                     Margin="350,3,0,0"
+                     Margin="355,63,0,0"
                      VerticalAlignment="Top" 
-                     Width="275"
+                     Width="276"
                      MaxLength="250"
                      Style="{StaticResource passwordBox_passwordBoxTransparente}" Grid.Row="1"/>
 
         <PasswordBox x:Name="pb_confirmarPassword" 
                      HorizontalAlignment="Left"
-                     Margin="350,107,0,0" 
+                     Margin="355,167,0,0" 
                      VerticalAlignment="Top"  
-                     Width="275"
+                     Width="276"
                      MaxLength="250"
                      Style="{StaticResource passwordBox_passwordBoxTransparente}" Grid.Row="1"/>
 
         <ComboBox x:Name="cb_cargo" 
                   HorizontalAlignment="Left"
-                  Margin="673,152,0,0" 
-                  VerticalAlignment="Top" 
-                  Width="300" Height="26"/>
+                  Margin="709,214,0,0" 
+                  VerticalAlignment="Top"
+                  FontSize="13"
+                  ItemsSource="{Binding cargos}"
+                  Width="271" Height="26"/>
 
         <ComboBox x:Name="cb_delegacion" 
                   HorizontalAlignment="Left" 
-                  Margin="673,268,0,0" 
+                  Margin="717,328,0,0" 
+                  FontSize="13"
                   VerticalAlignment="Top" 
-                  Width="300" Height="26"/>
+                  Width="263" Height="28"/>
 
         <Button x:Name="button_Registrar"
                 Content="Registrar usuario" 
                 HorizontalAlignment="Center"
-                Margin="0,213,0,0"
+                Margin="0,245,0,0"
                 VerticalAlignment="Top"
                 Style="{StaticResource button_botonMediano}"
                 Click="button_Registrar_Click" Grid.Row="1"/>
@@ -185,5 +173,21 @@
                 VerticalAlignment="Top"
                 Style="{StaticResource button_botonIcono}"
                 Click="button_CerrarVentana_Click"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="680,360,320,19"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="680,244,320,135"/>
+        <Border Style="{StaticResource border_lineasGrandes}" Margin="331,244,669,135"/>
+        <Label Content="Nombre completo"
+            HorizontalAlignment="Left" 
+            Margin="325,244,0,0" 
+            VerticalAlignment="Top"
+            Style="{StaticResource label_textoPequeño}"/>
+        <TextBox x:Name="tb_Nombre" 
+            HorizontalAlignment="Left"
+            Margin="355,214,0,0"
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="276"
+            MaxLength="250"
+            Style="{StaticResource textBox_textBoxTransparente}"/>
     </Grid>
 </Window>

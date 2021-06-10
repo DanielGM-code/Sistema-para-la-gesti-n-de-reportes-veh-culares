@@ -19,4 +19,10 @@
 	<ItemGroup>
 	  <Resource Include="recursos\LogoSGRV.png" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Page Update="recursos\HojaDeEstilos.xaml">
+	    <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+	    <SubType>Designer</SubType>
+	  </Page>
+	</ItemGroup>
 </Project>

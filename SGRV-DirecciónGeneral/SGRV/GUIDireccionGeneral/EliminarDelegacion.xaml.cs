@@ -1,4 +1,6 @@
-﻿using SGRV.modelo.dao;
+﻿using SGRV;
+using SGRV.GUIDireccionGeneral;
+using SGRV.modelo.dao;
 using SGRV.modelo.poco;
 using System;
 using System.Collections.Generic;
@@ -14,55 +16,38 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SGRV.GUIDireccionGeneral
+namespace DireccionGeneral.GUIDireccionGeneral
 {
     /// <summary>
-    /// Lógica de interacción para ModificarDelegacion.xaml
+    /// Lógica de interacción para EliminarDelegacion.xaml
     /// </summary>
-    public partial class ModificarDelegacion : Window
+    public partial class EliminarDelegacion : Window
     {
         List<Delegacion> delegaciones;
         Delegacion delegacionSeleccionada;
 
-        public ModificarDelegacion()
+        public EliminarDelegacion()
         {
             InitializeComponent();
             delegaciones = new List<Delegacion>();
             llenarTabla();
         }
 
-        private void button_Modificar_Click(object sender, RoutedEventArgs e)
+        private void button_Eliminar_Click(object sender, RoutedEventArgs e)
         {
-            if (validarCampos())
+            try
             {
-                Delegacion delegacion = new Delegacion();
-                delegacion.IdDelegacion = delegacionSeleccionada.IdDelegacion;
-                delegacion.Estado = "Activo";
-                delegacion.Nombre = tb_nombre.Text;
-                delegacion.CodigoPostal = tb_codigoPostal.Text;
-                delegacion.Correo = tb_correo.Text;
-                delegacion.Direccion = tb_direccion.Text;
-                delegacion.Municipio = tb_municipio.Text;
-                delegacion.Telefono = tb_telefono.Text;
-
-                try
+                if (delegacionSeleccionada != null)
                 {
-                    if (delegacionSeleccionada != null)
-                    {
-                        DelegacionDAO.updateDelegacion(delegacion);
-                        MessageBox.Show("Delegación modificada de manera exitosa.");
-                        vaciarCampos();
-                        llenarTabla();
-                    }
-                }
-                catch (Exception x)
-                {
-                    MessageBox.Show("Ocurrió un error, inténtelo de nuevo.");
+                    DelegacionDAO.removeDelegacion(delegacionSeleccionada);
+                    MessageBox.Show("Delegación eliminada de manera exitosa.");
+                    vaciarCampos();
+                    llenarTabla();
                 }
             }
-            else
+            catch (Exception x)
             {
-                MessageBox.Show("Asegúrese de llenar todos los campos.");
+                MessageBox.Show("Ocurrió un error, inténtelo de nuevo.");
             }
         }
 
