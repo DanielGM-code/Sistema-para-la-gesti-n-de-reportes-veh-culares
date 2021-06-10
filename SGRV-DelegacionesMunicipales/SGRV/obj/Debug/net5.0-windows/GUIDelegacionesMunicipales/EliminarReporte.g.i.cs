@@ -160,8 +160,8 @@ namespace DelegacionesMunicipales.GUIDelegacionesMunicipales {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;V1.0.0.0;component/guidelegacionesmunicipales/eliminarre" +
-                    "porte.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;component/guidelegacionesmunicipales/eliminarreporte.xam" +
+                    "l", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDelegacionesMunicipales\EliminarReporte.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
