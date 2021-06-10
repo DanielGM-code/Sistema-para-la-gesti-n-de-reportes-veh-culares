@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\App.xaml
-102005163203
+11286492328
 1-780599726
-391815366332
+40501372871
 1971342861370
-Chat.xaml;GUIDelegacionesMunicipales\EliminarConductor.xaml;GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml;GUIDelegacionesMunicipales\ModificarConductor.xaml;GUIDelegacionesMunicipales\ModificarVehiculo.xaml;GUIDelegacionesMunicipales\RegistrarConductor.xaml;GUIDelegacionesMunicipales\RegistrarReporte.xaml;GUIDelegacionesMunicipales\RegistrarVehiculo.xaml;Login.xaml;recursos\HojaDeEstilos.xaml;
+Chat.xaml;GUIDelegacionesMunicipales\EliminarConductor.xaml;GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml;GUIDelegacionesMunicipales\ModificarConductor.xaml;GUIDelegacionesMunicipales\ModificarReporte.xaml;GUIDelegacionesMunicipales\ModificarVehiculo.xaml;GUIDelegacionesMunicipales\RegistrarConductor.xaml;GUIDelegacionesMunicipales\RegistrarReporte.xaml;GUIDelegacionesMunicipales\RegistrarVehiculo.xaml;Login.xaml;recursos\HojaDeEstilos.xaml;
 
 False
 

@@ -96,3 +96,5 @@ C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV
 C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\ModificarUsuario.g.cs
 C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\EliminarDelegacion.baml
 C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\ModificarUsuario.baml
+C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\EliminarUsuario.g.cs
+C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\EliminarUsuario.baml

@@ -110,3 +110,5 @@ C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV
 C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\ref\DelegacionesMunicipales.dll
 C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\DelegacionesMunicipales.pdb
 C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\DelegacionesMunicipales.genruntimeconfig.cache
+C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\GUIDelegacionesMunicipales\ModificarReporte.g.cs
+C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\GUIDelegacionesMunicipales\ModificarReporte.baml

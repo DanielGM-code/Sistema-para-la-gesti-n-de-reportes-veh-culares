@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\dagam\source\repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\App.xaml
-9-1715660180
+11-1768256
 1-780599726
-401535140437
+42-148518450
 1971342861370
-Chat.xaml;GUIDireccionGeneral\EliminarDelegacion.xaml;GUIDireccionGeneral\MenuDireccionGeneral.xaml;GUIDireccionGeneral\ModificarDelegacion.xaml;GUIDireccionGeneral\ModificarUsuario.xaml;GUIDireccionGeneral\RegistrarDelegacion.xaml;GUIDireccionGeneral\RegistrarUsuario.xaml;Login.xaml;recursos\HojaDeEstilos.xaml;
+Chat.xaml;GUIDireccionGeneral\EliminarDelegacion.xaml;GUIDireccionGeneral\EliminarUsuario.xaml;GUIDireccionGeneral\MenuDireccionGeneral.xaml;GUIDireccionGeneral\ModificarDelegacion.xaml;GUIDireccionGeneral\ModificarUsuario.xaml;GUIDireccionGeneral\RegistrarDelegacion.xaml;GUIDireccionGeneral\RegistrarUsuario.xaml;Login.xaml;Mensaje.xaml;recursos\HojaDeEstilos.xaml;
 
-True
+False
 
