@@ -151,9 +151,6 @@
                  Style="{StaticResource textBox_textBoxTransparente}"/>
 
 
-        <iconPacks:PackIconMaterial Kind="AccountSearch" 
-                                        Margin="89,185,0,0" Height="25" Width="20"/>
-
         <iconPacks:PackIconMaterial Kind="RegisteredTrademark" 
                                         Margin="486,184,0,0" Height="25" Width="20"/>
 
@@ -175,7 +172,14 @@
         <iconPacks:PackIconMaterial Kind="CarBack" 
                                         Margin="486,546,0,0" Height="24" Width="20"/>
 
-
+        <Button x:Name="button_Buscar"
+                Content="{iconPacks:Material Kind=AccountSearch, Height=25, Width=26}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Height="40" Width="35"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Buscar_Click" Margin="85,178,0,0"/>
+        
         <Button x:Name="button_Modificar"
                 Content="Modificar vehículo" 
                 HorizontalAlignment="Left"

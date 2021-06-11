@@ -114,8 +114,7 @@
 
         <Border Style="{StaticResource border_lineasGrandes}" Margin="882,245,118,483"/>
 
-        <iconPacks:PackIconMaterial Kind="AccountSearch" 
-                                    Margin="80,185,0,0" Height="25" Width="26"/>
+        
 
         <iconPacks:PackIconMaterial Kind="RenameBox" 
                                     Margin="524,213,0,0" 
@@ -143,6 +142,14 @@
                     Margin="907,210,0,0" 
                     VerticalAlignment="Top"
                     Height="30" Width="275"/>
+
+        <Button x:Name="button_Buscar"
+                Content="{iconPacks:Material Kind=AccountSearch, Height=25, Width=26}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Height="40" Width="35"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Buscar_Click" Margin="75,178,0,0"/>
 
         <Button x:Name="button_Regresar"
                 Content="{iconPacks:Material Kind=ArrowLeft, Height=30, Width=40}"

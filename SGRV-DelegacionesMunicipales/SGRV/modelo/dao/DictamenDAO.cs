@@ -34,8 +34,8 @@ namespace SGRV.modelo.dao
                         dictamen.Fecha = (!dataReader.IsDBNull(2)) ? dataReader.GetDateTime(2) : new DateTime();
                         dictamen.IdPerito = (!dataReader.IsDBNull(3)) ? dataReader.GetInt32(3) : 0;
                         dictamen.IdReporte = (!dataReader.IsDBNull(4)) ? dataReader.GetInt32(4) : 0;
-                        dictamen.Hora = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
-                        dictamen.Estado = (!dataReader.IsDBNull(6)) ? dataReader.GetString(6) : "";
+                        dictamen.Hora = (!dataReader.IsDBNull(6)) ? dataReader.GetString(6) : "";
+                        dictamen.Estado = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
                         dictamenes.Add(dictamen);
                     }
                     dataReader.Close();
@@ -75,8 +75,48 @@ namespace SGRV.modelo.dao
                         dictamen.Fecha = (!dataReader.IsDBNull(2)) ? dataReader.GetDateTime(2) : new DateTime();
                         dictamen.IdPerito = (!dataReader.IsDBNull(3)) ? dataReader.GetInt32(3) : 0;
                         dictamen.IdReporte = (!dataReader.IsDBNull(4)) ? dataReader.GetInt32(4) : 0;
-                        dictamen.Hora = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
-                        dictamen.Estado = (!dataReader.IsDBNull(6)) ? dataReader.GetString(6) : "";
+                        dictamen.Hora = (!dataReader.IsDBNull(6)) ? dataReader.GetString(6) : "";
+                        dictamen.Estado = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
+                    }
+                    dataReader.Close();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return dictamen;
+        }
+        
+        public static Dictamen getDictamenByIdReporte(int idReporte)
+        {
+            Dictamen dictamen = new Dictamen();
+            SqlConnection connection = null;
+            try
+            {
+                connection = ConexionBD.getConnection();
+                if (connection != null)
+                {
+                    SqlCommand command;
+                    SqlDataReader dataReader;
+                    String query = String.Format("SELECT * FROM Dictamen WHERE idReporte = {0}", idReporte);
+                    command = new SqlCommand(query, connection);
+                    dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        dictamen.Folio = (!dataReader.IsDBNull(0)) ? dataReader.GetInt32(0) : 0;
+                        dictamen.Descripcion = (!dataReader.IsDBNull(1)) ? dataReader.GetString(1) : "";
+                        dictamen.Fecha = (!dataReader.IsDBNull(2)) ? dataReader.GetDateTime(2) : new DateTime();
+                        dictamen.IdPerito = (!dataReader.IsDBNull(3)) ? dataReader.GetInt32(3) : 0;
+                        dictamen.IdReporte = (!dataReader.IsDBNull(4)) ? dataReader.GetInt32(4) : 0;
+                        dictamen.Hora = (!dataReader.IsDBNull(6)) ? dataReader.GetString(6) : "";
+                        dictamen.Estado = (!dataReader.IsDBNull(5)) ? dataReader.GetString(5) : "";
                     }
                     dataReader.Close();
                     command.Dispose();
@@ -141,6 +181,40 @@ namespace SGRV.modelo.dao
                     SqlCommand command;
                     int folio = dictamen.Folio;
                     String query = String.Format("UPDATE Dictamen SET estado = 'Eliminado' WHERE folio = {0}", folio);
+                    command = new SqlCommand(query, connection);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public static void updateDictamen(Dictamen dictamen)
+        {
+            SqlConnection connection = null;
+            try
+            {
+                connection = ConexionBD.getConnection();
+                if (connection != null)
+                {
+                    SqlCommand command;
+                    int folio = dictamen.Folio;
+                    String descripcion = dictamen.Descripcion;
+                    int idPerito = dictamen.IdPerito;
+                    String estado = dictamen.Estado;
+                    String hora = dictamen.Hora;
+                    String query = String.Format("UPDATE Dictamen SET descripcion = '{0}', " +
+                                                  "idPerito = {1}, " +
+                                                  "hora = '{2}', estado = '{3}' WHERE folio = {4}",
+                                                  descripcion, idPerito, hora, estado, folio);
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
                     command.Dispose();

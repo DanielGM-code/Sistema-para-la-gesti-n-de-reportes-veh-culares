@@ -375,5 +375,57 @@ namespace SGRV.GUIDelegacionesMunicipales
                 MessageBox.Show("Debe seleccionar un vehículo para eliminarlo de la lista.");
             }
         }
+
+        private void button_BuscarConductor_Click(object sender, RoutedEventArgs e)
+        {
+            String busqueda = tb_busquedaConductor.Text;
+            if (busqueda != "")
+            {
+                List<Conductor> conductoresFiltrados = new List<Conductor>();
+                foreach (Conductor conductor in conductores)
+                {
+                    if (conductor.Nombre.ToLower() == busqueda.ToLower() ||
+                        conductor.NumeroLicencia == busqueda ||
+                        conductor.Telefono == busqueda ||
+                        conductor.Nombre.ToLower().Contains(busqueda.ToLower()))
+                    {
+                        conductoresFiltrados.Add(conductor);
+                    }
+                }
+                dg_conductores.ItemsSource = conductoresFiltrados;
+
+            }
+            else
+            {
+                llenarTablaConductores();
+            }
+        }
+
+        private void button_BuscarVehiculo_Click(object sender, RoutedEventArgs e)
+        {
+            String busqueda = tb_busquedaVehiculo.Text.ToLower();
+            if(busqueda!= "")
+            {
+                List<Vehiculo> vehiculosFiltrados = new List<Vehiculo>();
+                foreach(Vehiculo vehiculo in vehiculos)
+                {
+                    if (vehiculo.Marca.ToLower() == busqueda ||
+                        vehiculo.Modelo.ToLower() == busqueda ||
+                        vehiculo.NombreAseguradora.ToLower() == busqueda ||
+                        vehiculo.Placas.ToLower() == busqueda ||
+                        vehiculo.PolizaSeguro.ToLower() == busqueda ||
+                        vehiculo.Color.ToLower() == busqueda ||
+                        vehiculo.Ano == busqueda)
+                    {
+                        vehiculosFiltrados.Add(vehiculo);
+                    }
+                }
+                dg_vehiculos.ItemsSource = vehiculosFiltrados;
+            }
+            else
+            {
+                llenarTablaVehiculos(conductorElegido);
+            }
+        }
     }
 }

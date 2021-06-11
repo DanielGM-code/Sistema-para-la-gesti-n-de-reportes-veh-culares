@@ -31,6 +31,9 @@
     <Compile Update="GUIDelegacionesMunicipales\RegistrarConductor.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="GUIDelegacionesMunicipales\VerDictamen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="GUIDelegacionesMunicipales\VisualizarReporte.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +64,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GUIDelegacionesMunicipales\RegistrarConductor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDelegacionesMunicipales\VerDictamen.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GUIDelegacionesMunicipales\VisualizarReporte.xaml">
