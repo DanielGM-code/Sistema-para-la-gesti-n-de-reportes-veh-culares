@@ -23,10 +23,12 @@ namespace SGRV.GUIDelegacionesMunicipales
     {
         List<Conductor> conductores;
         Conductor conductorSeleccionado;
+        String username;
 
-        public ModificarConductor()
+        public ModificarConductor(String username)
         {
             InitializeComponent();
+            this.username = username;
             conductores = new List<Conductor>();
             llenarTabla();
         }
@@ -95,14 +97,14 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_Regresar_Click(object sender, RoutedEventArgs e)
         {
-            MenuDelegacionMunicipal ventanaMenuDelegacionMunicipal = new MenuDelegacionMunicipal();
+            MenuDelegacionMunicipal ventanaMenuDelegacionMunicipal = new MenuDelegacionMunicipal(username);
             ventanaMenuDelegacionMunicipal.Show();
             this.Close();
         }
 
         private void button_Chat_Click(object sender, RoutedEventArgs e)
         {
-            Chat ventanaChat = new Chat();
+            Chat ventanaChat = new Chat(username);
             ventanaChat.Show();
         }
 

@@ -13,9 +13,6 @@
     <Compile Update="GUIDelegacionesMunicipales\EliminarConductor.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="GUIDelegacionesMunicipales\EliminarReporte.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -46,9 +43,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GUIDelegacionesMunicipales\EliminarConductor.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="GUIDelegacionesMunicipales\EliminarReporte.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml">

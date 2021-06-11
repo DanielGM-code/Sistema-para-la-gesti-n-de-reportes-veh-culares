@@ -24,6 +24,7 @@ namespace SGRV.GUIDelegacionesMunicipales
     /// </summary>
     public partial class RegistrarReporte : Window
     {
+        String username;
         List<Conductor> conductores;
         List<Conductor> conductoresSeleccionados;
         Conductor conductorSeleccionado;
@@ -34,9 +35,11 @@ namespace SGRV.GUIDelegacionesMunicipales
         Vehiculo vehiculoElegido;
         List<Image> images;
         List<Reporte> reportes;
-        public RegistrarReporte()
+
+        public RegistrarReporte(String username)
         {
             InitializeComponent();
+            this.username = username;
             conductores = new List<Conductor>();
             conductoresSeleccionados = new List<Conductor>();
             vehiculos = new List<Vehiculo>();
@@ -292,14 +295,14 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_Regresar_Click(object sender, RoutedEventArgs e)
         {
-            MenuDelegacionMunicipal ventanaMenuDelegacionMunicipal = new MenuDelegacionMunicipal();
+            MenuDelegacionMunicipal ventanaMenuDelegacionMunicipal = new MenuDelegacionMunicipal(username);
             ventanaMenuDelegacionMunicipal.Show();
             this.Close();
         }
 
         private void button_Chat_Click(object sender, RoutedEventArgs e)
         {
-            Chat ventanaChat = new Chat();
+            Chat ventanaChat = new Chat(username);
             ventanaChat.Show();
         }
 

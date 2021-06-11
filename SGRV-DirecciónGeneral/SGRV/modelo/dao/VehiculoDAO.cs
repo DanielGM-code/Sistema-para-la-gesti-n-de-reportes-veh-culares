@@ -23,7 +23,7 @@ namespace SGRV.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = "SELECT * FROM Vehiculo";
+                    String query = "SELECT * FROM Vehiculo WHERE estado = 'Activo'";
                     command = new SqlCommand(query, connection);
                     dataReader = command.ExecuteReader();
 

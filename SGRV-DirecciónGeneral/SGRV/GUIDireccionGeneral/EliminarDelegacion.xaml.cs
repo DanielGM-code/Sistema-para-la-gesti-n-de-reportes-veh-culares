@@ -29,10 +29,12 @@ namespace DireccionGeneral.GUIDireccionGeneral
         List<Delegacion> delegaciones;
         List<Delegacion> delegacionesFiltradas;
         Delegacion delegacionSeleccionada;
+        String username;
 
-        public EliminarDelegacion()
+        public EliminarDelegacion(String username)
         {
             InitializeComponent();
+            this.username = username;
             delegaciones = new List<Delegacion>();
             delegacionesFiltradas = new List<Delegacion>();
             llenarTabla();
@@ -89,14 +91,14 @@ namespace DireccionGeneral.GUIDireccionGeneral
 
         private void button_Regresar_Click(object sender, RoutedEventArgs e)
         {
-            MenuDireccionGeneral ventanaMenuDireccionGeneral = new MenuDireccionGeneral();
+            MenuDireccionGeneral ventanaMenuDireccionGeneral = new MenuDireccionGeneral(username);
             ventanaMenuDireccionGeneral.Show();
             this.Close();
         }
 
         private void button_Chat_Click(object sender, RoutedEventArgs e)
         {
-            Chat ventanaChat = new Chat();
+            Chat ventanaChat = new Chat(username);
             ventanaChat.Show();
         }
 
