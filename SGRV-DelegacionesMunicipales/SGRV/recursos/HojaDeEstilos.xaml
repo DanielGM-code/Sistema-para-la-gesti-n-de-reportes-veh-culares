@@ -347,7 +347,6 @@
     <!--Estilo para lineas horizontales pequeñas-->
     <Style TargetType="Border" x:Key="border_lineas">
         <Setter Property="Background" Value ="#ffffffff"/>
-        <Setter Property="Opacity" Value="0.5"/>
         <Setter Property="Height" Value="2"/>
         <Setter Property="Width" Value="260"/>
     </Style>
@@ -355,7 +354,6 @@
     <!--Estilo para lineas horizontales grandes-->
     <Style TargetType="Border" x:Key="border_lineasGrandes">
         <Setter Property="Background" Value ="#ffffffff"/>
-        <Setter Property="Opacity" Value="0.5"/>
         <Setter Property="Height" Value="2"/>
         <Setter Property="Width" Value="300"/>
     </Style>

@@ -77,44 +77,44 @@
 
         <TextBox x:Name="tb_username" 
                  HorizontalAlignment="Left"
-                 Margin="355,212,0,0"
+                 Margin="368,212,0,0"
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top"
-                 Width="276"
+                 Width="263"
                  MaxLength="250"
                  Style="{StaticResource textBox_textBoxTransparente}"/>
 
         <TextBox x:Name="tb_correo"
                  HorizontalAlignment="Left"
-                 Margin="354,330,0,0"
+                 Margin="365,330,0,0"
                  VerticalAlignment="Top" 
-                 Width="275"
+                 Width="264"
                  MaxLength="250"
                  Style="{StaticResource textBox_textBoxTransparente}"/>
 
         <PasswordBox x:Name="pb_password"
                      HorizontalAlignment="Left"
-                     Margin="710,328,0,0"
+                     Margin="724,328,0,0"
                      VerticalAlignment="Top" 
-                     Width="276"
+                     Width="262"
                      MaxLength="250"
                      Style="{StaticResource passwordBox_passwordBoxTransparente}"/>
 
         <PasswordBox x:Name="pb_confirmarPassword" 
                      HorizontalAlignment="Left"
-                     Margin="710,67,0,0" 
+                     Margin="724,67,0,0" 
                      VerticalAlignment="Top"  
-                     Width="276"
+                     Width="262"
                      MaxLength="250"
                      Style="{StaticResource passwordBox_passwordBoxTransparente}" Grid.Row="1"/>
 
         <ComboBox x:Name="cb_cargo" 
                   HorizontalAlignment="Left"
-                  Margin="709,214,0,0" 
+                  Margin="724,214,0,0" 
                   VerticalAlignment="Top"
                   FontSize="13"
                   ItemsSource="{Binding cargos}"
-                  Width="271" Height="26"/>
+                  Width="256" Height="26"/>
 
         <ComboBox x:Name="cb_delegacion" 
                   HorizontalAlignment="Left" 
@@ -175,5 +175,23 @@
                 Click="button_CerrarVentana_Click"/>
         <Border Style="{StaticResource border_lineasGrandes}" Margin="331,99,669,248" Grid.Row="1"/>
         <Border Style="{StaticResource border_lineasGrandes}" Margin="680,244,320,135"/>
+
+        <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
+                                        Margin="684,214,0,0" Height="24" Width="20"/>
+
+        <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
+                                        Margin="687,67,0,0" Height="24" Width="20" Grid.Row="1"/>
+
+        <iconPacks:PackIconMaterial Kind="Gmail" 
+                                        Margin="331,330,0,0" Height="24" Width="20"/>
+
+        <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
+                                        Margin="687,328,0,0" Height="24" Width="20"/>
+
+        <iconPacks:PackIconMaterial Kind="Account" 
+                                        Margin="335,212,0,0" Height="24" Width="20"/>
+
+        <iconPacks:PackIconMaterial Kind="City" 
+                                        Margin="335,67,0,0" Height="24" Width="20" Grid.Row="1"/>
     </Grid>
 </Window>

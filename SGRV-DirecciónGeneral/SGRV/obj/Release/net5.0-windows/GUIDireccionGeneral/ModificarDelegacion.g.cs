@@ -168,8 +168,7 @@ namespace SGRV.GUIDireccionGeneral {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DireccionGeneral_c4kpg42o_wpftmp;component/guidirecciongeneral/modificardelegaci" +
-                    "on.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DireccionGeneral;component/guidirecciongeneral/modificardelegacion.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDireccionGeneral\ModificarDelegacion.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

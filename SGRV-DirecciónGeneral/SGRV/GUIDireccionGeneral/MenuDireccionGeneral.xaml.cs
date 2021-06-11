@@ -27,9 +27,7 @@ namespace SGRV.GUIDireccionGeneral
             button_ModificarUsuario.Visibility = Visibility.Hidden;
             button_EliminarUsuario.Visibility = Visibility.Hidden;
 
-            button_RegistrarReporte.Visibility = Visibility.Hidden;
-            button_ModificarReporte.Visibility = Visibility.Hidden;
-            button_EliminarReporte.Visibility = Visibility.Hidden;
+            button_VisualizarReporte.Visibility = Visibility.Hidden;
 
             button_RegistrarDelegacion.Visibility = Visibility.Hidden;
             button_ModificarDelegacion.Visibility = Visibility.Hidden;
@@ -44,9 +42,7 @@ namespace SGRV.GUIDireccionGeneral
             button_ModificarUsuario.Visibility = Visibility.Visible;
             button_EliminarUsuario.Visibility = Visibility.Visible;
 
-            button_RegistrarReporte.Visibility = Visibility.Hidden;
-            button_ModificarReporte.Visibility = Visibility.Hidden;
-            button_EliminarReporte.Visibility = Visibility.Hidden;
+            button_VisualizarReporte.Visibility = Visibility.Hidden;
 
             button_RegistrarDelegacion.Visibility = Visibility.Hidden;
             button_ModificarDelegacion.Visibility = Visibility.Hidden;
@@ -59,9 +55,7 @@ namespace SGRV.GUIDireccionGeneral
         private void button_Reporte_Click(object sender, RoutedEventArgs e)
         {
             button_Reporte.Visibility = Visibility.Hidden;
-            button_RegistrarReporte.Visibility = Visibility.Visible;
-            button_ModificarReporte.Visibility = Visibility.Visible;
-            button_EliminarReporte.Visibility = Visibility.Visible;
+            button_VisualizarReporte.Visibility = Visibility.Hidden;
 
             button_RegistrarUsuario.Visibility = Visibility.Hidden;
             button_ModificarUsuario.Visibility = Visibility.Hidden;
@@ -84,11 +78,9 @@ namespace SGRV.GUIDireccionGeneral
 
             button_RegistrarUsuario.Visibility = Visibility.Hidden;
             button_ModificarUsuario.Visibility = Visibility.Hidden;
-            button_EliminarUsuario.Visibility = Visibility.Hidden;
+            button_EliminarUsuario.Visibility = Visibility.Hidden; 
 
-            button_RegistrarReporte.Visibility = Visibility.Hidden;
-            button_ModificarReporte.Visibility = Visibility.Hidden;
-            button_EliminarReporte.Visibility = Visibility.Hidden;
+            button_VisualizarReporte.Visibility = Visibility.Hidden;
 
             button_Usuario.Visibility = Visibility.Visible;
             button_Reporte.Visibility = Visibility.Visible;
@@ -99,11 +91,6 @@ namespace SGRV.GUIDireccionGeneral
             RegistrarUsuario ventanaRegistrarUsuario = new RegistrarUsuario();
             ventanaRegistrarUsuario.Show();
             this.Close();
-        }
-
-        private void button_RegistrarReporte_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void button_RegistrarDelegacion_Click(object sender, RoutedEventArgs e)
@@ -120,9 +107,11 @@ namespace SGRV.GUIDireccionGeneral
             this.Close();
         }
 
-        private void button_ModificarReporte_Click(object sender, RoutedEventArgs e)
+        private void button_VisualizarReporte_Click(object sender, RoutedEventArgs e)
         {
-
+            VisualizarReporte ventanaVisualizarReporte = new VisualizarReporte();
+            ventanaVisualizarReporte.Show();
+            this.Close();
         }
 
         private void button_ModificarDelegacion_Click(object sender, RoutedEventArgs e)
@@ -137,11 +126,6 @@ namespace SGRV.GUIDireccionGeneral
             EliminarUsuario ventanaEliminarUsuario = new EliminarUsuario();
             ventanaEliminarUsuario.Show();
             this.Close();
-        }
-
-        private void button_EliminarReporte_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void button_EliminarDelegacion_Click(object sender, RoutedEventArgs e)

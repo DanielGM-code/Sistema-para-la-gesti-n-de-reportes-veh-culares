@@ -132,31 +132,13 @@
             Click="button_EliminarUsuarior_Click"/>
 
         <Button 
-            x:Name="button_RegistrarReporte"
-            Content="{iconPacks:Material Height=40, Kind=Plus, Width=40}"
-            Style="{StaticResource button_botonIconoRegistrar}"
-            Click="button_RegistrarReporte_Click"
-            HorizontalAlignment="Left" 
-            Margin="828,281,0,0" 
-            VerticalAlignment="Top" Height="58" Width="56"/>
-
-        <Button 
-            x:Name="button_ModificarReporte"
-            Content="{iconPacks:Material Height=40, Kind=Pencil, Width=40}"
+            x:Name="button_VisualizarReporte"
+            Content="{iconPacks:Material Height=50, Kind=Eye, Width=50}"
             Style="{StaticResource button_botonIconoModificar}"
             HorizontalAlignment="Left" 
-            Margin="896,281,0,0" 
+            Margin="886,281,0,0" 
             VerticalAlignment="Top" Height="58" Width="56"
-            Click="button_ModificarReporte_Click"/>
-
-        <Button 
-            x:Name="button_EliminarReporte"
-            Content="{iconPacks:Material Height=40, Kind=TrashCan, Width=40}"
-            Style="{StaticResource button_botonIconoEliminar}"
-            HorizontalAlignment="Left" 
-            Margin="964,281,0,0" 
-            VerticalAlignment="Top" Height="58" Width="56" 
-            Click="button_EliminarReporte_Click"/>
+            Click="button_VisualizarReporte_Click" RenderTransformOrigin="0.634,0.457"/>
 
         <Button 
             x:Name="button_RegistrarDelegacion"

@@ -170,6 +170,7 @@
 
         <iconPacks:PackIconMaterial Kind="FileSearch" 
             Margin="59,144,0,0" Height="24" Width="27"/>
+        
         <Border
             Style="{StaticResource border_lineas}"
             Margin="59,176,981,552"/>
