@@ -176,8 +176,8 @@ namespace SGRV.GUIDelegacionesMunicipales {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;V1.0.0.0;component/guidelegacionesmunicipales/registrarv" +
-                    "ehiculo.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;component/guidelegacionesmunicipales/registrarvehiculo.x" +
+                    "aml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDelegacionesMunicipales\RegistrarVehiculo.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

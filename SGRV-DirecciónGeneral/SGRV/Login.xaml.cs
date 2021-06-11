@@ -46,7 +46,7 @@ namespace SGRV
                         {
                             case "Administrativo":
                             case "Soporte":
-                                MenuDireccionGeneral menuDireccionGeneral = new MenuDireccionGeneral();
+                                MenuDireccionGeneral menuDireccionGeneral = new MenuDireccionGeneral(username);
                                 menuDireccionGeneral.Show();
                                 this.Close();
                                 break;
