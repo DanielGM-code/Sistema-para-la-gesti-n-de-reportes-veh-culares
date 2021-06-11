@@ -4,6 +4,9 @@ using SGRV.modelo.dao;
 using SGRV.modelo.poco;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,13 +27,16 @@ namespace DireccionGeneral.GUIDireccionGeneral
     public partial class EliminarDelegacion : Window
     {
         List<Delegacion> delegaciones;
+        List<Delegacion> delegacionesFiltradas;
         Delegacion delegacionSeleccionada;
 
         public EliminarDelegacion()
         {
             InitializeComponent();
             delegaciones = new List<Delegacion>();
+            delegacionesFiltradas = new List<Delegacion>();
             llenarTabla();
+
         }
 
         private void button_Eliminar_Click(object sender, RoutedEventArgs e)
@@ -114,6 +120,29 @@ namespace DireccionGeneral.GUIDireccionGeneral
             delegaciones = DelegacionDAO.getAllDelegaciones();
             dg_DelegacionesMunicipales.AutoGenerateColumns = false;
             dg_DelegacionesMunicipales.ItemsSource = delegaciones;
+        }
+
+        private void filtrarTabla()
+        {
+            delegaciones = DelegacionDAO.getAllDelegaciones();
+
+            foreach (Delegacion delegacion in delegaciones)
+            {
+                if (delegacion.Nombre == tb_nombreDelegacion.Text)
+                {
+                    delegacionesFiltradas.Add(delegacion);
+                }
+            }
+
+            if(delegacionesFiltradas.Count > 0)
+            {
+                dg_DelegacionesMunicipales.ItemsSource = delegacionesFiltradas;
+            }
+        }
+
+        private void button_Buscar_Click(object sender, RoutedEventArgs e)
+        {
+            filtrarTabla();
         }
 
         private void clic_delegacion_item(object sender, SelectionChangedEventArgs e)
