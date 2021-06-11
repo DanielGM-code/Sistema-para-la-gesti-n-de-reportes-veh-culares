@@ -127,3 +127,5 @@ C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-ve
 C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\GUIDelegacionesMunicipales\ElimarVehiculo.g.cs
 C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\GUIDelegacionesMunicipales\ElimarVehiculo.baml
 >>>>>>> b2423864f0d22851759d0cf7ab4861cf32960342
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\GUIDelegacionesMunicipales\ElimarVehiculo.g.cs
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\obj\Debug\net5.0-windows\GUIDelegacionesMunicipales\ElimarVehiculo.baml
