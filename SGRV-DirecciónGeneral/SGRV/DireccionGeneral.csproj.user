@@ -10,6 +10,9 @@
     <Compile Update="Chat.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="GUIDireccionGeneral\DictaminarReporte.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="GUIDireccionGeneral\EliminarDelegacion.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -21,12 +24,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="GUIDireccionGeneral\RegistrarUsuario.xaml.cs" />
+    <Compile Update="GUIDireccionGeneral\VisualizarReporte.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Mensaje.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Chat.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDireccionGeneral\DictaminarReporte.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GUIDireccionGeneral\EliminarDelegacion.xaml">
@@ -48,6 +57,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GUIDireccionGeneral\RegistrarUsuario.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDireccionGeneral\VisualizarReporte.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Login.xaml">
