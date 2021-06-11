@@ -176,7 +176,7 @@
         <Border Style="{StaticResource border_lineasGrandes}" Margin="331,99,669,248" Grid.Row="1"/>
         <Border Style="{StaticResource border_lineasGrandes}" Margin="680,244,320,135"/>
 
-        <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
+        <iconPacks:PackIconMaterial Kind="Briefcase" 
                                         Margin="684,214,0,0" Height="24" Width="20"/>
 
         <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
