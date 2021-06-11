@@ -46,7 +46,7 @@ namespace SGRV
                         {
                             case "Agente De Transito":
                             case "Perito":
-                                MenuDelegacionMunicipal menuDelegacionMunicipal = new MenuDelegacionMunicipal();
+                                MenuDelegacionMunicipal menuDelegacionMunicipal = new MenuDelegacionMunicipal(username);
                                 menuDelegacionMunicipal.Show();
                                 this.Close();
                                 break;
