@@ -19,9 +19,13 @@ namespace DireccionGeneral
     /// </summary>
     public partial class Mensaje : Window
     {
-        public Mensaje()
+
+        public string mensaje { get; set; }
+
+        public Mensaje(string mensaje)
         {
             InitializeComponent();
+            lb_mensaje.Content = mensaje;
         }
 
         private void button_Aceptar_Click(object sender, RoutedEventArgs e)

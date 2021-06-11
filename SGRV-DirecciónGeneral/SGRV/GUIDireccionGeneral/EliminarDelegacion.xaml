@@ -16,7 +16,7 @@
         <Border CornerRadius="25" Grid.RowSpan="2" RenderTransformOrigin="0.513,0.427">
             <Border.Background>
                 <LinearGradientBrush>
-                    <GradientStop Color="#202639" Offset="0.0"/>
+                    <GradientStop Color="#006a65" Offset="0.0"/>
                     <GradientStop Color="#3f4977" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
@@ -76,9 +76,9 @@
 
         <TextBox x:Name="tb_nombreDelegacion" 
                  HorizontalAlignment="Left"
-                 Margin="114,184,0,0"
+                 Margin="133,184,0,0"
                  VerticalAlignment="Top" 
-                 Width="275"
+                 Width="256"
                  MaxLength="250"
                  Style="{StaticResource textBox_textBoxTransparente}"/>
 
@@ -136,8 +136,13 @@
                  Style="{StaticResource textBox_textBoxTransparente}"/>
 
 
-        <iconPacks:PackIconMaterial Kind="TextBoxSearch" 
-                                        Margin="89,185,0,0" Height="25" Width="20"/>
+        <Button x:Name="button_Buscar"
+                Content="{iconPacks:Material Kind=TextBoxSearch, Height=25, Width=25}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Height="39" Width="34"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Buscar_Click" Margin="89,175,0,0"/>
 
         <iconPacks:PackIconMaterial Kind="RenameBox" 
                                         Margin="486,228,0,0" Height="26" Width="20"/>
@@ -224,7 +229,9 @@
         <Border Style="{StaticResource border_lineasGrandes}" Margin="89,217,911,511"/>
 
 
-        <DataGrid x:Name="dg_DelegacionesMunicipales" Margin="76,254,905,48" SelectionChanged="clic_delegacion_item">
+        <DataGrid x:Name="dg_DelegacionesMunicipales"
+                  Margin="76,254,905,48"
+                  SelectionChanged="clic_delegacion_item">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
                 <DataGridTextColumn Header="Municipio" Binding="{Binding Municipio}"/>

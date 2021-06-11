@@ -17,7 +17,7 @@
         <Border CornerRadius="25" Grid.RowSpan="2" RenderTransformOrigin="0.513,0.427">
             <Border.Background>
                 <LinearGradientBrush>
-                    <GradientStop Color="#202639" Offset="0.0"/>
+                    <GradientStop Color="#006a65" Offset="0.0"/>
                     <GradientStop Color="#3f4977" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
@@ -98,13 +98,10 @@
                  MaxLength="250"
                  Style="{StaticResource textBox_textBoxTransparente}"/>
 
-        <TextBox x:Name="tb_municipio" 
-                 HorizontalAlignment="Left" 
-                 Margin="912,228,0,0" 
-                 VerticalAlignment="Top"
-                 Width="270"
-                 MaxLength="250"
-                 Style="{StaticResource textBox_textBoxTransparente}"/>
+        <ComboBox x:Name="cb_municipio" 
+                  Margin="911,228,119,477"
+                  FontSize="13"
+                  ItemsSource="{Binding municipios}"/>
 
         <TextBox x:Name="tb_telefono" 
                  HorizontalAlignment="Left" 
