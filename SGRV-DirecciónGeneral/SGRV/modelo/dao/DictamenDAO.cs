@@ -156,5 +156,38 @@ namespace SGRV.modelo.dao
                 connection.Close();
             }
         }
+
+        public static void updateDictamen(Dictamen dictamen)
+        {
+            SqlConnection connection = null;
+            try
+            {
+                connection = ConexionBD.getConnection();
+                if (connection != null)
+                {
+                    SqlCommand command;
+                    String descripcion = dictamen.Descripcion;
+                    int idPerito = dictamen.IdPerito;
+                    String hora = dictamen.Hora;
+                    String query = String.Format("UPDATE Perito SET descripcion = '{0}', " +
+                                                  "idPerito = {1}, " +
+                                                  "año = '{2}', " +
+                                                  "hora = '{3}'",
+                                                  descripcion, idPerito, hora);
+                    command = new SqlCommand(query, connection);
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
