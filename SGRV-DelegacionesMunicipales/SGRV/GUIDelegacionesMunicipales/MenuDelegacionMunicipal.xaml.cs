@@ -185,7 +185,9 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_HistorialReporte_Click(object sender, RoutedEventArgs e)
         {
-
+            VisualizarReporte ventanaVisualizarReporte = new VisualizarReporte(username);
+            ventanaVisualizarReporte.Show();
+            this.Close();
         }
     }
 }
