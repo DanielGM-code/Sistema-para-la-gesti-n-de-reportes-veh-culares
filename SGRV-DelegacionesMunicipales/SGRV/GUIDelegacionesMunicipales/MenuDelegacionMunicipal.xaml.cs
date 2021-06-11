@@ -24,7 +24,7 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         public MenuDelegacionMunicipal()
         {
-
+            InitializeComponent();
         }
         public MenuDelegacionMunicipal( String username)
         {
