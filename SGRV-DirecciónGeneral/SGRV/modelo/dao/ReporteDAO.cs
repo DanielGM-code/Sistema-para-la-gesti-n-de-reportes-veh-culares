@@ -34,7 +34,6 @@ namespace SGRV.modelo.dao
                         reporte.Direccion = (!dataReader.IsDBNull(2)) ? dataReader.GetString(2) : "";
                         reporte.Descripcion = (!dataReader.IsDBNull(3)) ? dataReader.GetString(3) : "";
                         reporte.Estado = (!dataReader.IsDBNull(4)) ? dataReader.GetString(4) : "";
-                        reporte.IdAgenteDeTransito = (!dataReader.IsDBNull(5)) ? dataReader.GetInt32(5) : 0;
                         reportes.Add(reporte);
                     }
                     dataReader.Close();
@@ -74,7 +73,6 @@ namespace SGRV.modelo.dao
                         reporte.Direccion = (!dataReader.IsDBNull(2)) ? dataReader.GetString(2) : "";
                         reporte.Descripcion = (!dataReader.IsDBNull(3)) ? dataReader.GetString(3) : "";
                         reporte.Estado = (!dataReader.IsDBNull(4)) ? dataReader.GetString(4) : "";
-                        reporte.IdAgenteDeTransito = (!dataReader.IsDBNull(5)) ? dataReader.GetInt32(5) : 0;
                     }
                     dataReader.Close();
                     command.Dispose();

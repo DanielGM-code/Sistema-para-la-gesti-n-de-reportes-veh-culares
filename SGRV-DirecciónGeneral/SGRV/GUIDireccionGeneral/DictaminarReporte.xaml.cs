@@ -23,17 +23,46 @@ namespace DireccionGeneral.GUIDireccionGeneral
     {
         List<Perito> peritos;
         Perito peritoSeleccionado;
+        private int folio;
 
-        public int idReporte { get; set; }
+        private int idReporte;
 
         public DictaminarReporte(int idReporte)
         {
             InitializeComponent();
+            this.idReporte = idReporte;
+            llenarCampos();
+        }
 
+        private void llenarCampos()
+        {
+            Dictamen dictamen = DictamenDAO.getDictamenByIdReporte(idReporte);
+
+            folio = dictamen.Folio;
             peritos = PeritoDAO.getAllPeritos();
             cb_perito.ItemsSource = peritos;
+            dp_fecha.SelectedDate = dictamen.Fecha;
+            tb_Folio.Text = dictamen.IdReporte.ToString();
 
-            tb_Folio.Text = idReporte.ToString();
+            if(dictamen.Estado == "Inactivo")
+            {
+                tb_Descripcion.Text = dictamen.Descripcion;
+                for(int i=0; i<peritos.Count; i++)
+                {
+                    cb_perito.SelectedIndex = i;
+                    Perito perito = (Perito)cb_perito.SelectedItem;
+                    if(perito.IdPerito == dictamen.IdPerito)
+                    {
+                        break;
+                    }
+                    button_RegistrarDictamen.IsEnabled = false;
+                    tb_Descripcion.IsEnabled = false;
+                    cb_perito.IsEnabled = false;
+                }
+
+                
+            }
+
         }
 
         private void button_RegistrarDictamen_Click(object sender, RoutedEventArgs e)
@@ -41,6 +70,7 @@ namespace DireccionGeneral.GUIDireccionGeneral
             if (validarCampos())
             {
                 Dictamen dictamen = new Dictamen();
+                dictamen.Folio = folio;
                 dictamen.Descripcion = tb_Descripcion.Text;
                 peritoSeleccionado = (Perito)cb_perito.SelectedItem;
                 dictamen.IdPerito = peritoSeleccionado.IdPerito;
@@ -56,7 +86,7 @@ namespace DireccionGeneral.GUIDireccionGeneral
                 }
                 catch (Exception x)
                 {
-                    MessageBox.Show("Ocurrió un error, inténtelo de nuevo.");
+                    MessageBox.Show("Ocurrió un error, inténtelo de nuevo." + x.Message);
                 }
             }
             else
@@ -79,6 +109,14 @@ namespace DireccionGeneral.GUIDireccionGeneral
         private void button_CerrarVentana_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
         }
     }
 }
