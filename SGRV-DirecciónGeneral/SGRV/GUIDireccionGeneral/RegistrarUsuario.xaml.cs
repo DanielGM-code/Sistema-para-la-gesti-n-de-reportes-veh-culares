@@ -25,11 +25,13 @@ namespace SGRV.GUIDireccionGeneral
         public string[] cargos { get; set; }
         public RegistrarUsuario()
         {
-            delegaciones = new List<Delegacion>();
 
+            InitializeComponent();
+            delegaciones = DelegacionDAO.getAllDelegaciones();
+            cb_delegacion.ItemsSource = delegaciones;
             cargos = new string[] { "Administrativo", "Agente de transito", "Perito", "Soporte" };
             DataContext = this;
-            InitializeComponent();
+ 
         }
 
         private void button_Registrar_Click(object sender, RoutedEventArgs e)
@@ -47,37 +49,37 @@ namespace SGRV.GUIDireccionGeneral
                     usuario.Correo = tb_correo.Text;
                     usuario.Estado = "Activo";
                     UsuarioDAO.addUsuario(usuario);
-                    //switch (usuario.Cargo)
-                    //{
-                    //    case "Administrativo":
-                    //        Administrativo administrativo = new Administrativo();
-                    //        administrativo.Nombre = tb_Nombre.Text;
-                    //        administrativo.Correo = tb_correo.Text;
-                    //        administrativo.Estado = "Activo";
-                    //        AdministrativoDAO.addAdministrativo(administrativo);
-                    //        break;
-                    //    case "Soporte":
-                    //        Soporte soporte = new Soporte();
-                    //        soporte.Nombre = tb_Nombre.Text;
-                    //        soporte.Correo = tb_correo.Text;
-                    //        soporte.Estado = "Activo";
-                    //        SoporteDAO.addSoporte(soporte);
-                    //        break;
-                    //    case "Agente de Tránsito":
-                    //        AgenteDeTransito agenteDeTransito = new AgenteDeTransito();
-                    //        agenteDeTransito.Nombre = tb_Nombre.Text;
-                    //        agenteDeTransito.Correo = tb_correo.Text;
-                    //        agenteDeTransito.Estado = "Activo";
-                    //        AgenteDeTransitoDAO.addAgenteDeTransito(agenteDeTransito);
-                    //        break;
-                    //    case "Perito":
-                    //        Perito perito = new Perito();
-                    //        perito.Nombre = tb_Nombre.Text;
-                    //        perito.Correo = tb_correo.Text;
-                    //        perito.Estado = "Activo";
-                    //        PeritoDAO.addPerito(perito);
-                    //        break;
-                    //}
+                    switch (usuario.Cargo)
+                    {
+                        case "Administrativo":
+                            Administrativo administrativo = new Administrativo();
+                            administrativo.Nombre = tb_username.Text;
+                            administrativo.Correo = tb_correo.Text;
+                            administrativo.Estado = "Activo";
+                            AdministrativoDAO.addAdministrativo(administrativo);
+                            break;
+                        case "Soporte":
+                            Soporte soporte = new Soporte();
+                            soporte.Nombre = tb_username.Text;
+                            soporte.Correo = tb_correo.Text;
+                            soporte.Estado = "Activo";
+                            SoporteDAO.addSoporte(soporte);
+                            break;
+                        case "Agente de Tránsito":
+                            AgenteDeTransito agenteDeTransito = new AgenteDeTransito();
+                            agenteDeTransito.Nombre = tb_username.Text;
+                            agenteDeTransito.Correo = tb_correo.Text;
+                            agenteDeTransito.Estado = "Activo";
+                            AgenteDeTransitoDAO.addAgenteDeTransito(agenteDeTransito);
+                            break;
+                        case "Perito":
+                            Perito perito = new Perito();
+                            perito.Nombre = tb_username.Text;
+                            perito.Correo = tb_correo.Text;
+                            perito.Estado = "Activo";
+                            PeritoDAO.addPerito(perito);
+                            break;
+                    }
                     MessageBox.Show("Se ha registrado al usuario de manera exitosa.");
                     vaciarCampos();
                 }
@@ -140,12 +142,12 @@ namespace SGRV.GUIDireccionGeneral
 
         private void button_MinimizarVentana_Click(object sender, RoutedEventArgs e)
         {
-
+            WindowState = WindowState.Minimized;
         }
 
         private void button_CerrarVentana_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -80,7 +80,7 @@ namespace DireccionGeneral {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DireccionGeneral_c4kpg42o_wpftmp;component/mensaje.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DireccionGeneral;component/mensaje.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Mensaje.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

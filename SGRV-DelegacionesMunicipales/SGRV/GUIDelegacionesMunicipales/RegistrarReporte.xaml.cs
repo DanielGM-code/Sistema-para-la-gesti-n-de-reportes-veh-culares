@@ -33,6 +33,7 @@ namespace SGRV.GUIDelegacionesMunicipales
         Vehiculo vehiculoSeleccionado;
         Vehiculo vehiculoElegido;
         List<Image> images;
+        List<Reporte> reportes;
         public RegistrarReporte()
         {
             InitializeComponent();
@@ -42,6 +43,7 @@ namespace SGRV.GUIDelegacionesMunicipales
             vehiculosSeleccionados = new List<Vehiculo>();
             vehiculosSeleccionados = new List<Vehiculo>();
             images = new List<Image>();
+            reportes = new List<Reporte>();
             llenarTablaConductores();
         }
 
@@ -60,8 +62,21 @@ namespace SGRV.GUIDelegacionesMunicipales
                             reporte.Descripcion = tb_descripcion.Text;
                             reporte.Fecha = (DateTime)dp_fecha.SelectedDate;
                             reporte.Estado = "Activo";
-
                             ReporteDAO.addReporte(reporte);
+
+                            Dictamen dictamen = new Dictamen();
+                            dictamen.Descripcion = "";
+                            dictamen.Estado = "Activo";
+                            dictamen.Fecha = (DateTime)dp_fecha.SelectedDate;
+                            string hora = DateTime.Now.ToString("t");
+                            dictamen.Hora = hora;
+                            dictamen.IdPerito = 0;
+                            reportes = ReporteDAO.getAllReportes();
+                            int numeroReportes = reportes.Count;
+                            dictamen.IdReporte = numeroReportes + 1;
+                            dictamen.Folio = numeroReportes + 1;
+                            DictamenDAO.addDictamen(dictamen);
+
                             int ultimoReporte = ReporteDAO.getLastIndex();
 
                             VehiculosReporte vehiculosReporte;

@@ -15,7 +15,6 @@ namespace DireccionGeneral.GUIDireccionGeneral
     /// </summary>
     public partial class ModificarUsuario : Window
     {
-        List<Usuario> usuarios;
         List<Delegacion> delegaciones;
         Usuario usuarioSeleccionado;
 
@@ -25,7 +24,6 @@ namespace DireccionGeneral.GUIDireccionGeneral
         {
             InitializeComponent();
 
-            usuarios = new List<Usuario>();
             cargos = new string[] { "Administrativo", "Agente de transito", "Perito", "Soporte" }; 
             DataContext = this;
 

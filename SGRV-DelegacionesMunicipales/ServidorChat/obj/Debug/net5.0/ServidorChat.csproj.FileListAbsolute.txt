@@ -1,0 +1,16 @@
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\obj\Debug\net5.0\ServidorChat.csproj.AssemblyReference.cache
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\obj\Debug\net5.0\ServidorChat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\obj\Debug\net5.0\ServidorChat.AssemblyInfoInputs.cache
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\obj\Debug\net5.0\ServidorChat.AssemblyInfo.cs
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\obj\Debug\net5.0\ServidorChat.csproj.CoreCompileInputs.cache
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\bin\Debug\net5.0\ServidorChat.exe
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\bin\Debug\net5.0\ServidorChat.deps.json
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\bin\Debug\net5.0\ServidorChat.runtimeconfig.json
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\bin\Debug\net5.0\ServidorChat.runtimeconfig.dev.json
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\bin\Debug\net5.0\ServidorChat.dll
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\bin\Debug\net5.0\ref\ServidorChat.dll
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\bin\Debug\net5.0\ServidorChat.pdb
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\obj\Debug\net5.0\ServidorChat.dll
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\obj\Debug\net5.0\ref\ServidorChat.dll
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\obj\Debug\net5.0\ServidorChat.pdb
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\ServidorChat\obj\Debug\net5.0\ServidorChat.genruntimeconfig.cache

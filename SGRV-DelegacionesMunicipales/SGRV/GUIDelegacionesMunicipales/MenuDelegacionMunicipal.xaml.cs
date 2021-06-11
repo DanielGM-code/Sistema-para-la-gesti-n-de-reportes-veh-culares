@@ -20,9 +20,17 @@ namespace SGRV.GUIDelegacionesMunicipales
     /// </summary>
     public partial class MenuDelegacionMunicipal : Window
     {
+        String username;
+
         public MenuDelegacionMunicipal()
         {
             InitializeComponent();
+        }
+        public MenuDelegacionMunicipal( String username)
+        {
+            InitializeComponent();
+            this.username = username;
+
             button_RegistrarConductor.Visibility = Visibility.Hidden;
             button_ModificarConductor.Visibility = Visibility.Hidden;
             button_EliminarConductor.Visibility = Visibility.Hidden;
@@ -157,7 +165,7 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_Chat_Click(object sender, RoutedEventArgs e)
         {
-            Chat ventanaChat = new Chat();
+            Chat ventanaChat = new Chat(username);
             ventanaChat.Show();
         }
 

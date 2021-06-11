@@ -130,14 +130,12 @@ namespace DireccionGeneral.GUIDireccionGeneral
             usuarioSeleccionado = (Usuario)dg_Usarios.SelectedItem;
             if (usuarioSeleccionado != null)
             {
-                //tb_correo.Text = usuarioSeleccionado.Correo;
+                tb_correo.Text = usuarioSeleccionado.Correo;
                 tb_username.Text = usuarioSeleccionado.Username;
                 tb_Usuario.Text = usuarioSeleccionado.Username;
-                //cb_cargo.Text = usuarioSeleccionado.Correo;
-                //cb_delegacion.Text = usuarioSeleccionado.Correo;
+                cb_cargo.Text = usuarioSeleccionado.Cargo;
+                cb_delegacion.Text = usuarioSeleccionado.Delegacion;
             }
         }
-
-
     }
 }
