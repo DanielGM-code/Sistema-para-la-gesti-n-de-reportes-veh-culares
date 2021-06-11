@@ -13,10 +13,10 @@
         MouseDown="OnMouseDown"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Border CornerRadius="25" RenderTransformOrigin="0.513,0.427">
+        <Border CornerRadius="25" Grid.RowSpan="2" RenderTransformOrigin="0.513,0.427">
             <Border.Background>
                 <LinearGradientBrush>
-                    <GradientStop Color="#202639" Offset="0.0"/>
+                    <GradientStop Color="#006a65" Offset="0.0"/>
                     <GradientStop Color="#3f4977" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
