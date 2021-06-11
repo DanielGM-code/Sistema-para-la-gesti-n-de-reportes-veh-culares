@@ -50,9 +50,7 @@ namespace DireccionGeneral.GUIDireccionGeneral
                 if (usuarioSeleccionado != null)
                 {
                     UsuarioDAO.removeUsuario(usuarioSeleccionado);
-                    string mensaje = "Delegación eliminada de manera exitosa.";
-                    Mensaje ventanaMensaje = new Mensaje(mensaje);
-                    ventanaMensaje.Show();
+                    MessageBox.Show("Usuario Eliminado de manera exitosa.");
                     vaciarCampos();
                     llenarTabla();
                 }

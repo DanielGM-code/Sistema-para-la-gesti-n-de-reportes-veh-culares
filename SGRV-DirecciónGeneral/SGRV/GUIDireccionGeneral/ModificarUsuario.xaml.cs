@@ -43,6 +43,7 @@ namespace DireccionGeneral.GUIDireccionGeneral
                 Usuario usuario = new Usuario();
                 usuario.IdUsuario = usuarioSeleccionado.IdUsuario;
                 usuario.Username = tb_username.Text;
+                usuario.Contraseña = usuarioSeleccionado.Contraseña;
                 usuario.Cargo = cb_cargo.SelectedItem.ToString();
                 Delegacion delegacion = (Delegacion)cb_delegacion.SelectedItem;
                 usuario.IdDelegacion = delegacion.IdDelegacion;
@@ -142,14 +143,15 @@ namespace DireccionGeneral.GUIDireccionGeneral
         private void filtrarTabla()
         {
             usuarios = UsuarioDAO.getAllUsuarios();
-            String busqueda = tb_username.Text;
+            String busqueda = tb_Usuario.Text;
 
             foreach (Usuario usuario in usuarios)
             {
                 if (usuario.Username.ToLower() == busqueda.ToLower() ||
                     usuario.Cargo.ToLower() == busqueda.ToLower() ||
                     usuario.Correo.ToLower() == busqueda.ToLower() ||
-                    usuario.Delegacion.ToLower() == busqueda.ToLower())
+                    usuario.Delegacion.ToLower() == busqueda.ToLower() ||
+                    usuario.Username.ToLower().Contains(busqueda.ToLower()))
                 {
                     usuariosFiltrados.Add(usuario);
                 }

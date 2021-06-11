@@ -184,8 +184,8 @@ namespace DelegacionesMunicipales.GUIDelegacionesMunicipales {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;V1.0.0.0;component/guidelegacionesmunicipales/elimarvehi" +
-                    "culo.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;component/guidelegacionesmunicipales/elimarvehiculo.xaml" +
+                    "", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDelegacionesMunicipales\ElimarVehiculo.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

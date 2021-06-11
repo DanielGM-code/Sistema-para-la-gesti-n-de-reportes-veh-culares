@@ -58,27 +58,34 @@ namespace SGRV.GUIDelegacionesMunicipales
         {
             if (validarCampos())
             {
-                Vehiculo vehiculo = new Vehiculo();
-                vehiculo.Marca = tb_marca.Text;
-                vehiculo.Modelo = tb_modelo.Text;
-                vehiculo.Ano = tb_año.Text;
-                vehiculo.Color = tb_color.Text;
-                vehiculo.NombreAseguradora = tb_nombreAseguradora.Text;
-                vehiculo.PolizaSeguro = tb_numeroPolizaSeguro.Text;
-                vehiculo.Placas = tb_numeroPlacas.Text;
-                vehiculo.IdConductor = conductorSeleccionado.IdConductor;
-                vehiculo.Estado = "Activo";
-                try
+                if (conductorSeleccionado != null)
                 {
-                    VehiculoDAO.addVehiculo(vehiculo);
+                    Vehiculo vehiculo = new Vehiculo();
+                    vehiculo.Marca = tb_marca.Text;
+                    vehiculo.Modelo = tb_modelo.Text;
+                    vehiculo.Ano = tb_año.Text;
+                    vehiculo.Color = tb_color.Text;
+                    vehiculo.NombreAseguradora = tb_nombreAseguradora.Text;
+                    vehiculo.PolizaSeguro = tb_numeroPolizaSeguro.Text;
+                    vehiculo.Placas = tb_numeroPlacas.Text;
+                    vehiculo.IdConductor = conductorSeleccionado.IdConductor;
+                    vehiculo.Estado = "Activo";
+                    try
+                    {
+                        VehiculoDAO.addVehiculo(vehiculo);
+                    }
+                    catch (Exception x)
+                    {
+                        MessageBox.Show( "Ocurrió un error");
+                    }
+
+                    MessageBox.Show("Vehículo registrado con éxito.");
+                    limpiarCampos(); 
                 }
-                catch(Exception x)
-                {   
-                    MessageBox.Show(x.Message + "Ocurrió un error");
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un conductor.");
                 }
-                
-                MessageBox.Show("Vehículo registrado con éxito.");
-                limpiarCampos();
             }
             else
             {

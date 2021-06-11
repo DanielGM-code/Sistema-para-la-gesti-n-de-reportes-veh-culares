@@ -111,7 +111,6 @@ namespace SGRV.GUIDelegacionesMunicipales
             if (conductorSeleccionado != null)
             {
                 
-                tb_nombreConductor.Text = conductorSeleccionado.Nombre;
                 tb_nombre.Text = conductorSeleccionado.Nombre;
                 tb_licencia.Text = conductorSeleccionado.NumeroLicencia;
                 tb_telefono.Text = conductorSeleccionado.Telefono;
