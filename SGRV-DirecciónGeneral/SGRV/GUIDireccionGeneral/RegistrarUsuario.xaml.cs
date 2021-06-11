@@ -21,12 +21,14 @@ namespace SGRV.GUIDireccionGeneral
     /// </summary>
     public partial class RegistrarUsuario : Window
     {
+        String username;
         List<Delegacion> delegaciones;
         public string[] cargos { get; set; }
-        public RegistrarUsuario()
+        public RegistrarUsuario(String username)
         {
 
             InitializeComponent();
+            this.username = username;
             delegaciones = DelegacionDAO.getAllDelegaciones();
             cb_delegacion.ItemsSource = delegaciones;
             cargos = new string[] { "Administrativo", "Agente de transito", "Perito", "Soporte" };
@@ -96,14 +98,14 @@ namespace SGRV.GUIDireccionGeneral
 
         private void button_Regresar_Click(object sender, RoutedEventArgs e)
         {
-            MenuDireccionGeneral ventanaMenu = new MenuDireccionGeneral();
+            MenuDireccionGeneral ventanaMenu = new MenuDireccionGeneral(username);
             ventanaMenu.Show();
             this.Close();
         }
 
         private void button_Chat_Click(object sender, RoutedEventArgs e)
         {
-            Chat ventanaChat = new Chat();
+            Chat ventanaChat = new Chat(username);
             ventanaChat.Show();
         }
 

@@ -23,12 +23,14 @@ namespace DireccionGeneral.GUIDireccionGeneral
     /// </summary>
     public partial class EliminarUsuario : Window
     {
+        String username;
         List<Usuario> usuarios;
         Usuario usuarioSeleccionado;
 
-        public EliminarUsuario()
+        public EliminarUsuario(String username)
         {
             InitializeComponent();
+            this.username = username;
             usuarios = new List<Usuario>();
             llenarTabla();
         }
@@ -92,14 +94,14 @@ namespace DireccionGeneral.GUIDireccionGeneral
 
         private void button_Regresar_Click(object sender, RoutedEventArgs e)
         {
-            MenuDireccionGeneral ventanaMenuDireccionGeneral = new MenuDireccionGeneral();
+            MenuDireccionGeneral ventanaMenuDireccionGeneral = new MenuDireccionGeneral(username);
             ventanaMenuDireccionGeneral.Show();
             this.Close();
         }
 
         private void button_Chat_Click(object sender, RoutedEventArgs e)
         {
-            Chat ventanaChat = new Chat();
+            Chat ventanaChat = new Chat(username);
             ventanaChat.Show();
         }
 

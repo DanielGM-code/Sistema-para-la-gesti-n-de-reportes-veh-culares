@@ -15,15 +15,16 @@ namespace DireccionGeneral.GUIDireccionGeneral
     /// </summary>
     public partial class ModificarUsuario : Window
     {
+        String username;
         List<Delegacion> delegaciones;
         Usuario usuarioSeleccionado;
 
         public string[] cargos { get; set; }
 
-        public ModificarUsuario()
+        public ModificarUsuario(String username)
         {
             InitializeComponent();
-
+            this.username = username;
             cargos = new string[] { "Administrativo", "Agente de transito", "Perito", "Soporte" }; 
             DataContext = this;
 
@@ -91,14 +92,14 @@ namespace DireccionGeneral.GUIDireccionGeneral
 
         private void button_Regresar_Click(object sender, RoutedEventArgs e)
         {
-            MenuDireccionGeneral ventanaMenuDireccionGeneral = new MenuDireccionGeneral();
+            MenuDireccionGeneral ventanaMenuDireccionGeneral = new MenuDireccionGeneral(username);
             ventanaMenuDireccionGeneral.Show();
             this.Close();
         }
 
         private void button_Chat_Click(object sender, RoutedEventArgs e)
         {
-            Chat ventanaChat = new Chat();
+            Chat ventanaChat = new Chat(username);
             ventanaChat.Show();
         }
 

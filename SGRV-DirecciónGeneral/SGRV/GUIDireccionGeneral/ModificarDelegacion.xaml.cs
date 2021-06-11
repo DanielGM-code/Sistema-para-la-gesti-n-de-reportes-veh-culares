@@ -21,13 +21,15 @@ namespace SGRV.GUIDireccionGeneral
     /// </summary>
     public partial class ModificarDelegacion : Window
     {
+        String username;
         List<Delegacion> delegaciones;
         Delegacion delegacionSeleccionada;
         public string[] municipios { get; set; }
 
-        public ModificarDelegacion()
+        public ModificarDelegacion(String username)
         {
             InitializeComponent();
+            this.username = username;
             delegaciones = new List<Delegacion>();
             llenarTabla();
             municipios = new string[] {
@@ -163,14 +165,14 @@ namespace SGRV.GUIDireccionGeneral
 
         private void button_Regresar_Click(object sender, RoutedEventArgs e)
         {
-            MenuDireccionGeneral ventanaMenuDireccionGeneral = new MenuDireccionGeneral();
+            MenuDireccionGeneral ventanaMenuDireccionGeneral = new MenuDireccionGeneral(username);
             ventanaMenuDireccionGeneral.Show();
             this.Close();
         }
 
         private void button_Chat_Click(object sender, RoutedEventArgs e)
         {
-            Chat ventanaChat = new Chat();
+            Chat ventanaChat = new Chat(username);
             ventanaChat.Show();
         }
 

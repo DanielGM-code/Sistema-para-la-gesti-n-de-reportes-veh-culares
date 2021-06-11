@@ -20,9 +20,12 @@ namespace SGRV.GUIDireccionGeneral
     /// </summary>
     public partial class MenuDireccionGeneral : Window
     {
-        public MenuDireccionGeneral()
+        String username;
+        public MenuDireccionGeneral(String username)
         {
             InitializeComponent();
+            this.username = username;
+
             button_RegistrarUsuario.Visibility = Visibility.Hidden;
             button_ModificarUsuario.Visibility = Visibility.Hidden;
             button_EliminarUsuario.Visibility = Visibility.Hidden;
@@ -88,49 +91,49 @@ namespace SGRV.GUIDireccionGeneral
 
         private void button_RegistrarUsuario_Click(object sender, RoutedEventArgs e)
         {
-            RegistrarUsuario ventanaRegistrarUsuario = new RegistrarUsuario();
+            RegistrarUsuario ventanaRegistrarUsuario = new RegistrarUsuario(username);
             ventanaRegistrarUsuario.Show();
             this.Close();
         }
 
         private void button_RegistrarDelegacion_Click(object sender, RoutedEventArgs e)
         {
-            RegistrarDelegacion ventanaRegistrarDelegacionMunicipal = new RegistrarDelegacion();
+            RegistrarDelegacion ventanaRegistrarDelegacionMunicipal = new RegistrarDelegacion(username);
             ventanaRegistrarDelegacionMunicipal.Show();
             this.Close();
         }
 
         private void button_ModificarUsuario_Click(object sender, RoutedEventArgs e)
         {
-            ModificarUsuario ventanaModificarUsuario = new ModificarUsuario();
+            ModificarUsuario ventanaModificarUsuario = new ModificarUsuario(username);
             ventanaModificarUsuario.Show();
             this.Close();
         }
 
         private void button_VisualizarReporte_Click(object sender, RoutedEventArgs e)
         {
-            VisualizarReporte ventanaVisualizarReporte = new VisualizarReporte();
+            VisualizarReporte ventanaVisualizarReporte = new VisualizarReporte(username);
             ventanaVisualizarReporte.Show();
             this.Close();
         }
 
         private void button_ModificarDelegacion_Click(object sender, RoutedEventArgs e)
         {
-            ModificarDelegacion ventanaModificarDelegacionMunicipal = new ModificarDelegacion();
+            ModificarDelegacion ventanaModificarDelegacionMunicipal = new ModificarDelegacion(username);
             ventanaModificarDelegacionMunicipal.Show();
             this.Close();
         }
 
         private void button_EliminarUsuarior_Click(object sender, RoutedEventArgs e)
         {
-            EliminarUsuario ventanaEliminarUsuario = new EliminarUsuario();
+            EliminarUsuario ventanaEliminarUsuario = new EliminarUsuario(username);
             ventanaEliminarUsuario.Show();
             this.Close();
         }
 
         private void button_EliminarDelegacion_Click(object sender, RoutedEventArgs e)
         {
-            EliminarDelegacion ventanaEliminarDelegacionMunicipal = new EliminarDelegacion();
+            EliminarDelegacion ventanaEliminarDelegacionMunicipal = new EliminarDelegacion(username);
             ventanaEliminarDelegacionMunicipal.Show();
             this.Close();
         }
@@ -138,7 +141,7 @@ namespace SGRV.GUIDireccionGeneral
 
         private void button_Chat_Click(object sender, RoutedEventArgs e)
         {
-            Chat ventanaChat = new Chat();
+            Chat ventanaChat = new Chat(username);
             ventanaChat.Show();
         }
 
