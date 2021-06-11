@@ -114,3 +114,7 @@ C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-ve
 C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\DictaminarReporte.baml
 C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\VisualizarReporte.baml
 C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\DireccionGeneral.csproj.AssemblyReference.cache
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\DictaminarReporte.g.cs
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\VisualizarReporte.g.cs
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\DictaminarReporte.baml
+C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DirecciónGeneral\SGRV\obj\Debug\net5.0-windows\GUIDireccionGeneral\VisualizarReporte.baml

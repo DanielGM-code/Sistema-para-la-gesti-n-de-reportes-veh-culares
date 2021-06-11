@@ -36,8 +36,7 @@ namespace SGRV.GUIDelegacionesMunicipales
             button_EliminarVehiculo.Visibility = Visibility.Hidden;
 
             button_RegistrarReporte.Visibility = Visibility.Hidden;
-            button_ModificarReporte.Visibility = Visibility.Hidden;
-            button_EliminarReporte.Visibility = Visibility.Hidden;
+            button_HistorialReporte.Visibility = Visibility.Hidden;
         }
 
         private void button_Conductor_Click(object sender, RoutedEventArgs e)
@@ -52,8 +51,7 @@ namespace SGRV.GUIDelegacionesMunicipales
             button_EliminarVehiculo.Visibility = Visibility.Hidden;
 
             button_RegistrarReporte.Visibility = Visibility.Hidden;
-            button_ModificarReporte.Visibility = Visibility.Hidden;
-            button_EliminarReporte.Visibility = Visibility.Hidden;
+            button_HistorialReporte.Visibility = Visibility.Hidden;
 
             button_Vehiculo.Visibility = Visibility.Visible;
             button_Reporte.Visibility = Visibility.Visible;
@@ -71,8 +69,7 @@ namespace SGRV.GUIDelegacionesMunicipales
             button_EliminarConductor.Visibility = Visibility.Hidden;
 
             button_RegistrarReporte.Visibility = Visibility.Hidden;
-            button_ModificarReporte.Visibility = Visibility.Hidden;
-            button_EliminarReporte.Visibility = Visibility.Hidden;
+            button_HistorialReporte.Visibility = Visibility.Hidden;
 
             button_Conductor.Visibility = Visibility.Visible;
             button_Reporte.Visibility = Visibility.Visible;
@@ -82,8 +79,7 @@ namespace SGRV.GUIDelegacionesMunicipales
         {
             button_Reporte.Visibility = Visibility.Hidden;
             button_RegistrarReporte.Visibility = Visibility.Visible;
-            button_ModificarReporte.Visibility = Visibility.Visible;
-            button_EliminarReporte.Visibility = Visibility.Visible;
+            button_HistorialReporte.Visibility = Visibility.Visible;
 
             button_RegistrarConductor.Visibility = Visibility.Hidden;
             button_ModificarConductor.Visibility = Visibility.Hidden;
@@ -151,7 +147,9 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_EliminarVehiculo_Click(object sender, RoutedEventArgs e)
         {
-
+            ElimarVehiculo ventanaEliminarVehiculo = new ElimarVehiculo(username);
+            ventanaEliminarVehiculo.Show();
+            this.Close();
         }
 
         private void button_Chat_Click(object sender, RoutedEventArgs e)

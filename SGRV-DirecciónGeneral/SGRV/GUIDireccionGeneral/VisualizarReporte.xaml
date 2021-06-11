@@ -168,8 +168,15 @@
                 Style="{StaticResource button_botonIcono}"
                 Click="button_CerrarVentana_Click"/>
 
-        <iconPacks:PackIconMaterial Kind="FileSearch" 
-            Margin="59,144,0,0" Height="24" Width="27"/>
+        <Button x:Name="button_Buscar"
+                Content="{iconPacks:Material Kind=FileSearch, Height=24, Width=20}"
+                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                VerticalAlignment="Top" 
+                Height="38" Width="38"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Buscar_Click" Margin="59,135,0,0"/>
 
         <Border
             Style="{StaticResource border_lineas}"
@@ -181,10 +188,11 @@
             VerticalAlignment="Top"
             Style="{StaticResource label_textoPequeño}"/>
         <TextBox 
+            x:Name="tb_reporte"
             HorizontalAlignment="Left" 
-            Margin="94,144,0,0"
+            Margin="102,144,0,0"
             VerticalAlignment="Top"
-            Width="225"
+            Width="217"
             MaxLength="250"
             Style="{StaticResource textBox_textBoxTransparente}"/>
 

@@ -77,9 +77,9 @@
 
         <TextBox x:Name="tb_nombreDelegacion" 
                  HorizontalAlignment="Left"
-                 Margin="114,184,0,0"
+                 Margin="138,184,0,0"
                  VerticalAlignment="Top" 
-                 Width="275"
+                 Width="251"
                  MaxLength="250"
                  Style="{StaticResource textBox_textBoxTransparente}"/>
 
@@ -127,9 +127,15 @@
                  MaxLength="250"
                  Style="{StaticResource textBox_textBoxTransparente}"/>
 
-
-        <iconPacks:PackIconMaterial Kind="TextBoxSearch" 
-                                        Margin="89,185,0,0" Height="25" Width="20"/>
+        <Button x:Name="button_Buscar"
+                Content="{iconPacks:Material Kind=TextBoxSearch, Height=24, Width=20}"
+                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                VerticalAlignment="Top" 
+                Height="34" Width="39"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Buscar_Click" Margin="89,178,0,0"/>
 
         <iconPacks:PackIconMaterial Kind="RenameBox" 
                                         Margin="486,228,0,0" Height="26" Width="20"/>

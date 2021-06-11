@@ -137,5 +137,10 @@ namespace SGRV
             });
 
         }
+
+        private void btn_cerrar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

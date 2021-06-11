@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="LogoSGRV.png" />
+    <None Remove="recursos\LogoSGRV.png" />
     <None Remove="recursos\plus_icon.png" />
     <None Remove="recursos\plus_icon_gray.png" />
   </ItemGroup>
@@ -19,6 +20,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Resource Include="LogoSGRV.png" />
+	  <Resource Include="recursos\LogoSGRV.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Compile Update="GUIDireccionGeneral\ModificarDelegacion.xaml.cs">

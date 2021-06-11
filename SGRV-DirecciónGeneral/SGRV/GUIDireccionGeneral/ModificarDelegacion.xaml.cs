@@ -23,6 +23,7 @@ namespace SGRV.GUIDireccionGeneral
     {
         String username;
         List<Delegacion> delegaciones;
+        List<Delegacion> delegacionesFiltradas;
         Delegacion delegacionSeleccionada;
         public string[] municipios { get; set; }
 
@@ -31,6 +32,7 @@ namespace SGRV.GUIDireccionGeneral
             InitializeComponent();
             this.username = username;
             delegaciones = new List<Delegacion>();
+            delegacionesFiltradas = new List<Delegacion>();
             llenarTabla();
             municipios = new string[] {
                 "Acajete", "Acatlán", "Acayucan",
@@ -210,6 +212,39 @@ namespace SGRV.GUIDireccionGeneral
                 cb_municipio.Text = delegacionSeleccionada.Municipio;
                 tb_telefono.Text = delegacionSeleccionada.Telefono;
             }
+        }
+
+        private void filtrarTabla()
+        {
+            delegaciones = DelegacionDAO.getAllDelegaciones();
+            String busqueda = tb_nombreDelegacion.Text;
+
+            foreach (Delegacion delegacion in delegaciones)
+            {
+                if (delegacion.Nombre.ToLower() == busqueda.ToLower() ||
+                    delegacion.CodigoPostal == busqueda ||
+                    delegacion.Correo.ToLower() == busqueda.ToLower() ||
+                    delegacion.Direccion.ToLower() == busqueda.ToLower() ||
+                    delegacion.Municipio.ToLower() == busqueda.ToLower() ||
+                    delegacion.Telefono == busqueda)
+                {
+                    delegacionesFiltradas.Add(delegacion);
+                }
+            }
+
+            if (delegacionesFiltradas.Count > 0)
+            {
+                dg_DelegacionesMunicipales.ItemsSource = delegacionesFiltradas;
+            }
+            else
+            {
+                llenarTabla();
+            }
+        }
+
+        private void button_Buscar_Click(object sender, RoutedEventArgs e)
+        {
+            filtrarTabla();
         }
     }
 }

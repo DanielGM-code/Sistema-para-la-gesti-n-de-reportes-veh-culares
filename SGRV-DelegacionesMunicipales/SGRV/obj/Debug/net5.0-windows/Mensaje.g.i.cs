@@ -10,9 +10,8 @@
 //------------------------------------------------------------------------------
 
 using DelegacionesMunicipales;
-using DelegacionesMunicipales.GUIDelegacionesMunicipales;
-using SGRV;
-using SGRV.GUIDelegacionesMunicipales;
+using MahApps.Metro.IconPacks;
+using MahApps.Metro.IconPacks.Converter;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -22,6 +21,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Controls.Ribbon;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms.Integration;
 using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Markup;
@@ -80,7 +80,7 @@ namespace DelegacionesMunicipales {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;V1.0.0.0;component/mensaje.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;component/mensaje.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Mensaje.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -23,7 +23,7 @@ namespace SGRV.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = "SELECT * FROM Vehiculo";
+                    String query = "SELECT * FROM Vehiculo WHERE estado = 'Activo'";
                     command = new SqlCommand(query, connection);
                     dataReader = command.ExecuteReader();
 
@@ -69,7 +69,7 @@ namespace SGRV.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = String.Format("SELECT * FROM Vehiculo WHERE idConductor = {0}", idConductor);
+                    String query = String.Format("SELECT * FROM Vehiculo WHERE estado = 'Activo' AND idConductor = {0}", idConductor);
                     command = new SqlCommand(query, connection);
                     dataReader = command.ExecuteReader();
                     while (dataReader.Read())

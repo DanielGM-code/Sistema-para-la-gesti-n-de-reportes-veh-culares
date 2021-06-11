@@ -124,13 +124,20 @@ namespace DireccionGeneral.GUIDireccionGeneral
             dg_DelegacionesMunicipales.ItemsSource = delegaciones;
         }
 
+
         private void filtrarTabla()
         {
             delegaciones = DelegacionDAO.getAllDelegaciones();
+            String busqueda = tb_nombreDelegacion.Text;
 
             foreach (Delegacion delegacion in delegaciones)
             {
-                if (delegacion.Nombre == tb_nombreDelegacion.Text)
+                if (delegacion.Nombre.ToLower() == busqueda.ToLower() ||
+                    delegacion.CodigoPostal == busqueda ||
+                    delegacion.Correo.ToLower() == busqueda.ToLower() ||
+                    delegacion.Direccion.ToLower() == busqueda.ToLower() ||
+                    delegacion.Municipio.ToLower() == busqueda.ToLower() ||
+                    delegacion.Telefono == busqueda)
                 {
                     delegacionesFiltradas.Add(delegacion);
                 }
@@ -139,6 +146,10 @@ namespace DireccionGeneral.GUIDireccionGeneral
             if(delegacionesFiltradas.Count > 0)
             {
                 dg_DelegacionesMunicipales.ItemsSource = delegacionesFiltradas;
+            }
+            else
+            {
+                llenarTabla();
             }
         }
 

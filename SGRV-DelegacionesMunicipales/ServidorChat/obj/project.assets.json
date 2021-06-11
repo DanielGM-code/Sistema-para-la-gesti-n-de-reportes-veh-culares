@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\angel\\.nuget\\packages\\": {}
+    "C:\\Users\\dagam\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\ServidorChat\\ServidorChat.csproj",
+      "projectUniqueName": "C:\\Users\\dagam\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\ServidorChat\\ServidorChat.csproj",
       "projectName": "ServidorChat",
-      "projectPath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\ServidorChat\\ServidorChat.csproj",
-      "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\ServidorChat\\obj\\",
+      "projectPath": "C:\\Users\\dagam\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\ServidorChat\\ServidorChat.csproj",
+      "packagesPath": "C:\\Users\\dagam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dagam\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DelegacionesMunicipales\\ServidorChat\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dagam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
