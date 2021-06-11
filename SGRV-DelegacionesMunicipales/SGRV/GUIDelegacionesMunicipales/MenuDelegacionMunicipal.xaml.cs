@@ -132,8 +132,8 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_ModificarReporte_Click(object sender, RoutedEventArgs e)
         {
-            ModificarReporte ventanaModificarReporte = new ModificarReporte();
-            ventanaModificarReporte.Show();
+            VisualizarReporte ventanaVisualizarReporte = new VisualizarReporte();
+            ventanaVisualizarReporte.Show();
             this.Close();
         }
 

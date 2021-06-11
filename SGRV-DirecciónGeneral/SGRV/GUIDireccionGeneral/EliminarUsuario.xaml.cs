@@ -35,7 +35,22 @@ namespace DireccionGeneral.GUIDireccionGeneral
 
         private void button_Eliminar_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                if (usuarioSeleccionado != null)
+                {
+                    UsuarioDAO.removeUsuario(usuarioSeleccionado);
+                    string mensaje = "Delegación eliminada de manera exitosa.";
+                    Mensaje ventanaMensaje = new Mensaje(mensaje);
+                    ventanaMensaje.Show();
+                    vaciarCampos();
+                    llenarTabla();
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Ocurrió un error, inténtelo de nuevo.");
+            }
         }
 
         private void button_Modificar_Click(object sender, RoutedEventArgs e)

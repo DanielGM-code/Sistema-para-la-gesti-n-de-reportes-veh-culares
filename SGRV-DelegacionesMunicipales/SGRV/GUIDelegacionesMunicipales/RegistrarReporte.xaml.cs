@@ -53,49 +53,56 @@ namespace SGRV.GUIDelegacionesMunicipales
                 {
                     if (vehiculosSeleccionados.Count > 0)
                     {
-                        Reporte reporte = new Reporte();
-                        reporte.Direccion = tb_direccion.Text;
-                        reporte.Descripcion = tb_descripcion.Text;
-                        reporte.Fecha = (DateTime)dp_fecha.SelectedDate;
-                        reporte.Estado = "Activo";
-
-                        ReporteDAO.addReporte(reporte);
-                        int ultimoReporte = ReporteDAO.getLastIndex();
-
-                        VehiculosReporte vehiculosReporte;
-                        foreach (Vehiculo vehiculo in vehiculosSeleccionados)
+                        if (images.Count >= 3)
                         {
-                            vehiculosReporte = new VehiculosReporte();
-                            vehiculosReporte.IdReporte = ultimoReporte;
-                            vehiculosReporte.IdVehiculo = vehiculo.IdVehiculo;
-                            VehiculosReporteDAO.addVehiculosReporte(vehiculosReporte);
-                        }
+                            Reporte reporte = new Reporte();
+                            reporte.Direccion = tb_direccion.Text;
+                            reporte.Descripcion = tb_descripcion.Text;
+                            reporte.Fecha = (DateTime)dp_fecha.SelectedDate;
+                            reporte.Estado = "Activo";
 
-                        ConductoresReporte conductoresReporte;
-                        foreach (Conductor conductor in conductoresSeleccionados)
-                        {
-                            conductoresReporte = new ConductoresReporte();
-                            conductoresReporte.IdReporte = ultimoReporte;
-                            conductoresReporte.IdConductor = conductor.IdConductor;
-                            ConductoresReporteDAO.addConductoresReporte(conductoresReporte);
-                        }
+                            ReporteDAO.addReporte(reporte);
+                            int ultimoReporte = ReporteDAO.getLastIndex();
 
-                        try
-                        {
-                            foreach (Image imagen in images)
+                            VehiculosReporte vehiculosReporte;
+                            foreach (Vehiculo vehiculo in vehiculosSeleccionados)
                             {
-                                String filepath = imagen.Source.ToString().Substring(8);
-                                String filename = String.Format("Reporte{0}", ultimoReporte);
-                                ConexionSFTP.subirArchivo(filepath, filename);
+                                vehiculosReporte = new VehiculosReporte();
+                                vehiculosReporte.IdReporte = ultimoReporte;
+                                vehiculosReporte.IdVehiculo = vehiculo.IdVehiculo;
+                                VehiculosReporteDAO.addVehiculosReporte(vehiculosReporte);
                             }
+
+                            ConductoresReporte conductoresReporte;
+                            foreach (Conductor conductor in conductoresSeleccionados)
+                            {
+                                conductoresReporte = new ConductoresReporte();
+                                conductoresReporte.IdReporte = ultimoReporte;
+                                conductoresReporte.IdConductor = conductor.IdConductor;
+                                ConductoresReporteDAO.addConductoresReporte(conductoresReporte);
+                            }
+
+                            try
+                            {
+                                foreach (Image imagen in images)
+                                {
+                                    String filepath = imagen.Source.ToString().Substring(8);
+                                    String filename = String.Format("Reporte{0}", ultimoReporte);
+                                    ConexionSFTP.subirArchivo(filepath, filename);
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                                throw;
+                            }
+                            MessageBox.Show("Registro exitoso.");
+                            limpiarCampos(); 
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show(ex.Message);
-                            throw;
+                            MessageBox.Show("Debe seleccionar al menos 3 fotografías.");
                         }
-                        MessageBox.Show("Registro exitoso.");
-                        limpiarCampos();
                     }
                     else
                     {

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegacionesMunicipales", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DireccionGeneral", "..\..\SGRV-DirecciónGeneral\SGRV\DireccionGeneral.csproj", "{E76E4337-5607-46FA-AB22-223A01FBB27F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServidorChat", "..\ServidorChat\ServidorChat.csproj", "{EF843F96-1C64-4EB0-9EDE-A98EDB5F66A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E76E4337-5607-46FA-AB22-223A01FBB27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E76E4337-5607-46FA-AB22-223A01FBB27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E76E4337-5607-46FA-AB22-223A01FBB27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF843F96-1C64-4EB0-9EDE-A98EDB5F66A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF843F96-1C64-4EB0-9EDE-A98EDB5F66A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF843F96-1C64-4EB0-9EDE-A98EDB5F66A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF843F96-1C64-4EB0-9EDE-A98EDB5F66A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,9 +15,7 @@ namespace SGRV.modelo.database
         private static int PORT_NUMBER = 22;
         private static String HOSTNAME = "s-1d58539369434fd89.server.transfer.us-east-2.amazonaws.com";
         private static String USERNAME = "adminSGRV";
-        private static String PASSWORD = "ssh-rsa 2048 SHA256:2X1kw1rcSK0Dvp0qchCHvFeSegx/umXbIErTCoFcDdo";
-        private static String PASSWORD2 = "ssh-rsa 2048 46:b8:40:85:4e:ca:53:b9:d4:8f:a2:58:d8:f2:fa:ea";
-        private static String PASSWORD3 = "ssh-rsa 2048 SHA256:S1oiDmLhnmjF3U3xfkev1uozGUpo+DZwyBgqsvhjYx0";
+        private static String PASSWORD = "ssh-rsa 2048 71:92:22:b8:7a:44:86:69:f9:ee:7f:52:60:f4:e3:b7";
 
         public static string FileMask { get; private set; }
 
@@ -26,16 +24,17 @@ namespace SGRV.modelo.database
             Session session = new Session();
             try
             {
+
                 SessionOptions sessionOptions = new SessionOptions
                 {
                     Protocol = PROTOCOL,
                     PortNumber = PORT_NUMBER,
                     HostName = HOSTNAME,
                     UserName = USERNAME,
-                    Password = PASSWORD3,
+                    Password = PASSWORD,
+                    //SshPrivateKeyPath = "C:/Users/angel/source/repos/DanielGM-code/Sistema-para-la-gesti-n-de-reportes-veh-culares/SGRV-DelegacionesMunicipales/SGRV/modelo/database/privada.ppk",
                     GiveUpSecurityAndAcceptAnySshHostKey = true
                 };
-
 
                 session.Open(sessionOptions);
             }

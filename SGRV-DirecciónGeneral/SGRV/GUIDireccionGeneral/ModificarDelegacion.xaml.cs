@@ -23,12 +23,77 @@ namespace SGRV.GUIDireccionGeneral
     {
         List<Delegacion> delegaciones;
         Delegacion delegacionSeleccionada;
+        public string[] municipios { get; set; }
 
         public ModificarDelegacion()
         {
             InitializeComponent();
             delegaciones = new List<Delegacion>();
             llenarTabla();
+            municipios = new string[] {
+                "Acajete", "Acatlán", "Acayucan",
+                "Actopan", "Acula", "Acutzingo",
+                "Agua Dulce", "Álamo Temapache",
+                "Alpatláhuac", "Alto Lucero de Gutiérrez Barrios",
+                "Altotonga", "Amatitlán", "Amatlán de los Reyes",
+                "Ángel R. Cabada", "Apazapan", "Aquila",
+                "Astacinga", "Atlahuilco", "Atoyac", "Atzacan",
+                "Atzalan", "Ayahualulco", "Banderilla",
+                "Benito Juárez", "Boca del Río", "Calcahualco",
+                "Camarón de Tejeda", "Camerino Z. Mendoza",
+                "Carlos A. Carrillo", "Carrillo Puerto",
+                "Castillo de Teayo", "Catemaco", "Cazones de Herrera",
+                "Cerro Azul", "Chacaltianguis", "Chalma", "Chiconamel",
+                "Chiconquiaco", "Chicotepec", "Chinameca",
+                "Chinampa de Gorostiza", "Chocomán", "Chontla",
+                "Chumatlán", "Citlaltépetl", "Cocoatzintla",
+                "Coahuitlán", "Coatepec", "Coatzacoalcos",
+                "Coatzintla", "Coetzala", "Colipa", "Comapa",
+                "Córdoba", "Cosamaloapan de Carpio", "Cosautlán de Carvajal",
+                "Coscomatepec", "Cosoleacaque", "Cotaxtla", "Coxquihui",
+                "Coyutla", "Chichapa", "Cuitláhuac", "El Higo",
+                "Emiliano Zapata", "Espinal", "Filomeno Mata",
+                "Fortín", "Gutiérrez Zamora", "Hidalgotitlán",
+                "Huatusco", "Huayacocotla", "Hueyapan de Ocampo",
+                "Huiloapan de Cuauhtémoc", "Ignacio de la Llave", "Ilamatlán",
+                "Isla", "Ixcatepec", "Ixhuacán de los Reyes", "Ixhuatlán de Madero",
+                "Ixhuatlán del Café", "Ixhuatlán del Sureste", "Ixhuatlancillo",
+                "Ixmatlahuacan", "Ixtaczoquitlán", "Jalacingo", "Jalcomulco",
+                "Jáltipan", "Jamapa", "Jesús Carranza", "Jilotepec",
+                "José Azueta", "Juan Rodríguez Clara", "Juchique de Ferrer",
+                "La Antigua", "La Perla", "Landero y Coss", "Las Choapas",
+                "Las Minas", "Las Vigas de Ramírez", "Lerdo de Tejada",
+                "Los Reyes", "Magdalena", "Maltrata", "	Manlio Fabio Altamirano",
+                "Mariano Escobedo", "Martínez de la Torre", "Mecatlán",
+                "Mecayapan", "Medellín", "Miahuatlán", "Minatitlán",
+                "Misantla", "Mixtla de Altamirano", "Moloacán",
+                "Nanchital de Lázaro Cárdenas del Río",
+                "Naolinco", "Naranjal", "Naranjos Amatlán", "Nautla",
+                "Nogales", "Nogales", "Oluta", "Omealca", "Orizaba",
+                "Otatitlán", "Oteapan", "Ozuluama de Mascareñas", "Pajapan",
+                "Pánuco", "Papantla", "Paso de Ovejas", "Paso del Macho",
+                "Perote", "Platón Sánchez", "Playa Vicente", "Poza Rica de Hidalgo",
+                "Pueblo Viejo", "Puente Nacional", "Rafael Delgado", "Rafael Lucio",
+                "Río Blanco", "Saltabarranca", "San Andrés Tenejapan",
+                "San Andrés Tuxtla", "San Juan Evangelista", "San Rafael",
+                "Santiago Sochiapan", "Santiago Tuxtla", "Sayula de Alemán",
+                "Sochiapa", "Soconusco", "Soledad Atzompa", "Soledad de Doblado",
+                "Soteapan", "Tamalín", "Tamiahua", "Tampico Alto", "Tancoco",
+                "Tantima", "Tantoyuca", "Tatahuicapan de Juárez", "Tlatatila",
+                "Tecolutla", "Tehuipango", "Tempoal", "Tempoal", "Tenochtitlán",
+                "Teocelo", "Tepatlaxco", "Tepetlán", "Tepetzintla",
+                "Tequila", "Texcatepec", "Texhuacán", "Texistepec",
+                "Tezonapa", "Tierra Blanca", "Tihuatlán", "Tlachichilco",
+                "Tlacojalpan", "Tlacolulan", "Tlacotalpan", "Tlacotepec de Mejía",
+                "Tlalixcoyan", "Tlalnelhuayocan", "Tlaltetela", "Tlapacoyan",
+                "Tlaquilpa", "Tlilapan", "Tomatlán", "Tonayán", "Totutla",
+                "Tres Valles", "Tuxpan", "Tuxtilla", "Úrsulo Galván",
+                "Uxpanapa", "Vega de Alatorre", "Veracruz", "Villa Aldama",
+                "Xalapa", "Xico", "Xoxocotla", "Yanga", "Yecuatla",
+                "Zacualpan", "Zaragoza", "Zentla", "Zongolica",
+                "Zontecomatlán de López y Fuentes", "Zozocolco de Hidalgo"
+            };
+            DataContext = this;
         }
 
         private void button_Modificar_Click(object sender, RoutedEventArgs e)
@@ -42,7 +107,7 @@ namespace SGRV.GUIDireccionGeneral
                 delegacion.CodigoPostal = tb_codigoPostal.Text;
                 delegacion.Correo = tb_correo.Text;
                 delegacion.Direccion = tb_direccion.Text;
-                delegacion.Municipio = tb_municipio.Text;
+                delegacion.Municipio = cb_municipio.Text;
                 delegacion.Telefono = tb_telefono.Text;
 
                 try
@@ -72,7 +137,7 @@ namespace SGRV.GUIDireccionGeneral
                     tb_codigoPostal.Text == "" ||
                     tb_correo.Text == "" ||
                     tb_direccion.Text == "" ||
-                    tb_municipio.Text == "" ||
+                    cb_municipio.SelectedItem == null ||
                     tb_telefono.Text == "") ? false : true;
         }
 
@@ -82,7 +147,7 @@ namespace SGRV.GUIDireccionGeneral
             tb_codigoPostal.Text = "";
             tb_correo.Text = "";
             tb_direccion.Text = "";
-            tb_municipio.Text = "";
+            cb_municipio.SelectedItem = null;
             tb_telefono.Text = "";
         }
 
@@ -140,7 +205,7 @@ namespace SGRV.GUIDireccionGeneral
                 tb_codigoPostal.Text = delegacionSeleccionada.CodigoPostal;
                 tb_correo.Text = delegacionSeleccionada.Correo;
                 tb_direccion.Text = delegacionSeleccionada.Direccion;
-                tb_municipio.Text = delegacionSeleccionada.Municipio;
+                cb_municipio.Text = delegacionSeleccionada.Municipio;
                 tb_telefono.Text = delegacionSeleccionada.Telefono;
             }
         }
