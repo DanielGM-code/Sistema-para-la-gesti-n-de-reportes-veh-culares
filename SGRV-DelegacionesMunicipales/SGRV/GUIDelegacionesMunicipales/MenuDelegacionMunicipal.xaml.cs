@@ -154,11 +154,6 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         }
 
-        private void button_EliminarReporte_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void button_Chat_Click(object sender, RoutedEventArgs e)
         {
             Chat ventanaChat = new Chat(username);
@@ -188,6 +183,11 @@ namespace SGRV.GUIDelegacionesMunicipales
             {
                 DragMove();
             }
+        }
+
+        private void button_HistorialReporte_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

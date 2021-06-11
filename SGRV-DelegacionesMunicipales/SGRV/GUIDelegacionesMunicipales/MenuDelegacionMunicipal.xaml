@@ -128,27 +128,18 @@
             Content="{iconPacks:Material Height=40, Kind=Plus, Width=40}"
             Style="{StaticResource button_botonIconoRegistrar}"
             HorizontalAlignment="Left" 
-            Margin="584,522,0,0" 
+            Margin="616,522,0,0" 
             VerticalAlignment="Top" Height="58" Width="56"
             Click="button_RegistrarReporte_Click"/>
 
         <Button 
-            x:Name="button_ModificarReporte"
-            Content="{iconPacks:Material Height=40, Kind=BookEdit, Width=40}"
+            x:Name="button_HistorialReporte"
+            Content="{iconPacks:Material Height=40, Kind=ListStatus, Width=40}"
             Style="{StaticResource button_botonIconoModificar}"
             HorizontalAlignment="Left" 
-            Margin="652,522,0,0" 
+            Margin="684,522,0,0" 
             VerticalAlignment="Top" Height="58" Width="56"
-            Click="button_ModificarReporte_Click"/>
-
-        <Button 
-            x:Name="button_EliminarReporte"
-            Content="{iconPacks:Material Kind=TrashCan, Height=40, Width=40}"
-            Style="{StaticResource button_botonIconoEliminar}"
-            HorizontalAlignment="Left" 
-            Margin="720,522,0,0" 
-            VerticalAlignment="Top" Height="58" Width="56"
-            Click="button_EliminarReporte_Click"/>
+            Click="button_HistorialReporte_Click"/>
 
         <Button x:Name="button_Chat"
                 Content="{iconPacks:Material Kind=Email, Height=30, Width=40}"
