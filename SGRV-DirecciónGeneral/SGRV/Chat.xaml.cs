@@ -22,6 +22,25 @@ namespace SGRV
         public Chat()
         {
             InitializeComponent();
+            gridChat.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+            Label label = new Label();
+            label.Height = 25;
+            label.VerticalAlignment = VerticalAlignment.Top;
+            label.Content = "Hola";
+            Grid.SetColumn(label, 0);
+            Grid.SetRow(label, 0);
+            gridChat.Children.Add(label);
+
+            gridChat.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+            Label label1 = new Label();
+            label1.Content = "Hola2\n¿Cómo estás?";
+            label1.Height = 100;
+            label1.Background = Brushes.Red;
+            label1.VerticalAlignment = VerticalAlignment.Top;
+            Grid.SetColumn(label1, 0);
+            Grid.SetRow(label1, 1);
+            gridChat.Children.Add(label1);
+
         }
     }
 }

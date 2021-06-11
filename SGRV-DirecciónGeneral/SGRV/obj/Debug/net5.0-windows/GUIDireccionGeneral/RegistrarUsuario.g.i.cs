@@ -152,7 +152,7 @@ namespace SGRV.GUIDireccionGeneral {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DireccionGeneral;V1.0.0.0;component/guidirecciongeneral/registrarusuario.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DireccionGeneral;component/guidirecciongeneral/registrarusuario.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDireccionGeneral\RegistrarUsuario.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -90,11 +90,13 @@
             Style="{StaticResource label_textoPequeño}"/>
 
         <TextBox 
+            x:Name="tb_direccion"
             HorizontalAlignment="Left"
             Margin="1021,142,0,0"
             VerticalAlignment="Top"
             Width="220"
             MaxLength="250"
+            IsEnabled="False"
             Style="{StaticResource textBox_textBoxTransparente}"/>
 
         <Label 
@@ -105,6 +107,8 @@
             Style="{StaticResource label_textoPequeño}"/>
 
         <TextBox
+            x:Name="tb_Descripcion"
+            IsEnabled="False"
             HorizontalAlignment="Left" 
             Margin="685,254,0,0"
             VerticalAlignment="Top"
@@ -187,7 +191,8 @@
                      HorizontalAlignment="Left"
                      Margin="717,140,0,0" 
                      VerticalAlignment="Top"
-                     Width="224"/>
+                     Width="224"
+                     IsEnabled="False"/>
 
         <WrapPanel
             x:Name="wp_imagenes" 
