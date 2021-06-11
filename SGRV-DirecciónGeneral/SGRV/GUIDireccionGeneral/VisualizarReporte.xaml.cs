@@ -26,6 +26,8 @@ namespace DireccionGeneral.GUIDireccionGeneral
     public partial class VisualizarReporte : Window
     {
         String username;
+        List<Reporte> reportes;
+        List<Reporte> reportesFiltrados;
         private Reporte reporteSeleccionado;
         private List<Conductor> conductoresSeleccionados;
         private List<Vehiculo> vehiculosSeleccionados;
@@ -37,6 +39,8 @@ namespace DireccionGeneral.GUIDireccionGeneral
             this.username = username;
             conductoresSeleccionados = new List<Conductor>();
             vehiculosSeleccionados = new List<Vehiculo>();
+            reportes = new List<Reporte>();
+            reportesFiltrados = new List<Reporte>();
             directoriosCreados = new List<string>();
             fotografias = new List<Image>();
             llenarTablaReportes();
@@ -169,6 +173,36 @@ namespace DireccionGeneral.GUIDireccionGeneral
             {
                 DragMove();
             }
+        }
+
+        private void filtrarTabla()
+        {
+            reportes = ReporteDAO.getAllReportes();
+            String busqueda = tb_reporte.Text;
+
+            foreach (Reporte reporte in reportes)
+            {
+                if (reporte.Direccion.ToLower() == busqueda.ToLower() ||
+                    reporte.Estado.ToLower() == busqueda.ToLower() ||
+                    reporte.Fecha.ToString() == busqueda)
+                {
+                    reportesFiltrados.Add(reporte);
+                }
+            }
+
+            if (reportesFiltrados.Count > 0)
+            {
+                dg_reportes.ItemsSource = reportesFiltrados;
+            }
+            else
+            {
+                llenarTablaReportes();
+            }
+        }
+
+        private void button_Buscar_Click(object sender, RoutedEventArgs e)
+        {
+            filtrarTabla();
         }
     }
 }

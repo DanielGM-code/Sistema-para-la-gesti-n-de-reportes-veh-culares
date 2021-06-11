@@ -31,6 +31,7 @@ namespace DelegacionesMunicipales.GUIDelegacionesMunicipales
         private List<Vehiculo> vehiculosSeleccionados;
         List<String> directoriosCreados;
         List<Image> fotografias;
+        List<Reporte> reportes;
 
         public VisualizarReporte(String username)
         {
@@ -40,6 +41,7 @@ namespace DelegacionesMunicipales.GUIDelegacionesMunicipales
             vehiculosSeleccionados = new List<Vehiculo>();
             directoriosCreados = new List<string>();
             fotografias = new List<Image>();
+            reportes = new List<Reporte>();
             llenarTablaReportes();
             
         }
@@ -135,12 +137,28 @@ namespace DelegacionesMunicipales.GUIDelegacionesMunicipales
 
         private void button_VerDictamen_Click(object sender, RoutedEventArgs e)
         {
+            if (reporteSeleccionado != null)
+            {
+                VerDictamen ventanaVerDictamen = new VerDictamen(reporteSeleccionado.IdReporte);
+                try
+                {
+                    ventanaVerDictamen.ShowDialog();
+                }
+                catch
+                {
 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe Seleccionar un reporte.");
+            }
         }
 
         private void llenarTablaReportes()
         {
-            dg_reportes.ItemsSource = ReporteDAO.getAllReportes();
+            reportes = ReporteDAO.getAllReportes();
+            dg_reportes.ItemsSource = reportes;
         }
 
         private void actualizarTablaConductoresSeleccionados()
@@ -168,6 +186,28 @@ namespace DelegacionesMunicipales.GUIDelegacionesMunicipales
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
+            }
+        }
+
+        private void button_BuscarReporte_Click(object sender, RoutedEventArgs e)
+        {
+            String busqueda = tb_busqueda.Text.ToLower();
+            if(busqueda != "")
+            {
+                List<Reporte> reportesFiltrados = new List<Reporte>();
+                foreach(Reporte reporte in reportes)
+                {
+                    if (reporte.Descripcion.ToLower().Contains(busqueda) ||
+                        reporte.Direccion.ToLower().Contains(busqueda) ||
+                        reporte.Fecha.ToString() == busqueda){
+                        reportesFiltrados.Add(reporte);
+                    }
+                    dg_reportes.ItemsSource = reportesFiltrados;
+                }
+            }
+            else
+            {
+                llenarTablaReportes();
             }
         }
     }

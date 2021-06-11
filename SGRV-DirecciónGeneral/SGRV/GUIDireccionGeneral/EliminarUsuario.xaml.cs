@@ -25,13 +25,21 @@ namespace DireccionGeneral.GUIDireccionGeneral
     {
         String username;
         List<Usuario> usuarios;
+        List<Usuario> usuariosFiltrados;
         Usuario usuarioSeleccionado;
+        List<Delegacion> delegaciones;
+        public string[] cargos { get; set; }
 
         public EliminarUsuario(String username)
         {
             InitializeComponent();
+            delegaciones = DelegacionDAO.getAllDelegaciones();
+            cb_delegacion.ItemsSource = delegaciones;
+            cargos = new string[] { "Administrativo", "Agente De Transito", "Perito", "Soporte" };
+            DataContext = this;
             this.username = username;
             usuarios = new List<Usuario>();
+            usuariosFiltrados = new List<Usuario>();
             llenarTabla();
         }
 
@@ -134,10 +142,41 @@ namespace DireccionGeneral.GUIDireccionGeneral
             {
                 tb_correo.Text = usuarioSeleccionado.Correo;
                 tb_username.Text = usuarioSeleccionado.Username;
-                tb_Usuario.Text = usuarioSeleccionado.Username;
                 cb_cargo.Text = usuarioSeleccionado.Cargo;
                 cb_delegacion.Text = usuarioSeleccionado.Delegacion;
             }
+        }
+
+
+        private void filtrarTabla()
+        {
+            usuarios = UsuarioDAO.getAllUsuarios();
+            String busqueda = tb_username.Text;
+
+            foreach (Usuario usuario in usuarios)
+            {
+                if (usuario.Username.ToLower() == busqueda.ToLower() ||
+                    usuario.Cargo.ToLower() == busqueda.ToLower() ||
+                    usuario.Correo.ToLower() == busqueda.ToLower() ||
+                    usuario.Delegacion.ToLower() == busqueda.ToLower())
+                {
+                    usuariosFiltrados.Add(usuario);
+                }
+            }
+
+            if (usuariosFiltrados.Count > 0)
+            {
+                dg_Usarios.ItemsSource = usuariosFiltrados;
+            }
+            else
+            {
+                llenarTabla();
+            }
+        }
+
+        private void button_Buscar_Click(object sender, RoutedEventArgs e)
+        {
+            filtrarTabla();
         }
     }
 }

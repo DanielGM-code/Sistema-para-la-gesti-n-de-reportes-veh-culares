@@ -143,5 +143,30 @@ namespace SGRV.GUIDelegacionesMunicipales
                 dp_fehcaNacimiento.SelectedDate = fechaNacimiento; 
             }
         }
+
+        private void button_Buscar_Click(object sender, RoutedEventArgs e)
+        {
+            String busqueda = tb_nombreConductor.Text;
+            if (busqueda != "")
+            {
+                List<Conductor> conductoresFiltrados = new List<Conductor>();
+                foreach (Conductor conductor in conductores)
+                {
+                    if (conductor.Nombre.ToLower() == busqueda.ToLower() ||
+                        conductor.NumeroLicencia == busqueda ||
+                        conductor.Telefono == busqueda ||
+                        conductor.Nombre.ToLower().Contains(busqueda.ToLower()))
+                    {
+                        conductoresFiltrados.Add(conductor);
+                    }
+                }
+                dg_conductores.ItemsSource = conductoresFiltrados;
+
+            }
+            else
+            {
+                llenarTabla();
+            }
+        }
     }
 }

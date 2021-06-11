@@ -164,16 +164,23 @@
 
         <TextBox x:Name="tb_Usuario" 
             HorizontalAlignment="Left"
-            Margin="122,161,0,0"
+            Margin="144,161,0,0"
             VerticalAlignment="Top" 
-            Width="270"
+            Width="248"
             MaxLength="250"
             Style="{StaticResource textBox_textBoxTransparente}"/>
         <Border Style="{StaticResource border_lineasGrandes}" Margin="886,314,114,65"/>
         <Border Style="{StaticResource border_lineasGrandes}" Margin="886,47,114,300" Grid.Row="1"/>
 
-        <iconPacks:PackIconMaterial Kind="AccountSearch" 
-                                        Margin="93,161,0,0" Height="24" Width="20"/>
+        <Button x:Name="button_Buscar"
+                Content="{iconPacks:Material Kind=AccountSearch, Height=24, Width=20}"
+                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                VerticalAlignment="Top" 
+                Height="34" Width="38"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Buscar_Click" Margin="92,154,0,0"/>
 
         <iconPacks:PackIconMaterial Kind="Account" 
                                         Margin="547,280,0,0" Height="24" Width="20"/>

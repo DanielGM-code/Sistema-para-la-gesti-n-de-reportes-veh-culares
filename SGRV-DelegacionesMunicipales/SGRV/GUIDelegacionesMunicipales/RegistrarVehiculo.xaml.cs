@@ -101,15 +101,13 @@ namespace SGRV.GUIDelegacionesMunicipales
                     tb_numeroPlacas.Text == "" ||
                     tb_año.Text == "" ||
                     tb_color.Text == "" ||
-                    tb_numeroPolizaSeguro.Text == "" ||
-                    tb_nombreConductor.Text == "") ? false : true;
+                    tb_numeroPolizaSeguro.Text == "" ) ? false : true;
         }
 
 
         private void clic_conductor_item(object sender, SelectionChangedEventArgs e)
         {
             conductorSeleccionado = (Conductor)dg_conductores.SelectedItem;
-            tb_nombreConductor.Text = conductorSeleccionado.Nombre;
         }
 
         private void limpiarCampos()
@@ -121,7 +119,6 @@ namespace SGRV.GUIDelegacionesMunicipales
             tb_año.Text = "";
             tb_color.Text = "";
             tb_numeroPolizaSeguro.Text = "";
-            tb_nombreConductor.Text = "";
         }
 
         private void OnMouseDown(object sender, MouseButtonEventArgs e)
@@ -140,6 +137,31 @@ namespace SGRV.GUIDelegacionesMunicipales
         private void button_CerrarVentana_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void button_BuscarConductor_Click(object sender, RoutedEventArgs e)
+        {
+            String busqueda = tb_busqueda.Text;
+            if(busqueda != "")
+            {
+                List<Conductor> conductoresFiltrados = new List<Conductor>();
+                foreach(Conductor conductor in conductors)
+                {
+                    if(conductor.Nombre.ToLower() == busqueda.ToLower() ||
+                        conductor.NumeroLicencia == busqueda ||
+                        conductor.Telefono == busqueda ||
+                        conductor.Nombre.ToLower().Contains(busqueda.ToLower()))
+                    {
+                        conductoresFiltrados.Add(conductor);
+                    }
+                }
+                dg_conductores.ItemsSource = conductoresFiltrados;
+                
+            }
+            else
+            {
+                llenarTabla();
+            }
         }
     }
 }

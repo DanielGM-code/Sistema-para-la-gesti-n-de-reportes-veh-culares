@@ -3,39 +3,68 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:SGRV"
         mc:Ignorable="d"
-        Title="Chat" Height="600" Width="450">
+        Title="Chat" Height="600" Width="450"        
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="OnMouseDown"
+        WindowStartupLocation="CenterScreen">
     <Grid>
+
+        <Border CornerRadius="25" Grid.RowSpan="2" RenderTransformOrigin="0.513,0.427" Opacity="0.9">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#3f4977" Offset="0.0"/>
+                    <GradientStop Color="#006a65" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
         <TextBox 
             x:Name="tb_mensaje"
             HorizontalAlignment="Left" 
             Margin="20,486,0,0" 
             Text="TextBox" 
+            Background="Transparent"
+            BorderBrush="White"
+            BorderThickness="1"
+            Foreground="White"
             TextWrapping="Wrap" 
             VerticalAlignment="Top" 
-            Width="346" 
+            Width="355" 
             Height="74"/>
-        <Button 
-            x:Name="btn_enviar"
-            Content="Enviar" 
-            HorizontalAlignment="Left" 
-            Margin="385,499,0,0" 
-            VerticalAlignment="Top" 
-            Height="39" 
-            Width="50" Click="btn_enviar_Click" />
-        <ScrollViewer VerticalScrollBarVisibility="Visible" Margin="15,15,0,0"
 
-                Width="400"
-                Height="448"
+
+        <Button x:Name="btn_enviar"
+                Content="{iconPacks:Material Kind=Send, Height=30, Width=40}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Height="44" Width="52"
+                Style="{StaticResource button_botonIcono}"
+                Click="btn_enviar_Click" Margin="385,501,0,0"/>
+
+
+        <Button x:Name="btn_cerrar"
+                Content="X"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Height="17" Width="18"
+                Style="{StaticResource button_botonIcono}"
+                Click="btn_cerrar_Click" Margin="417,6,0,0"/>
+
+
+        <ScrollViewer VerticalScrollBarVisibility="Visible" Margin="0,29,0,0"
+
+                Width="420"
+                Height="434"
                 VerticalAlignment="Top"
-                HorizontalAlignment="Left">
+                HorizontalAlignment="Center">
             <StackPanel
                 x:Name="sp_chat"
                 Width="375">
             </StackPanel>
         </ScrollViewer>
-
-
     </Grid>
 </Window>
