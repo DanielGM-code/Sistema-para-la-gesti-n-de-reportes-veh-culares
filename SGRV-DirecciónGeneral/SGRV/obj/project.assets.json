@@ -697,19 +697,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dagam\\.nuget\\packages\\": {}
+    "C:\\Users\\angel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dagam\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DirecciónGeneral\\SGRV\\DireccionGeneral.csproj",
+      "projectUniqueName": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DirecciónGeneral\\SGRV\\DireccionGeneral.csproj",
       "projectName": "DireccionGeneral",
-      "projectPath": "C:\\Users\\dagam\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DirecciónGeneral\\SGRV\\DireccionGeneral.csproj",
-      "packagesPath": "C:\\Users\\dagam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dagam\\Source\\Repos\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DirecciónGeneral\\SGRV\\obj\\",
+      "projectPath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DirecciónGeneral\\SGRV\\DireccionGeneral.csproj",
+      "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\angel\\source\\repos\\DanielGM-code\\Sistema-para-la-gesti-n-de-reportes-veh-culares\\SGRV-DirecciónGeneral\\SGRV\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dagam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -770,7 +770,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

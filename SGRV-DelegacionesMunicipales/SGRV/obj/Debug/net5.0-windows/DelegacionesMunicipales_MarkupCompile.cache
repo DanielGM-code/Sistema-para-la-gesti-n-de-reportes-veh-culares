@@ -9,12 +9,21 @@ DelegacionesMunicipales
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+<<<<<<< HEAD
+C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\App.xaml
+13202578115
+11225599352
+42-1745361304
+211-742781212
+Chat.xaml;GUIDelegacionesMunicipales\EliminarConductor.xaml;GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml;GUIDelegacionesMunicipales\ModificarConductor.xaml;GUIDelegacionesMunicipales\ModificarVehiculo.xaml;GUIDelegacionesMunicipales\RegistrarConductor.xaml;GUIDelegacionesMunicipales\RegistrarReporte.xaml;GUIDelegacionesMunicipales\RegistrarVehiculo.xaml;GUIDelegacionesMunicipales\VerDictamen.xaml;GUIDelegacionesMunicipales\VisualizarReporte.xaml;Login.xaml;Mensaje.xaml;recursos\HojaDeEstilos.xaml;
+=======
 C:\Users\dagam\Source\Repos\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\App.xaml
 13-16055929
 1-780599726
 42648548964
 211-1868023934
 Chat.xaml;GUIDelegacionesMunicipales\ElimarVehiculo.xaml;GUIDelegacionesMunicipales\EliminarConductor.xaml;GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml;GUIDelegacionesMunicipales\ModificarConductor.xaml;GUIDelegacionesMunicipales\ModificarVehiculo.xaml;GUIDelegacionesMunicipales\RegistrarConductor.xaml;GUIDelegacionesMunicipales\RegistrarReporte.xaml;GUIDelegacionesMunicipales\RegistrarVehiculo.xaml;GUIDelegacionesMunicipales\VisualizarReporte.xaml;Login.xaml;Mensaje.xaml;recursos\HojaDeEstilos.xaml;
+>>>>>>> b2423864f0d22851759d0cf7ab4861cf32960342
 
 False
 
