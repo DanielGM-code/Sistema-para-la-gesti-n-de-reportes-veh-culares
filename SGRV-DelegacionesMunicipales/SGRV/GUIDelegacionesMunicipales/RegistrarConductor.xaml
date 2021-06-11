@@ -47,7 +47,7 @@
                  TextWrapping="NoWrap" 
                  VerticalAlignment="Top"
                  Width="275"
-                 MaxLength="250"
+                 MaxLength="10"
                  Style="{StaticResource textBox_textBoxTransparente}"/>
 
         <TextBox x:Name="tb_telefono"

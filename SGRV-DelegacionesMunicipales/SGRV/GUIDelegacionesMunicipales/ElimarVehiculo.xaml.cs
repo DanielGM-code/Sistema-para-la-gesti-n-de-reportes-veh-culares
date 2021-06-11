@@ -45,10 +45,8 @@ namespace DelegacionesMunicipales.GUIDelegacionesMunicipales
                 {
                     VehiculoDAO.removeVehiculo(vehiculoSeleccionado);
                     MessageBox.Show("Vehiculo eliminado de manera exitosa.");
-                    dg_conductores.SelectedItem = null;
-                    dg_vehiculos.SelectedItem = null;
                     limpiarCampos();
-
+                    llenarTablaVehiculos(conductorSeleccionado);
                 }
             }
             catch (Exception x)

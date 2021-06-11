@@ -164,8 +164,7 @@ namespace SGRV.modelo.dao
                     String query = String.Format("INSERT INTO Vehiculo (marca, modelo, año, color, nombreAseguradora, polizaSeguro, placas, idConductor, estado) " +
                         "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', {7}, '{8}')", marca, modelo, ano, color, nombreAseguradora, polizaSeguro, placas, idConductor, estado);
                     command = new SqlCommand(query, connection);
-                    int noseque = command.ExecuteNonQuery();
-                    MessageBox.Show(noseque + "");
+                    command.ExecuteNonQuery();
                     command.Dispose();
                 }
             }

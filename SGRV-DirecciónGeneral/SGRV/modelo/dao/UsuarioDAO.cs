@@ -157,7 +157,7 @@ namespace SGRV.modelo.dao
                     String estado = usuario.Estado;
                     String correo = usuario.Correo;
                     String query = String.Format("INSERT INTO Usuario (username, contraseña, cargo, idDelegacion, estado, correo) " +
-                                                 "VALUES ('{0}','{1}','{2}','{3}','{4}', {5})", username, contraseña, cargo,
+                                                 "VALUES ('{0}','{1}','{2}','{3}','{4}', '{5}')", username, contraseña, cargo,
                                                  idDelegacion, estado, correo);
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
@@ -211,6 +211,7 @@ namespace SGRV.modelo.dao
                 if (connection != null)
                 {
                     SqlCommand command;
+                    int idUsuario = usuario.IdUsuario;
                     String username = usuario.Username;
                     String contraseña = usuario.Contraseña;
                     String cargo = usuario.Cargo;
@@ -219,14 +220,13 @@ namespace SGRV.modelo.dao
                     String correo = usuario.Correo;
                     String query = String.Format("UPDATE Usuario SET username = '{0}', " +
                                                                       "contraseña = '{1}', " +
-                                                                      "numeroLicencia = '{2}', " +
-                                                                      "cargo = '{3}', " +
-                                                                      "idDelegacion = '{4}'" +
-                                                                      "estado = '{5}'" +
-                                                                      "correo = '{6}'" +
-                                                                      "WHERE IdUsuario = {7}",
+                                                                      "cargo = '{2}', " +
+                                                                      "idDelegacion = {3}, " +
+                                                                      "estado = '{4}', " +
+                                                                      "correo = '{5}'" +
+                                                                      "WHERE IdUsuario = {6}",
                                                                       username, contraseña, cargo,
-                                                                      idDelegacion, estado, correo);
+                                                                      idDelegacion, estado, correo, idUsuario);
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
                     command.Dispose();

@@ -111,21 +111,17 @@ namespace SGRV.GUIDireccionGeneral
                 try
                 {
                     DelegacionDAO.addDelegacion(delegacion);
-                    string mensaje = "Se ha registrado al usuario de manera exitosa.";
-                    Mensaje ventanaMensaje = new Mensaje(mensaje);
-                    ventanaMensaje.Show();
+                    MessageBox.Show("Delegación registrada de manera exitosa");
                     vaciarCampos();
                 }
                 catch
                 {
-                    string mensaje = "Ha ocurrido un problema.";
-                    Mensaje ventanaMensaje = new Mensaje(mensaje);
+                    MessageBox.Show("Ha ocurrido un problema.");
                 }
             }
             else
             {
-                string mensaje = "Asegúrese de llenar todos los campos.";
-                Mensaje ventanaMensaje = new Mensaje(mensaje);
+                MessageBox.Show("Asegúrese de llenar todos los campos.");
             }
         }
 

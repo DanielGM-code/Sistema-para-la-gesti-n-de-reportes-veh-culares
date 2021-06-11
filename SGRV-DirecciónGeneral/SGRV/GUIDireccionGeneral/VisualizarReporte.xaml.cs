@@ -184,7 +184,8 @@ namespace DireccionGeneral.GUIDireccionGeneral
             {
                 if (reporte.Direccion.ToLower() == busqueda.ToLower() ||
                     reporte.Estado.ToLower() == busqueda.ToLower() ||
-                    reporte.Fecha.ToString() == busqueda)
+                    reporte.Fecha.ToString() == busqueda ||
+                    reporte.Fecha.ToString().ToLower().Contains(busqueda))
                 {
                     reportesFiltrados.Add(reporte);
                 }
