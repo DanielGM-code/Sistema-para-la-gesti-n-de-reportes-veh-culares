@@ -22,10 +22,6 @@ namespace SGRV.GUIDelegacionesMunicipales
     {
         String username;
 
-        public MenuDelegacionMunicipal()
-        {
-            InitializeComponent();
-        }
         public MenuDelegacionMunicipal( String username)
         {
             InitializeComponent();
@@ -104,21 +100,21 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_RegistrarConductor_Click(object sender, RoutedEventArgs e)
         {
-            RegistrarConductor ventanaRegistrarConductor = new RegistrarConductor();
+            RegistrarConductor ventanaRegistrarConductor = new RegistrarConductor(username);
             ventanaRegistrarConductor.Show();
             this.Close();
         }
 
         private void button_RegistrarVehiculo_Click(object sender, RoutedEventArgs e)
         {
-            RegistrarVehiculo ventanaRegistrarVehiculo = new RegistrarVehiculo();
+            RegistrarVehiculo ventanaRegistrarVehiculo = new RegistrarVehiculo(username);
             ventanaRegistrarVehiculo.Show();
             this.Close();
         }
 
         private void button_RegistrarReporte_Click(object sender, RoutedEventArgs e)
         {
-            RegistrarReporte ventanaRegistrarReporte = new RegistrarReporte();
+            RegistrarReporte ventanaRegistrarReporte = new RegistrarReporte(username);
             ventanaRegistrarReporte.Show();
             this.Close();
         }
@@ -126,21 +122,21 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_ModificarConductor_Click(object sender, RoutedEventArgs e)
         {
-            ModificarConductor ventanaModificarConductor = new ModificarConductor();
+            ModificarConductor ventanaModificarConductor = new ModificarConductor(username);
             ventanaModificarConductor.Show();
             this.Close();
         }
 
         private void button_ModificarVehiculo_Click(object sender, RoutedEventArgs e)
         {
-            ModificarVehiculo ventanaModificarVehiculo = new ModificarVehiculo();
+            ModificarVehiculo ventanaModificarVehiculo = new ModificarVehiculo(username);
             ventanaModificarVehiculo.Show();
             this.Close();
         }
 
         private void button_ModificarReporte_Click(object sender, RoutedEventArgs e)
         {
-            VisualizarReporte ventanaVisualizarReporte = new VisualizarReporte();
+            VisualizarReporte ventanaVisualizarReporte = new VisualizarReporte(username);
             ventanaVisualizarReporte.Show();
             this.Close();
         }
@@ -148,7 +144,7 @@ namespace SGRV.GUIDelegacionesMunicipales
 
         private void button_EliminarConductor_Click(object sender, RoutedEventArgs e)
         {
-            EliminarConductor ventanaEliminarConductor = new EliminarConductor();
+            EliminarConductor ventanaEliminarConductor = new EliminarConductor(username);
             ventanaEliminarConductor.Show();
             this.Close();
         }

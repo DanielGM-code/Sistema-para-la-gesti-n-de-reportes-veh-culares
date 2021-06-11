@@ -21,22 +21,23 @@ namespace SGRV.GUIDelegacionesMunicipales
     /// </summary>
     public partial class RegistrarConductor : Window
     {
-        public RegistrarConductor()
+        String username;
+        public RegistrarConductor(String username)
         {
             InitializeComponent();
-
+            this.username = username;
         }
 
         private void button_Regresar_Click(object sender, RoutedEventArgs e)
         {
-            MenuDelegacionMunicipal ventanaMenuDelegacionMunicipal = new MenuDelegacionMunicipal();
+            MenuDelegacionMunicipal ventanaMenuDelegacionMunicipal = new MenuDelegacionMunicipal(username);
             ventanaMenuDelegacionMunicipal.Show();
             this.Close();
         }
 
         private void button_Chat_Click(object sender, RoutedEventArgs e)
         {
-            Chat ventanaChat = new Chat();
+            Chat ventanaChat = new Chat(username);
             ventanaChat.Show();
         }
 
