@@ -64,6 +64,8 @@ namespace SGRV.GUIDelegacionesMunicipales
                             reporte.Estado = "Activo";
                             ReporteDAO.addReporte(reporte);
 
+                            int ultimoReporte = ReporteDAO.getLastIndex();
+
                             Dictamen dictamen = new Dictamen();
                             dictamen.Descripcion = "";
                             dictamen.Estado = "Activo";
@@ -71,13 +73,11 @@ namespace SGRV.GUIDelegacionesMunicipales
                             string hora = DateTime.Now.ToString("t");
                             dictamen.Hora = hora;
                             dictamen.IdPerito = 0;
-                            reportes = ReporteDAO.getAllReportes();
-                            int numeroReportes = reportes.Count;
-                            dictamen.IdReporte = numeroReportes + 1;
-                            dictamen.Folio = numeroReportes + 1;
+                            dictamen.IdReporte = ultimoReporte;
+                            dictamen.Folio = ultimoReporte;
                             DictamenDAO.addDictamen(dictamen);
 
-                            int ultimoReporte = ReporteDAO.getLastIndex();
+                            
 
                             VehiculosReporte vehiculosReporte;
                             foreach (Vehiculo vehiculo in vehiculosSeleccionados)

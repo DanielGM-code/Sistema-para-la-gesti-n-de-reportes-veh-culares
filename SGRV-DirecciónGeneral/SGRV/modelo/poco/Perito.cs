@@ -17,5 +17,13 @@ namespace SGRV.modelo.poco
         public string Nombre { get => nombre; set => nombre = value; }
         public string Correo { get => correo; set => correo = value; }
         public string Estado { get => estado; set => estado = value; }
+
+        override
+        public string ToString()
+        {
+            return this.nombre;
+        }
     }
+
+    
 }

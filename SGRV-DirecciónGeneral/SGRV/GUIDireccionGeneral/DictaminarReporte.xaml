@@ -100,7 +100,6 @@
 
         <TextBox
             x:Name="tb_Descripcion"
-            IsEnabled="False"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Width="852" Height="128"

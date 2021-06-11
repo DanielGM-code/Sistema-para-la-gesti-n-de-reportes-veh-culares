@@ -111,7 +111,7 @@ namespace DireccionGeneral.GUIDireccionGeneral
 
         private void llenarTabla()
         {
-            usuarios = UsuarioDAO.getAllUsuarios();
+            List<Usuario> usuarios = UsuarioDAO.getAllUsuarios();
             dg_Usarios.AutoGenerateColumns = false;
             dg_Usarios.ItemsSource = usuarios;
         }
