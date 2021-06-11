@@ -16,20 +16,22 @@ namespace DireccionGeneral.GUIDireccionGeneral
     public partial class ModificarUsuario : Window
     {
         String username;
-        List<Delegacion> delegaciones;
+        List<Usuario> usuarios;
+        List<Usuario> usuariosFiltrados;
         Usuario usuarioSeleccionado;
-
+        List<Delegacion> delegaciones;
         public string[] cargos { get; set; }
 
         public ModificarUsuario(String username)
         {
             InitializeComponent();
             this.username = username;
-            cargos = new string[] { "Administrativo", "Agente de transito", "Perito", "Soporte" }; 
-            DataContext = this;
-
             delegaciones = DelegacionDAO.getAllDelegaciones();
+            usuarios = new List<Usuario>();
+            usuariosFiltrados = new List<Usuario>();
             cb_delegacion.ItemsSource = delegaciones;
+            cargos = new string[] { "Administrativo", "Agente De Transito", "Perito", "Soporte" };
+            DataContext = this;
 
             llenarTabla();
         }
@@ -122,9 +124,10 @@ namespace DireccionGeneral.GUIDireccionGeneral
             usuarioSeleccionado = (Usuario)dg_Usarios.SelectedItem;
             if (usuarioSeleccionado != null)
             {
+                tb_correo.Text = usuarioSeleccionado.Correo;
                 tb_username.Text = usuarioSeleccionado.Username;
-                cb_cargo.SelectedItem = usuarioSeleccionado.Cargo;
-                cb_delegacion.SelectedItem = usuarioSeleccionado.Delegacion;
+                cb_cargo.Text = usuarioSeleccionado.Cargo;
+                cb_delegacion.Text = usuarioSeleccionado.Delegacion;
             }
         }
 
@@ -134,6 +137,37 @@ namespace DireccionGeneral.GUIDireccionGeneral
             {
                 DragMove();
             }
+        }
+
+        private void filtrarTabla()
+        {
+            usuarios = UsuarioDAO.getAllUsuarios();
+            String busqueda = tb_username.Text;
+
+            foreach (Usuario usuario in usuarios)
+            {
+                if (usuario.Username.ToLower() == busqueda.ToLower() ||
+                    usuario.Cargo.ToLower() == busqueda.ToLower() ||
+                    usuario.Correo.ToLower() == busqueda.ToLower() ||
+                    usuario.Delegacion.ToLower() == busqueda.ToLower())
+                {
+                    usuariosFiltrados.Add(usuario);
+                }
+            }
+
+            if (usuariosFiltrados.Count > 0)
+            {
+                dg_Usarios.ItemsSource = usuariosFiltrados;
+            }
+            else
+            {
+                llenarTabla();
+            }
+        }
+
+        private void button_Buscar_Click(object sender, RoutedEventArgs e)
+        {
+            filtrarTabla();
         }
     }
 }

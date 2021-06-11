@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\angel\source\repos\DanielGM-code\Sistema-para-la-gesti-n-de-reportes-veh-culares\SGRV-DelegacionesMunicipales\SGRV\App.xaml
-13202578115
+14-1733545808
 11225599352
-44328964548
+451621346082
 211-742781212
-Chat.xaml;GUIDelegacionesMunicipales\EliminarConductor.xaml;GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml;GUIDelegacionesMunicipales\ModificarConductor.xaml;GUIDelegacionesMunicipales\ModificarVehiculo.xaml;GUIDelegacionesMunicipales\RegistrarConductor.xaml;GUIDelegacionesMunicipales\RegistrarReporte.xaml;GUIDelegacionesMunicipales\RegistrarVehiculo.xaml;GUIDelegacionesMunicipales\VerDictamen.xaml;GUIDelegacionesMunicipales\VisualizarReporte.xaml;Login.xaml;Mensaje.xaml;recursos\HojaDeEstilos.xaml;
+Chat.xaml;GUIDelegacionesMunicipales\ElimarVehiculo.xaml;GUIDelegacionesMunicipales\EliminarConductor.xaml;GUIDelegacionesMunicipales\MenuDelegacionMunicipal.xaml;GUIDelegacionesMunicipales\ModificarConductor.xaml;GUIDelegacionesMunicipales\ModificarVehiculo.xaml;GUIDelegacionesMunicipales\RegistrarConductor.xaml;GUIDelegacionesMunicipales\RegistrarReporte.xaml;GUIDelegacionesMunicipales\RegistrarVehiculo.xaml;GUIDelegacionesMunicipales\VerDictamen.xaml;GUIDelegacionesMunicipales\VisualizarReporte.xaml;Login.xaml;Mensaje.xaml;recursos\HojaDeEstilos.xaml;
 
 True
 

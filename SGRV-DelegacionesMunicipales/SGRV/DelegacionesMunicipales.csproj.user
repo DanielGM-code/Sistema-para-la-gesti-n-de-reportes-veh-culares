@@ -10,6 +10,9 @@
     <Compile Update="Chat.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="GUIDelegacionesMunicipales\ElimarVehiculo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="GUIDelegacionesMunicipales\EliminarConductor.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Chat.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GUIDelegacionesMunicipales\ElimarVehiculo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GUIDelegacionesMunicipales\EliminarConductor.xaml">

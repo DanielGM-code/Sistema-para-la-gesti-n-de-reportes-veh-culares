@@ -25,6 +25,12 @@
             </Border.Background>
         </Border>
 
+        <Label Content="Eliminar usuario"
+               HorizontalAlignment="Center" 
+               Margin="0,18,0,0" 
+               VerticalAlignment="Top"
+               Style="{StaticResource label_textoGrande}"/>
+
         <Border Style="{StaticResource border_ContenedorFormulario}" Margin="508,248,84,140" Grid.RowSpan="2"/>
         <Border Style="{StaticResource border_lineasGrandes}" Margin="546,312,454,67"/>
         <Border Style="{StaticResource border_lineasGrandes}" Margin="546,47,454,300" Grid.Row="1"/>
@@ -113,6 +119,16 @@
                 Style="{StaticResource button_botonIcono}"
                 Click="button_Chat_Click" Margin="85,28,0,0"/>
 
+        <Button x:Name="button_Buscar"
+                Content="{iconPacks:Material Kind=AccountSearch, Height=24, Width=20}"
+                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                VerticalAlignment="Top" 
+                Height="34" Width="39"
+                Style="{StaticResource button_botonIcono}"
+                Click="button_Buscar_Click" Margin="92,154,0,0"/>
+
         <Button x:Name="button_CerrarSesion"
                 Content="{iconPacks:Material Kind=Logout, Height=30, Width=30}"
                 HorizontalAlignment="Left" 
@@ -158,16 +174,14 @@
 
         <TextBox x:Name="tb_Usuario" 
             HorizontalAlignment="Left"
-            Margin="122,161,0,0"
+            Margin="136,161,0,0"
             VerticalAlignment="Top" 
-            Width="270"
+            Width="256"
             MaxLength="250"
             Style="{StaticResource textBox_textBoxTransparente}"/>
         <Border Style="{StaticResource border_lineasGrandes}" Margin="886,314,114,65"/>
         <Border Style="{StaticResource border_lineasGrandes}" Margin="886,47,114,300" Grid.Row="1"/>
 
-        <iconPacks:PackIconMaterial Kind="AccountSearch" 
-                                        Margin="93,161,0,0" Height="24" Width="20"/>
 
         <iconPacks:PackIconMaterial Kind="Account" 
                                         Margin="547,280,0,0" Height="24" Width="20"/>
