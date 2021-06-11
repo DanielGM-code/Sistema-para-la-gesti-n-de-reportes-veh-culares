@@ -10,8 +10,9 @@
 //------------------------------------------------------------------------------
 
 using DireccionGeneral;
-using MahApps.Metro.IconPacks;
-using MahApps.Metro.IconPacks.Converter;
+using DireccionGeneral.GUIDireccionGeneral;
+using SGRV;
+using SGRV.GUIDireccionGeneral;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -21,7 +22,6 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Controls.Ribbon;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms.Integration;
 using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Markup;
