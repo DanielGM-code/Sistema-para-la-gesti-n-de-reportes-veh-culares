@@ -160,8 +160,8 @@ namespace DelegacionesMunicipales.GUIDelegacionesMunicipales {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;V1.0.0.0;component/guidelegacionesmunicipales/visualizar" +
-                    "reporte.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DelegacionesMunicipales;component/guidelegacionesmunicipales/visualizarreporte.x" +
+                    "aml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\GUIDelegacionesMunicipales\VisualizarReporte.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
