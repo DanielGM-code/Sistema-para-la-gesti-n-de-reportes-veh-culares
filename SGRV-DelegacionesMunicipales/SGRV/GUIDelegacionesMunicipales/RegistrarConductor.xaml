@@ -48,7 +48,7 @@
                  VerticalAlignment="Top"
                  Width="275"
                  MaxLength="10"
-                 Style="{StaticResource textBox_textBoxTransparente}"/>
+                 Style="{StaticResource textBox_textBoxTransparente}" KeyDown="tb_licencia_keyDown"/>
 
         <TextBox x:Name="tb_telefono"
                  HorizontalAlignment="Left"
@@ -57,7 +57,8 @@
                  VerticalAlignment="Top"
                  Width="275"
                  MaxLength="10"
-                 Style="{StaticResource textBox_textBoxTransparente}"/>
+                 
+                 Style="{StaticResource textBox_textBoxTransparente}" KeyDown="tb_telefono_keydown"/>
 
         <Button x:Name="button_Registrar" 
                 Content="Registrar conductor" 

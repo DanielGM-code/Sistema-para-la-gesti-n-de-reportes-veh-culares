@@ -116,7 +116,7 @@
                  VerticalAlignment="Top"
                  Width="270"
                  MaxLength="4"
-                 Style="{StaticResource textBox_textBoxTransparente}"/>
+                 Style="{StaticResource textBox_textBoxTransparente}" KeyDown="tb_año_keyDown"/>
 
         <TextBox x:Name="tb_color" 
                  HorizontalAlignment="Left" 
@@ -140,7 +140,7 @@
                  VerticalAlignment="Top"
                  Width="270"
                  MaxLength="250"
-                 Style="{StaticResource textBox_textBoxTransparente}"/>
+                 Style="{StaticResource textBox_textBoxTransparente}" KeyDown="tb_numeroPolizaSeguro_keyDown"/>
 
         <TextBox x:Name="tb_numeroPlacas" 
                  HorizontalAlignment="Center" 
